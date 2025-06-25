@@ -25,14 +25,28 @@ int main(int argc, char *argv[]) {
     // TODO: Set source and destination ranks to form a message chain:
     //      rank1 -> rank2 -> rank3 -> ...
     // Treat boundaries with MPI_PROC_NULL.
+
     int source = -1;
     int destination = -1;
+
+    if (rank < ntasks - 1) {
+        destination = rank + 1; // Send to the next rank
+    } else {
+        destination = MPI_PROC_NULL; // Last rank does not send to anyone
+    }
+
+    if (rank > 0) {
+        source = rank - 1; // Receive from the previous rank
+    } else {
+        source = MPI_PROC_NULL; // First rank does not receive from anyone
+    }
 
     // Start measuring the time spent in communication
     MPI_Barrier(MPI_COMM_WORLD);
     double t0 = MPI_Wtime();
 
     // TODO: Send messages
+    MPI_Send(message.data(), numElements, MPI_INT, destination, destination, MPI_COMM_WORLD);
 
 
     printf("Sender: %d. Sent elements: %d. Tag: %d. Receiver: %d\n",
@@ -40,7 +54,7 @@ int main(int argc, char *argv[]) {
     );
 
     // TODO: Receive messages
-
+    MPI_Recv(receiveBuffer.data(), numElements, MPI_INT, source, rank, MPI_COMM_WORLD, MPI_STATUS_IGNORE);
 
     printf("Receiver: %d. first element %d\n", rank, receiveBuffer[0]);
 
