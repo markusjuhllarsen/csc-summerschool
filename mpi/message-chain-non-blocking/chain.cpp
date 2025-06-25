@@ -42,12 +42,12 @@ int main(int argc, char *argv[]) {
 
     MPI_Request sendRequest, recvRequest;
 
-    MPI_Isend(message.data(), numElements, MPI_INT, destination, sendTag, MPI_COMM_WORLD);
+    MPI_Isend(message.data(), numElements, MPI_INT, destination, sendTag, MPI_COMM_WORLD, &sendRequest);
     
     printf("Sender: %d. Sent elements: %d. Tag: %d. Receiver: %d\n",
            rank, numElements, sendTag, destination);
     
-    MPI_Irecv(receiveBuffer.data(), numElements, MPI_INT, source, recvTag, MPI_COMM_WORLD, MPI_STATUS_IGNORE);
+    MPI_Irecv(receiveBuffer.data(), numElements, MPI_INT, source, recvTag, MPI_COMM_WORLD, &recvRequest);
 
     printf("Receiver: %d. Receive tag: %d. First element: %d.\n",
            rank, recvTag, receiveBuffer[0]);
