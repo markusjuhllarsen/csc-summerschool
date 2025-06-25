@@ -42,13 +42,13 @@ int main(int argc, char *argv[]) {
     double t0 = MPI_Wtime();
 
     int sendTag = rank + 1; // Use rank + 1 as the tag for sending
+    int recvTag = rank; // Use rank as the tag for receiving
+
     MPI_Send(message.data(), numElements, MPI_INT, destination, sendTag, MPI_COMM_WORLD);
 
-
     printf("Sender: %d. Sent elements: %d. Tag: %d. Receiver: %d\n",
-           rank, numElements, sendTag, destination))
+           rank, numElements, sendTag, destination);
 
-    int recvTag = rank; // Use rank as the tag for receiving
     MPI_Recv(receiveBuffer.data(), numElements, MPI_INT, source, recvTag, MPI_COMM_WORLD, MPI_STATUS_IGNORE);
 
     printf("Receiver: %d. Receive tag: %d. First element: %d.\n",
