@@ -61,7 +61,7 @@ int main(int argc, char *argv[]) {
 
         // Receive the message. Will error with MPI_ERR_TRUNCATE if the buffer is too small for the incoming message
         MPI_Recv(receiveBuffer.data(), receiveBuffer.size(), MPI_INT,
-            sourceRank, tag, MPI_COMM_WORLD, MPI_STATUS_IGNORE
+            sourceRank, tag, MPI_COMM_WORLD, &status
         );
         // Approach 2
         MPI_Get_count(&status, MPI_INT, &messageLength);
