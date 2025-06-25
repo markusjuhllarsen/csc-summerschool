@@ -42,17 +42,23 @@ int main(int argc, char *argv[]) {
     double t0 = MPI_Wtime();
 
     int sendTag = rank + 1; // Use rank + 1 as the tag for sending
-    MPI_Send(message.data(), numElements, MPI_INT, destination, sendTag, MPI_COMM_WORLD);
-
+    int recvTag = rank; // Use rank as the tag for receiving
+    if (rank % 2 ==0){
+        // Even ranks send first
+        MPI_Send(message.data(), numElements, MPI_INT, destination, sendTag, MPI_COMM_WORLD);
+        
+        MPI_Recv(receiveBuffer.data(), numElements, MPI_INT, source, recvTag, MPI_COMM_WORLD, MPI_STATUS_IGNORE);
+    } else {
+        // Odd ranks receive first
+        MPI_Recv(receiveBuffer.data(), numElements, MPI_INT, source, recvTag, MPI_COMM_WORLD, MPI_STATUS_IGNORE);
+        MPI_Send(message.data(), numElements, MPI_INT, destination, sendTag, MPI_COMM_WORLD);
+    }
 
     printf("Sender: %d. Sent elements: %d. Tag: %d. Receiver: %d\n",
-           rank, numElements, sendTag, destination))
-
-    int recvTag = rank; // Use rank as the tag for receiving
-    MPI_Recv(receiveBuffer.data(), numElements, MPI_INT, source, recvTag, MPI_COMM_WORLD, MPI_STATUS_IGNORE);
+           rank, numElements, sendTag, destination);
 
     printf("Receiver: %d. Receive tag: %d. First element: %d.\n",
-           rank, recvTag, receiveBuffer[0]);
+        rank, recvTag, receiveBuffer[0]);
 
     // Finalize measuring the time and print it out
     double t1 = MPI_Wtime();
