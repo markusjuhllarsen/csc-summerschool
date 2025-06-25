@@ -29,7 +29,7 @@ int main(int argc, char** argv)
 
     double pi = local_pi;
     for (int i=1; i < ntasks; i++) {
-        MPI_Recv(&local_pi, 1, MPI_DOUBLE, i, 0, MPI_COMM_WORLD, MPI_STATUS_IGNORE);
+        MPI_Recv(&local_pi, 1, MPI_DOUBLE, MPI_ANY_SOURCE, 0, MPI_COMM_WORLD, MPI_STATUS_IGNORE);
         pi += local_pi;
     }
     pi *= 4.0 / n;
@@ -38,7 +38,6 @@ int main(int argc, char** argv)
   
   if (rank != 0){
     double local_pi = 0.0;
-    printf("Process %d computing from %d to %d\n", rank, istart, istop);
     for (int i=istart; i <= istop; i++) {
         double x = (i - 0.5) / n;
         local_pi += 1.0 / (1.0 + x*x);
