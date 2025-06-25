@@ -22,7 +22,7 @@ int main(int argc, char** argv)
   
   if (rank == 0){
     double local_pi = 0.0;
-    for (int i=istart; i <= istop/; i++) {
+    for (int i=istart; i <= istop; i++) {
         double x = (i - 0.5) / n;
         local_pi += 1.0 / (1.0 + x*x);
     }
