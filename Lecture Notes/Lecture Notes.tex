@@ -1,0 +1,49 @@
+\documentclass[12pt,a4paper]{article}
+
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath, amssymb}
+\usepackage{graphicx}
+\usepackage{hyperref}
+\usepackage{geometry}
+
+
+\begin{document}
+
+\section*{Lecture 1: Introduction}
+\begin{itemize}
+    \item Checkpointing important in case of crashes or other failures.
+\end{itemize}
+
+\section*{Lecture 2: Parallel Computing}
+\subsection*{Sum of N Numbers}
+Let $W$ be the number of workers. 
+\begin{itemize}
+    \item Split data into $W$ parts.
+    \item Initial summation time: $\lceil \tfrac{N}{W} \rceil - 1$.
+    \item $\lceil \log_2(W) \rceil$ steps to combine results.
+    \item So total time is $\lceil \tfrac{N}{W} \rceil - 1 + 1.1\lceil \log_2(W) \rceil $
+\end{itemize}
+
+For $N=20$, $W=8$:
+\begin{itemize}
+    \item $\lceil \tfrac{20}{8} \rceil -1 = 2$
+    \item $\lceil \log_2(8) \rceil = 3$
+    \item $2 + 1.1*3 = 5.3$
+\end{itemize}
+
+\begin{table}[!h]
+\begin{tabular}{lll}
+Workers & N=20 & 1020\\
+\hline
+1 & 19 & 1019\\
+2 & 10.1 & 510.1 \\
+4 & 6.2 & 256.2\\
+8 & 5.3 & 130.3
+\end{tabular}
+\end{table}
+
+\section*{Lecture 3: MPI Introduction}
+
+\section*{Lecture 4: }
+
+\end{document}
