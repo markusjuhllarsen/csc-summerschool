@@ -32,8 +32,6 @@ int main(int argc, char** argv)
         MPI_Recv(&local_pi, 1, MPI_DOUBLE, i, 0, MPI_COMM_WORLD, MPI_STATUS_IGNORE);
         pi += local_pi;
     }
-    MPI_Recv(&half_pi, 1, MPI_DOUBLE, 1, 0, MPI_COMM_WORLD, MPI_STATUS_IGNORE);
-    pi += half_pi;
     pi *= 4.0 / n;
     printf("Approximate pi=%18.16f (exact pi=%10.8f)\n", pi, M_PI);
   }
@@ -42,7 +40,7 @@ int main(int argc, char** argv)
     double local_pi = 0.0;
     istart = n / ntasks * rank + 1;
     istop = n / ntasks * rank;
-    for (int i=istart i <= istop; i++) {
+    for (int i=istart; i <= istop; i++) {
         double x = (i - 0.5) / n;
         local_pi += 1.0 / (1.0 + x*x);
     }
