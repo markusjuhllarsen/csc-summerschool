@@ -39,9 +39,9 @@ int main(int argc, char** argv)
   if (rank != 0){
     double local_pi = 0.0;
     istart = n / ntasks * rank + 1;
-    istop = n / ntasks * rank;
+    istop = n / ntasks * rank + n / ntasks;
     printf("Process %d computing from %d to %d\n", rank, istart, istop);
-    for (int i=istart; i < istop; i++) {
+    for (int i=istart; i <= istop; i++) {
         double x = (i - 0.5) / n;
         local_pi += 1.0 / (1.0 + x*x);
     }
