@@ -48,12 +48,12 @@ int main(int argc, char *argv[]) {
            rank, numElements, sendTag, destination);
     
     MPI_Irecv(receiveBuffer.data(), numElements, MPI_INT, source, recvTag, MPI_COMM_WORLD, &recvRequest);
-
-    printf("Receiver: %d. Receive tag: %d. First element: %d.\n",
-           rank, recvTag, receiveBuffer[0]);
     
     MPI_Wait(&sendRequest, MPI_STATUS_IGNORE);
     MPI_Wait(&recvRequest, MPI_STATUS_IGNORE);
+
+    printf("Receiver: %d. Receive tag: %d. First element: %d.\n",
+        rank, recvTag, receiveBuffer[0]);
 
     // Finalize measuring the time and print it out
     double t1 = MPI_Wtime();
