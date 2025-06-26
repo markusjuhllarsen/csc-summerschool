@@ -8,16 +8,14 @@ struct ParallelData {
     int size;            // Number of MPI tasks
     int rank;
     int nup, ndown;      // Ranks of neighbouring MPI tasks
-    MPI_Request requests[4];    // Requests for non-blocking communication
+    MPI_Request requests[4]; // Requests for non-blocking communication
 
     ParallelData() {      // Constructor
-
       MPI_Comm_size(MPI_COMM_WORLD, &size);
       MPI_Comm_rank(MPI_COMM_WORLD, &rank);
       nup = (rank == 0) ? MPI_PROC_NULL : rank - 1; // Up neighbour
       ndown = (rank == size - 1) ? MPI_PROC_NULL : rank + 1; // Down neighbour
     };
-
 };
 
 // Class for temperature field
