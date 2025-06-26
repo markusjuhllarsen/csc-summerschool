@@ -31,7 +31,7 @@ int main(int argc, char *argv[])
     /* Send everywhere */
     if (rank == 0) {
         for (int i = 1; i < size; i++) {
-            MPI_Send(sendbuf.data(), buf_size, MPI_INT, i, 0, MPI_COMM_WORLD);
+            MPI_Send(sendbuf.data() + i * buf_size, buf_size, MPI_INT, i, 0, MPI_COMM_WORLD);
         }
     } else {
         MPI_Recv(recvbuf.data(), buf_size, MPI_INT, 0, 0, MPI_COMM_WORLD, MPI_STATUS_IGNORE);
