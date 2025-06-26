@@ -37,7 +37,7 @@ int main(int argc, char *argv[])
     double t1 = MPI_Wtime();
 
     /* Print data that was received */
-    print_buffer(buf);
+    print_buffer(recvbuf);
     if (rank == 0) {
         printf("Time elapsed: %6.8f s\n", t1 - t0);
     }
