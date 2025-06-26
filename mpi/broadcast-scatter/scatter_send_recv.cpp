@@ -27,14 +27,14 @@ int main(int argc, char *argv[])
     /* Start timing */
     MPI_Barrier(MPI_COMM_WORLD);
     double t0 = MPI_Wtime();
-
+    block_size = buf_size / size;
     /* Send everywhere */
     if (rank == 0) {
         for (int i = 1; i < size; i++) {
-            MPI_Send(sendbuf.data() + (i-1) * buf_size, buf_size, MPI_INT, i, 0, MPI_COMM_WORLD);
+            MPI_Send(sendbuf.data() + (i-1) * block_size, block_size, MPI_INT, i, 0, MPI_COMM_WORLD);
         }
     } else {
-        MPI_Recv(recvbuf.data(), buf_size, MPI_INT, 0, 0, MPI_COMM_WORLD, MPI_STATUS_IGNORE);
+        MPI_Recv(recvbuf.data(), block_size, MPI_INT, 0, 0, MPI_COMM_WORLD, MPI_STATUS_IGNORE);
     }
 
     /* End timing */
