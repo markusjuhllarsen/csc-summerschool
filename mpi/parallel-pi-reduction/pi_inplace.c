@@ -41,7 +41,7 @@ int main(int argc, char** argv)
         local_pi += 1.0 / (1.0 + x*x);
   }
 
-  MPI_Reduce(MPI_IN_PLACE, &local_pi, 1, MPI_DOUBLE, MPI_SUM, 0, MPI_COMM_WORLD);
+  MPI_Allreduce(MPI_IN_PLACE, &local_pi, 1, MPI_DOUBLE, MPI_SUM, MPI_COMM_WORLD);
 
   if (rank == 0){
     local_pi *= 4.0 / n;
