@@ -16,7 +16,7 @@ double average(const Field& field, const ParallelData parallel)
        }
      }
 
-     MPI_Allreduce(&local_average, &average, 1, MPI_DOUBLE, MPI_SUM, 0, MPI_COMM_WORLD);
+     MPI_Allreduce(&local_average, &average, 1, MPI_DOUBLE, MPI_SUM, MPI_COMM_WORLD);
      average /= (field.nx_full * field.ny_full);
      return average;
 }
