@@ -49,7 +49,7 @@ void initialize(int argc, char *argv[], Field& current,
 
 void init_exchange(Field& field, ParallelData& parallel);
 
-void finalize_exchange(const ParallelData parallel);
+void finalize_exchange(ParallelData& parallel);
 
 void evolve_interior(Field& curr, const Field& prev, const double a, const double dt);
 
