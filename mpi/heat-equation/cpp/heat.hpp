@@ -8,6 +8,7 @@ struct ParallelData {
     int size;            // Number of MPI tasks
     int rank;
     int nup, ndown;      // Ranks of neighbouring MPI tasks
+    MPI_Request requests[4];    // Requests for non-blocking communication
 
     ParallelData() {      // Constructor
 

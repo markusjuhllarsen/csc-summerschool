@@ -10,10 +10,7 @@
 int main(int argc, char **argv)
 {
 
-  // TODO start: initialize MPI
     MPI_Init(&argc, &argv);
-
-  // TODO end
 
     const int image_interval = 100;    // Image output interval
 
@@ -48,8 +45,11 @@ int main(int argc, char **argv)
 
     // Time evolve
     for (int iter = 1; iter <= nsteps; iter++) {
-        exchange(previous, parallelization);
-        evolve(current, previous, a, dt);
+        exchange_init(previous, parallelization);
+        evolve_interior(current, previous, a, dt);
+        // Wait for ghost layers to be exchanged before doing boundary calculations
+        finalize_exchange(parallelization);
+        evolve_boundaries(current, previous, a, dt);
         if (iter % image_interval == 0) {
             write_field(current, iter, parallelization);
         }
@@ -76,9 +76,7 @@ int main(int argc, char **argv)
     // Output the final field
     write_field(previous, nsteps, parallelization);
 
-  // TODO start: finalize MPI
     MPI_Finalize();
-  // TODO end
 
     return 0;
 }
