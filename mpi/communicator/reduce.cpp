@@ -32,10 +32,6 @@ int main(int argc, char *argv[])
     /* Print data that will be sent */
     print_buffers(sendbuf);
 
-    /* TODO: create a new communicator and
-     *       use a single collective communication call
-     *       (and maybe prepare some parameters for the call)
-     */
     color = (rank < 2) ? 0 : 1; // Split into two groups
     int new_rank = (rank < 2) ? rank : rank - 2; // Adjust rank in new communicator
     MPI_Comm_split(MPI_COMM_WORLD, color, new_rank, &sub_comm);
