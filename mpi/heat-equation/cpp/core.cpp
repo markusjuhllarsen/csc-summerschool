@@ -5,7 +5,7 @@
 #include "heat.hpp"
 
 // Exchange the boundary values
-void init_exchange(Field& field, const ParallelData parallel)
+void init_exchange(Field& field, ParallelData& parallel)
 {
     // To up, from down
     double* sbuf_up = field.temperature.data(1, 0);

@@ -47,7 +47,7 @@ struct Field {
 void initialize(int argc, char *argv[], Field& current,
                 Field& previous, int& nsteps, ParallelData parallel);
 
-void init_exchange(Field& field, const ParallelData parallel);
+void init_exchange(Field& field, ParallelData& parallel);
 
 void finalize_exchange(const ParallelData parallel);
 
