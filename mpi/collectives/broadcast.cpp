@@ -11,7 +11,7 @@ void print_buffers(std::vector<int> &buffer);
 int main(int argc, char *argv[])
 {
     int ntasks, rank;
-    std::vector<int> sendbuf(2 * NTASKS);
+    std::vector<int> sendbuf(2 * NTASKS), recvbuf(2 * NTASKS);
 
     MPI_Init(&argc, &argv);
     MPI_Comm_size(MPI_COMM_WORLD, &ntasks);
@@ -25,7 +25,7 @@ int main(int argc, char *argv[])
     }
 
     /* Initialize message buffers */
-    init_buffers(sendbuf);
+    init_buffers(sendbuf, recvbuf);
 
     /* Print data that will be sent */
     print_buffers(sendbuf);
