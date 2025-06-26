@@ -47,9 +47,13 @@ struct Field {
 void initialize(int argc, char *argv[], Field& current,
                 Field& previous, int& nsteps, ParallelData parallel);
 
-void exchange(Field& field, const ParallelData parallel);
+void init_exchange(Field& field, const ParallelData parallel);
 
-void evolve(Field& curr, const Field& prev, const double a, const double dt);
+void finalize_exchange(const ParallelData parallel);
+
+void evolve_interior(Field& curr, const Field& prev, const double a, const double dt);
+
+void evolve_boundaries(Field& curr, const Field& prev, const double a, const double dt);
 
 void write_field(const Field& field, const int iter, const ParallelData parallel);
 

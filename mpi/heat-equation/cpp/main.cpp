@@ -44,7 +44,7 @@ int main(int argc, char **argv)
 
     // Time evolve
     for (int iter = 1; iter <= nsteps; iter++) {
-        exchange_init(previous, parallelization);
+        init_exchange(previous, parallelization);
         evolve_interior(current, previous, a, dt);
         // Wait for ghost layers to be exchanged before doing boundary calculations
         finalize_exchange(parallelization);
