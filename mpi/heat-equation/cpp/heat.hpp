@@ -13,8 +13,8 @@ struct ParallelData {
 
       MPI_Comm_size(MPI_COMM_WORLD, &size);
       MPI_Comm_rank(MPI_COMM_WORLD, &rank);
-      nup = (rank == 0) ? size - 1 : rank - 1; // Up neighbour
-      ndown = (rank == size - 1) ? 0 : rank + 1; // Down neighbour
+      nup = (rank == 0) ? MPI_PROC_NULL : rank - 1; // Up neighbour
+      ndown = (rank == size - 1) ? MPI_PROC_NULL : rank + 1; // Down neighbour
     };
 
 };

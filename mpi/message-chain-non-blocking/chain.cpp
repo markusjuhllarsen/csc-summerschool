@@ -40,17 +40,17 @@ int main(int argc, char *argv[]) {
     int sendTag = rank + 1; // Use rank + 1 as the tag for sending
     int recvTag = rank; // Use rank as the tag for receiving
 
-    MPI_Request sendRequest, recvRequest;
+    MPI_Request requests[2];
+    MPI_Status statuses[2];
 
-    MPI_Isend(message.data(), numElements, MPI_INT, destination, sendTag, MPI_COMM_WORLD, &sendRequest);
+    MPI_Isend(message.data(), numElements, MPI_INT, destination, sendTag, MPI_COMM_WORLD, &requests[0]);
     
     printf("Sender: %d. Sent elements: %d. Tag: %d. Receiver: %d\n",
            rank, numElements, sendTag, destination);
     
-    MPI_Irecv(receiveBuffer.data(), numElements, MPI_INT, source, recvTag, MPI_COMM_WORLD, &recvRequest);
-    
-    MPI_Wait(&sendRequest, MPI_STATUS_IGNORE);
-    MPI_Wait(&recvRequest, MPI_STATUS_IGNORE);
+    MPI_Irecv(receiveBuffer.data(), numElements, MPI_INT, source, recvTag, MPI_COMM_WORLD, &requests[1]);
+
+    MPI_Waitall(2, requests, statuses);
 
     printf("Receiver: %d. Receive tag: %d. First element: %d.\n",
         rank, recvTag, receiveBuffer[0]);
