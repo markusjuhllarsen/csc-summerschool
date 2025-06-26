@@ -48,7 +48,6 @@ void read_field(Field& field, std::string filename,
     std::getline(file, line);
     int nx_full, ny_full;
     std::stringstream(line) >> comment >> nx_full >> ny_full;
-    printf("%d %d", nx_full, ny_full);
     field.setup(nx_full, ny_full, parallel);
 
     auto full = Matrix<double> (nx_full, ny_full);
