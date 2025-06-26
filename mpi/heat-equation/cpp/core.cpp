@@ -17,8 +17,8 @@ void init_exchange(Field& field, const ParallelData parallel)
              parallel.ndown, 11, MPI_COMM_WORLD, &parallel.requests[1]);
 
     // To down, from up
-    double* sbuf_down = field.temperature.data(0,0);
-    double* rbuf_up = field.temperature.data(field.nx, 0);
+    double* rbuf_up = field.temperature.data(0,0);
+    double* sbuf_down = field.temperature.data(field.nx, 0);
 
     MPI_Isend(sbuf_down, field.ny + 2, MPI_DOUBLE,
              parallel.ndown, 12, MPI_COMM_WORLD, &parallel.requests[2]);
