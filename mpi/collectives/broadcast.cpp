@@ -30,10 +30,10 @@ int main(int argc, char *argv[])
     /* Print data that will be sent */
     print_buffers(sendbuf);
 
-    MPI_Scatter(sendbuf.data(), sendbuf.size(), MPI_INT, recvbuf.data(), recvbuf.size(), MPI_INT, 0, MPI_COMM_WORLD);
+    MPI_Bcast(sendbuf.data(), sendbuf.size(), MPI_INT, 0, MPI_COMM_WORLD);
 
     /* Print data that was received */
-    print_buffers(recvbuf);
+    print_buffers(sendbuf);
 
     MPI_Finalize();
     return 0;
