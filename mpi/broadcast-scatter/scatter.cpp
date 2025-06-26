@@ -11,25 +11,26 @@ void print_buffer(std::vector<int> &buffer);
 int main(int argc, char *argv[])
 {
     int size, rank, buf_size=12;
-    std::vector<int> buf(buf_size);
+    std::vector<int> sendbuf(buf_size);
+    std::vector<int> recvbuf(buf_size, -1);
 
     MPI_Init(&argc, &argv);
     MPI_Comm_size(MPI_COMM_WORLD, &size);
     MPI_Comm_rank(MPI_COMM_WORLD, &rank);
 
     /* Initialize message buffer */
-    init_buffer(buf);
+    init_buffer(sendbuf);
 
     /* Print data that will be sent */
-    print_buffer(buf);
+    print_buffer(sendbuf);
 
     /* Start timing */
     MPI_Barrier(MPI_COMM_WORLD);
     double t0 = MPI_Wtime();
 
     /* Send everywhere */
-    MPI_Scatter(buf.data(), buf.size() / size, MPI_INT,
-                buf.data(), buf.size() / size, MPI_INT,
+    MPI_Scatter(sendbuf.data(), buf_size/size, MPI_INT,
+                recvbuf.data(), buf_size/size, MPI_INT,
                 0, MPI_COMM_WORLD);
 
     /* End timing */
