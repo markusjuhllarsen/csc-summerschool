@@ -27,7 +27,7 @@ int main(int argc, char *argv[])
     /* Start timing */
     MPI_Barrier(MPI_COMM_WORLD);
     double t0 = MPI_Wtime();
-    block_size = buf_size / size;
+    int block_size = buf_size / size;
     /* Send everywhere */
     if (rank == 0) {
         for (int i = 1; i < size; i++) {
