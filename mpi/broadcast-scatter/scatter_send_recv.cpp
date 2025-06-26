@@ -11,18 +11,17 @@ void print_buffer(std::vector<int> &buffer);
 int main(int argc, char *argv[])
 {
     int size, rank, buf_size=12;
-    std::vector<int> sendbuf(buf_size);
-    std::vector<int> recvbuf(buf_size, -1);
+    std::vector<int> buf(buf_size);
 
     MPI_Init(&argc, &argv);
     MPI_Comm_size(MPI_COMM_WORLD, &size);
     MPI_Comm_rank(MPI_COMM_WORLD, &rank);
 
     /* Initialize message buffer */
-    init_buffer(sendbuf);
+    init_buffer(buf);
 
     /* Print data that will be sent */
-    print_buffer(sendbuf);
+    print_buffer(buf);
 
     /* Start timing */
     MPI_Barrier(MPI_COMM_WORLD);
@@ -31,17 +30,17 @@ int main(int argc, char *argv[])
     /* Send everywhere */
     if (rank == 0) {
         for (int i = 1; i < size; i++) {
-            MPI_Send(sendbuf.data() + (i-1) * block_size, block_size, MPI_INT, i, 0, MPI_COMM_WORLD);
+            MPI_Send(buf.data() + i * block_size, block_size, MPI_INT, i, 0, MPI_COMM_WORLD);
         }
     } else {
-        MPI_Recv(recvbuf.data(), block_size, MPI_INT, 0, 0, MPI_COMM_WORLD, MPI_STATUS_IGNORE);
+        MPI_Recv(buf.data(), block_size, MPI_INT, 0, 0, MPI_COMM_WORLD, MPI_STATUS_IGNORE);
     }
 
     /* End timing */
     double t1 = MPI_Wtime();
 
     /* Print data that was received */
-    print_buffer(recvbuf);
+    print_buffer(buf);
     if (rank == 0) {
         printf("Time elapsed: %6.8f s\n", t1 - t0);
     }
