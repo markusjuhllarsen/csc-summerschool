@@ -21,7 +21,7 @@ void write_field(const Field& field, const int iter, const ParallelData parallel
     auto tmp_mat = Matrix<double> (field.nx, field.ny);
     for (int i = 0; i < field.nx; i++)
         for (int j = 0; j < field.ny; j++)
-            temp_data(i, j) = field(i + 1, j + 1);
+            tmp_mat(i, j) = field(i + 1, j + 1);
     auto full_data = Matrix<double>(height, width);
 
     MPI_Gather(tmp_mat.data(), field.nx * field.ny, MPI_DOUBLE,
