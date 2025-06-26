@@ -7,8 +7,8 @@ void Field::setup(int nx_in, int ny_in, ParallelData parallel)
 {
     nx_full = nx_in;
     ny_full = ny_in;
-    printf("%d", nx_full);
-    printf("%d", parallel.size);
+    printf("%d\n", nx_full);
+    printf("%d\n", parallel.size);
 
     nx = nx_full / parallel.size;
     if (nx * parallel.size != nx_full) {
