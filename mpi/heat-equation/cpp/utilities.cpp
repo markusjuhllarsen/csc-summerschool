@@ -16,16 +16,7 @@ double average(const Field& field, const ParallelData parallel)
        }
      }
 
-     if (0 == parallel.rank) {
-         average = local_average;
-         for (int p=1; p < parallel.size; p++) {
-             MPI_Recv(&local_average, 1, MPI_DOUBLE, p, 22, MPI_COMM_WORLD, MPI_STATUS_IGNORE);
-             average += local_average;
-         }
-         average /= (field.nx_full * field.ny_full);
-     } else {
-         MPI_Send(&local_average, 1, MPI_DOUBLE, 0, 22, MPI_COMM_WORLD);
-     }
-
+     MPI_Allreduce(&local_average, &average, 1, MPI_DOUBLE, MPI_SUM, 0, MPI_COMM_WORLD);
+     average /= (field.nx_full * field.ny_full);
      return average;
 }
