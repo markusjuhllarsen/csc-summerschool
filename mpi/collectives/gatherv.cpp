@@ -32,7 +32,7 @@ int main(int argc, char *argv[])
 
     int counts[NTASKS] = { 1, 1, 2, 4 };
     int offsets[NTASKS] = { 0, 1, 2, 4 };
-    MPI_Gatherv(sendbuf.data(), counts, MPI_INT, recvbuf.data(), offsets, MPI_INT, 1, MPI_COMM_WORLD);
+    MPI_Gatherv(sendbuf.data(), counts[rank], MPI_INT, recvbuf.data(), counts, offsets, MPI_INT, 1, MPI_COMM_WORLD);
 
     /* Print data that was received */
     print_buffers(recvbuf);
