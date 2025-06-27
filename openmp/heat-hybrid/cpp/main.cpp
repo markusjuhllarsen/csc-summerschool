@@ -48,7 +48,6 @@ int main(int argc, char **argv)
     }
     }
 
-
     const double a = 0.5;     // Diffusion constant 
     auto dx2 = current.dx * current.dx;
     auto dy2 = current.dy * current.dy;
@@ -92,6 +91,7 @@ int main(int argc, char **argv)
     }
     }
 
+    } // end parallel region
     // Output the final field
     write_field(previous, nsteps, parallelization);
 
