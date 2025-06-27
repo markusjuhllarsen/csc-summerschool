@@ -4,7 +4,9 @@
 #include <iostream>
 #include <iomanip>
 #include <mpi.h>
+#ifdef _OPENMP
 #include <omp.h>
+#endif
 
 #include "heat.hpp"
 
@@ -13,7 +15,11 @@ int main(int argc, char **argv)
 
     int provided;
 
-    MPI_Init_thread(&argc, &argv, MPI_THREAD_FUNNELED, &provided);
+    MPI_Init_thread(&argc, &argv, MPI_THREAD_SERIALIZED, &provided);
+    if (provided < MPI_THREAD_SERIALIZED) {
+        printf("MPI_THREAD_SERIALIZED thread support level required\n");
+        MPI_Abort(MPI_COMM_WORLD, 5);
+    }
 
     const int image_interval = 100;    // Image output interval
 
@@ -47,7 +53,7 @@ int main(int argc, char **argv)
         std::cout << std::fixed << std::setprecision(6);
         std::cout << "Average temperature at start: " << average_temp << std::endl;
     }
-    }
+    } // end omp single
 
     const double a = 0.5;     // Diffusion constant 
     auto dx2 = current.dx * current.dx;
@@ -71,7 +77,7 @@ int main(int argc, char **argv)
         // Swap current field so that it will be used
         // as previous for next iteration step
         std::swap(current, previous);
-        }
+        } // end omp single
     }
 
     auto stop_clock = MPI_Wtime();
@@ -90,7 +96,7 @@ int main(int argc, char **argv)
                       << 59.281239 << std::endl;
         }
     }
-    }
+    } // end omp master
 
     } // end parallel region
     // Output the final field
