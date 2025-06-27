@@ -25,6 +25,7 @@ int main(int argc, char **argv)
     Field current, previous;    // Current and previous temperature fields
 
     #ifdef _OPENMP
+    #pragma omp parallel
     num_threads = omp_get_num_threads();
     #endif
 
