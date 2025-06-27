@@ -4,6 +4,7 @@
 #include <iostream>
 #include <iomanip>
 #include <mpi.h>
+#include <omp.h>
 
 #include "heat.hpp"
 
