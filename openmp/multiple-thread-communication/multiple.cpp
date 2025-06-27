@@ -17,7 +17,7 @@ int main(int argc, char *argv[])
     MPI_Comm_size(MPI_COMM_WORLD, &ntasks);
     MPI_Comm_rank(MPI_COMM_WORLD, &rank);
 
-    #pragma omp parallel private(thread_id, rank)
+    #pragma omp parallel private(thread_id, nthreads)
     {
         thread_id = omp_get_thread_num();
         nthreads = omp_get_num_threads();
