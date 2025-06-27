@@ -128,4 +128,3 @@ int main(int argc, char **argv)
     free(iter_counts);
     return 0;
 }
-
