@@ -10,7 +10,9 @@
 int main(int argc, char **argv)
 {
 
-    MPI_Init(&argc, &argv);
+    int provided;
+
+    MPI_Init_thread(&argc, &argv, MPI_THREAD_FUNNELED, &provided);
 
     const int image_interval = 100;    // Image output interval
 
@@ -18,8 +20,20 @@ int main(int argc, char **argv)
 
     int nsteps;                 // Number of time steps
     Field current, previous;    // Current and previous temperature fields
+    
+    int nthreads = 1;
+    
+    #pragma omp parallel
+    {
+    
+    #ifdef _OPENMP
+    #pragma omp master
+    nthreads = omp_get_num_threads();
+    #endif
     initialize(argc, argv, current, previous, nsteps, parallelization);
-
+    
+    #pragma omp single
+    {
     // Output the initial field
     write_field(current, 0, parallelization);
 
@@ -31,6 +45,7 @@ int main(int argc, char **argv)
         std::cout << "Number of MPI tasks: " << parallelization.size << std::endl;
         std::cout << std::fixed << std::setprecision(6);
         std::cout << "Average temperature at start: " << average_temp << std::endl;
+    }
     }
 
 
@@ -45,20 +60,26 @@ int main(int argc, char **argv)
 
     // Time evolve
     for (int iter = 1; iter <= nsteps; iter++) {
+        #pragma omp single
         exchange(previous, parallelization);
         evolve(current, previous, a, dt);
+        #pragma omp single
+        {
         if (iter % image_interval == 0) {
             write_field(current, iter, parallelization);
         }
         // Swap current field so that it will be used
         // as previous for next iteration step
         std::swap(current, previous);
+        }
     }
 
     auto stop_clock = MPI_Wtime();
 
+    #pragma omp master
+    {
     // Average temperature for reference 
-    average_temp = average(previous, parallelization);
+    auto average_temp = average(previous, parallelization);
 
     if (0 == parallelization.rank) {
         std::cout << "Iteration took " << (stop_clock - start_clock)
@@ -68,6 +89,7 @@ int main(int argc, char **argv)
             std::cout << "Reference value with default arguments: " 
                       << 59.281239 << std::endl;
         }
+    }
     }
 
     // Output the final field
