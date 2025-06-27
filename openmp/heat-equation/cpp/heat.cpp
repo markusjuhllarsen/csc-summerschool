@@ -33,13 +33,14 @@ void Field::generate() {
     }
 
     // Boundary conditions
+    #pragma omp parallel for
     for (int i = 0; i < nx + 2; i++) {
         // Left
         temperature(i, 0) = 20.0;
         // Right
         temperature(i, ny + 1) = 70.0;
     }
-
+    #pragma omp parallel for
     for (int j = 0; j < ny + 2; j++) {
         // Top
         temperature(0, j) = 85.0;
