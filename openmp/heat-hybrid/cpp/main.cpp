@@ -13,6 +13,11 @@
 int main(int argc, char **argv)
 {
 
+    const int image_interval = 100;    // Image output interval
+
+    int nsteps;                 // Number of time steps
+    Field current, previous;    // Current and previous temperature fields
+
     int provided;
 
     MPI_Init_thread(&argc, &argv, MPI_THREAD_SERIALIZED, &provided);
@@ -21,12 +26,7 @@ int main(int argc, char **argv)
         MPI_Abort(MPI_COMM_WORLD, 5);
     }
 
-    const int image_interval = 100;    // Image output interval
-
     ParallelData parallelization; // Parallelization info
-
-    int nsteps;                 // Number of time steps
-    Field current, previous;    // Current and previous temperature fields
     
     int nthreads = 1;
     
