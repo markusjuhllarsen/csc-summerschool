@@ -29,10 +29,10 @@ int main(int argc, char **argv)
     num_threads = omp_get_num_threads();
     #endif
     
-    #pragma omp single
-    {
     initialize(argc, argv, current, previous, nsteps);
 
+    #pragma omp single
+    {
     // Output the initial field
     write_field(current, 0);
 
@@ -71,7 +71,6 @@ int main(int argc, char **argv)
     
     #pragma omp master
     {
- 
     // Average temperature for reference 
     auto average_temp = average(previous);
     std::cout << "Iteration took " << (stop_clock - start_clock)
