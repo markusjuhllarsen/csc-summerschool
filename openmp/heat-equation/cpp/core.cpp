@@ -6,7 +6,6 @@
 // Update the temperature values using five-point stencil */
 void evolve(Field& curr, const Field& prev, const double a, const double dt)
 {
-
   // Compilers do not necessarily optimize division to multiplication, so make it explicit
   auto inv_dx2 = 1.0 / (prev.dx * prev.dx);
   auto inv_dy2 = 1.0 / (prev.dy * prev.dy);
