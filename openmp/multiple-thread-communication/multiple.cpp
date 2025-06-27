@@ -17,16 +17,20 @@ int main(int argc, char *argv[])
     MPI_Comm_size(MPI_COMM_WORLD, &ntasks);
     MPI_Comm_rank(MPI_COMM_WORLD, &rank);
 
+
     #pragma omp parallel private(thread_id, nthreads)
     {
         thread_id = omp_get_thread_num();
         nthreads = omp_get_num_threads();
         if (rank == 0) {
-            MPI_Send(&thread_id, 1, MPI_INT, 0, 0, MPI_COMM_WORLD);
+            for (int i = 1; i < ntasks; i++) {
+                // Send thread ID to all other ranks
+                MPI_Send(&thread_id, 1, MPI_INT, i, 0, MPI_COMM_WORLD);
+            }
         } else {
             int msg;
             MPI_Recv(&msg, 1, MPI_INT, 0, 0, MPI_COMM_WORLD, MPI_STATUS_IGNORE);
-            printf("Rank %d, Thread %d received message from Rank 0: %d\n", rank, thread_id, msg);
+            printf("Rank %d thread %d received %d\n", rank, thread_id, msg);
         }
     }
 
