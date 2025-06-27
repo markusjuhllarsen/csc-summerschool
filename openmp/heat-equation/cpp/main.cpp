@@ -23,9 +23,11 @@ int main(int argc, char **argv)
     int num_threads = 1;
 
     Field current, previous;    // Current and previous temperature fields
+
 #pragma omp parallel
 {
     #ifdef _OPENMP
+    #pragma omp master
     num_threads = omp_get_num_threads();
     #endif
     
