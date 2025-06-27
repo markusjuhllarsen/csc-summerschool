@@ -26,17 +26,18 @@ int main()
 
     #pragma omp parallel shared(norm, iter)
     {
-
-    // TODO start: add necessary execution controls (single, master, barrier)
-    //             in this parallel region
-
     // Read b
+    // Only one thread needs to read the file
+    // as b is shared
+    #pragma omp single
     read_file(b);
 
     int nx = b.nx;
     int ny = b.ny;
 
-    // Allocate space also for  boundaries
+    // Allocate space also for boundaries
+    // Only one thread needs to allocate memory
+    #pragma omp single
     u.allocate(nx + 2, ny + 2);
 
     // Initialize
@@ -45,10 +46,16 @@ int main()
         for (int j=0; j < ny + 2; j++) 
             u(i, j) = 0.0;
 
+    #pragma omp single
+    // unew is shared, so only one thread needs to initialize it
     unew = u;
 
     // Jacobi iteration
     do {
+        // Without barrier here, norm may be set to zero before some threads have 
+        // finished the check at the "while"
+        #pragma omp barrier
+        #pragma omp single // Only one thread needs to set norm to zero
         norm = 0.0;
 
         #pragma omp for reduction(+:norm)
@@ -60,16 +67,17 @@ int main()
                                     b(i - 1, j - 1));
                 norm += (unew(i, j) - u(i, j)) * (unew(i, j) - u(i, j));
             } 
-
+            
+        #pragma omp single
         std::swap(unew, u);
-
-        if (iter % 500 == 0)
-            std::cout << "Iteration " << iter << " norm: " << norm << std::endl;
-        iter++;    
+        #pragma omp master
+        {
+            if (iter % 500 == 0)
+                std::cout << "Iteration " << iter << " norm: " << norm << std::endl;
+            iter++;
+        }
 
     } while (norm > eps);
-
-    // TODO end
 
     } // end parallel
 
