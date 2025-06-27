@@ -24,9 +24,9 @@ int main(int argc, char **argv)
 
     Field current, previous;    // Current and previous temperature fields
 
-    // TODO: determine number of threads
-
-    // TODO end
+    #ifdef _OPENMP
+    num_threads = omp_get_num_threads();
+    #endif
 
     initialize(argc, argv, current, previous, nsteps);
 
