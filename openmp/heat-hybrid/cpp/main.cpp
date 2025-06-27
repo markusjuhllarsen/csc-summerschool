@@ -34,9 +34,10 @@ int main(int argc, char **argv)
     {
     
     #ifdef _OPENMP
-    #pragma omp master
-    nthreads = omp_get_num_threads();
+        #pragma omp master
+        nthreads = omp_get_num_threads();
     #endif
+    
     initialize(argc, argv, current, previous, nsteps, parallelization);
     
     #pragma omp single
