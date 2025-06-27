@@ -23,20 +23,33 @@ int main(int argc, char *argv[])
 
 #pragma omp parallel private(tid, nthreads)
 {
+    int msg = -1;
     nthreads = omp_get_num_threads();
     tid = omp_get_thread_num();
+    MPI_Comm thread_comm;
+
+    // Create communicators connecting same thread ids across all processes
+#pragma omp for ordered schedule(static, 1)
+    for (int i = 0; i < nthreads; i++) {
+#pragma omp ordered
+        {
+            MPI_Comm_dup(MPI_COMM_WORLD, &thread_comm);
+        }
+    }
 
     if (rank == 0) {
+        msg = tid;
+
 #pragma omp single
         {
             printf("%d threads in master rank\n", nthreads);
         }
-        for (int i = 1; i < ntasks; i++) {
-            MPI_Send(&tid, 1, MPI_INT, i, tid, MPI_COMM_WORLD);
-        }
-    } else {
-        int msg;
-        MPI_Recv(&msg, 1, MPI_INT, 0, tid, MPI_COMM_WORLD, MPI_STATUS_IGNORE);
+    }
+
+    // Broadcast using thread-specific communicators
+    MPI_Bcast(&msg, 1, MPI_INT, 0, thread_comm);
+
+    if (rank > 0) {
         printf("Rank %d thread %d received %d\n", rank, tid, msg);
     }
 }
