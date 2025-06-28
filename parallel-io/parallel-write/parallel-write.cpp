@@ -62,7 +62,7 @@ void collective_write(const std::vector<int>& localData, const char* filename) {
 
     MPI_Offset writeOffset = (MPI_Offset) (rank * localData.size() * sizeof(int));
 
-    MPI_File_write_at_all(file, offset, localData.data(), localData.size(), MPI_INT, MPI_STATUS_IGNORE);
+    MPI_File_write_at_all(file, writeOffset, localData.data(), localData.size(), MPI_INT, MPI_STATUS_IGNORE);
 
     MPI_File_close(&file);
     }
