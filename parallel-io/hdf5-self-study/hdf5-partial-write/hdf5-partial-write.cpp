@@ -50,11 +50,16 @@ void partialWrite2D(const hid_t fileId) {
         data[i] = (int) (i+1);
     }
 
-    // TODO: write the 'data' array to the dataset as instructed in the exercise README.md.
-    // The resulting dataset should have its top-left and top-right block replaced with 'data' contents
+    // The resulting dataset should have its top-left and bottom-right block replaced with 'data' contents
     hsize_t memspaceDims[2] = { rows, cols };
     hid_t memspace = H5Screate_simple(2, memspaceDims, NULL);
 
+    // Top left block of the dataset to write to
+    // We will write a 2x3 block starting from the top-left corner of the dataset
+    // The offset is the starting point in the dataset where we will write the block
+    // The stride is how many elements to skip in each dimension when writing the block
+    // The block is the size of the block to write, and count is how many blocks
+    // we want to write (in this case, just one block)
     hsize_t offset[2] = { 0, 0 }; // Start writing at the top-left corner
     hsize_t stride[2] = { 1, 1 }; // Write every element in the block
     hsize_t block[2] = { rows, cols }; // Block size to write
@@ -67,6 +72,18 @@ void partialWrite2D(const hid_t fileId) {
         offset, 
         stride, 
         count, 
+        block    // TODO: write the 'data' array to the dataset as instructed in the exercise README.md.
+
+    );
+
+    // Offset to bottom-right corner of the dataset
+    hsize_t offset[2] = {4,3};
+    status = H5Sselect_hyperslab(
+        dataspace,
+        H5S_SELECT_SET,
+        offset,
+        stride,
+        count,
         block
     );
 
