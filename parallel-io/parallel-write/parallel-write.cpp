@@ -122,7 +122,7 @@ int main(int argc, char **argv) {
             averageSingleWriteTime += time;
         }
         averageSingleWriteTime /= repeatCount;
-        printf("[%s] elapsed time: %f seconds\n", filename.c_str(), averageSingleWriteTime);
+        printf("Average elapsed time (single): %f seconds\n", averageSingleWriteTime);
     }
 
     // ########## Collective write
@@ -150,7 +150,7 @@ int main(int argc, char **argv) {
             averageCollectiveWriteTime += time;
         }
         averageCollectiveWriteTime /= repeatCount;
-        printf("[%s] elapsed time: %f seconds\n", filename.c_str(), averageCollectiveWriteTime);
+        printf("Average elapsed time (collective): %f seconds\n", averageCollectiveWriteTime);
     }
 
 
