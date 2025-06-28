@@ -112,7 +112,7 @@ int main(int argc, char **argv) {
         
         if (rank == 0 && doDebugPrint) {
             printf("[%s] file contents:\n", filename.c_str());
-            //debug_read_file(filename.c_str());
+            debug_read_file(filename.c_str());
         }
     }
 
@@ -140,7 +140,7 @@ int main(int argc, char **argv) {
 
         if (rank == 0 && doDebugPrint) {
             printf("[%s] file contents:\n", filename.c_str());
-            //debug_read_file(filename.c_str());
+            debug_read_file(filename.c_str());
         }
     }
 
