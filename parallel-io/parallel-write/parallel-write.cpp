@@ -95,25 +95,46 @@ int main(int argc, char **argv) {
         fflush(stdout);
     }
 
+    const int repeatCount = 5; // How many times to repeat the write operations
 
     // ########## "Spokesperson" write
     std::string filename = "single_writer.dat";
 
-    single_writer(localData, filename.c_str());
+    for (int i = 0; i < repeatCount; ++i) {
+        // Start time measurement
+        double startTime = MPI_Wtime();
 
-    if (rank == 0 && doDebugPrint) {
-        printf("[%s] file contents:\n", filename.c_str());
-        debug_read_file(filename.c_str());
+        single_writer(localData, filename.c_str());
+        double endTime = MPI_Wtime();
+        double elapsedTime = endTime - startTime;
+        if (rank == 0) {
+            printf("[%s] elapsed time: %f seconds\n", filename.c_str(), elapsedTime);
+        }
+        if (rank == 0 && doDebugPrint) {
+            printf("[%s] file contents:\n", filename.c_str());
+            debug_read_file(filename.c_str());
+        }
     }
+
+    
 
     // ########## Collective write
     filename = "collective_write.dat";
 
-    collective_write(localData, filename.c_str());
+    for (int i = 0; i < repeatCount; ++i) {
+        // Start time measurement
+        double startTime = MPI_Wtime();
 
-    if (rank == 0 && doDebugPrint) {
-        printf("[%s] file contents:\n", filename.c_str());
-        debug_read_file(filename.c_str());
+        collective_write(localData, filename.c_str());
+        double endTime = MPI_Wtime();
+        double elapsedTime = endTime - startTime;
+        if (rank == 0) {
+            printf("[%s] elapsed time: %f seconds\n", filename.c_str(), elapsedTime);
+        }
+        if (rank == 0 && doDebugPrint) {
+            printf("[%s] file contents:\n", filename.c_str());
+            debug_read_file(filename.c_str());
+        }
     }
 
     //~
