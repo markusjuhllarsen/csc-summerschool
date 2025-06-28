@@ -5,6 +5,7 @@
 #include <string.h>
 #include <assert.h>
 #include <mpi.h>
+#include <hdf5.h>
 
 #include "heat.h"
 #include "../common/pngwriter.h"
@@ -141,9 +142,11 @@ void read_field(field *temperature1, field *temperature2, char *filename,
 void write_restart(field *temperature, parallel_data *parallel, int iter)
 {
     // TODO: create a file called CHECKPOINT (defined in heat.h)
+    hid_t file_id = H5Fcreate(CHECKPOINT, H5F_ACC_TRUNC, H5P_DEFAULT, H5P_DEFAULT);
 
     // TODO: define a dataspace with the dimensions of the full
     //   temperature field and create the dataset.
+    hsize_t full_size[2] = {temperature->nx_full, temperature->ny_full};
 
     // TODO: use hyperslabs to define the part of the file that
     //   each rank writes.
@@ -152,6 +155,7 @@ void write_restart(field *temperature, parallel_data *parallel, int iter)
     //   domain for each rank and user hyperslabs to select
     //   the part containing the data (not including the ghost
     //   cells).
+    
 
     // TODO: write data using a collective write operation.
 
