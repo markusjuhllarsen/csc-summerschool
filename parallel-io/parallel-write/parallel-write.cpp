@@ -100,6 +100,7 @@ int main(int argc, char **argv) {
     // ########## "Spokesperson" write
     std::string filename = "single_writer.dat";
 
+    std::vector<double> singleWriteTimes(repeatCount);
     for (int i = 0; i < repeatCount; ++i) {
         // Start time measurement
         double startTime = MPI_Wtime();
@@ -107,20 +108,27 @@ int main(int argc, char **argv) {
         single_writer(localData, filename.c_str());
         double endTime = MPI_Wtime();
         double elapsedTime = endTime - startTime;
-        if (rank == 0) {
-            printf("[%s] elapsed time: %f seconds\n", filename.c_str(), elapsedTime);
-        }
+        singleWriteTimes[i] = elapsedTime;
+        
         if (rank == 0 && doDebugPrint) {
             printf("[%s] file contents:\n", filename.c_str());
-            debug_read_file(filename.c_str());
+            //debug_read_file(filename.c_str());
         }
     }
 
-    
+    if (rank == 0) {
+        double averageSingleWriteTime = 0.0;
+        for (double time : singleWriteTimes) {
+            averageSingleWriteTime += time;
+        }
+        averageSingleWriteTime /= repeatCount;
+        printf("[%s] elapsed time: %f seconds\n", filename.c_str(), averageSingleWriteTime);
+    }
 
     // ########## Collective write
     filename = "collective_write.dat";
 
+    std::vector<double> collectiveWriteTimes(repeatCount);
     for (int i = 0; i < repeatCount; ++i) {
         // Start time measurement
         double startTime = MPI_Wtime();
@@ -128,16 +136,23 @@ int main(int argc, char **argv) {
         collective_write(localData, filename.c_str());
         double endTime = MPI_Wtime();
         double elapsedTime = endTime - startTime;
-        if (rank == 0) {
-            printf("[%s] elapsed time: %f seconds\n", filename.c_str(), elapsedTime);
-        }
+        collectiveWriteTimes[i] = elapsedTime;
+
         if (rank == 0 && doDebugPrint) {
             printf("[%s] file contents:\n", filename.c_str());
-            debug_read_file(filename.c_str());
+            //debug_read_file(filename.c_str());
         }
     }
 
-    //~
+    if (rank == 0) {
+        double averageCollectiveWriteTime = 0.0;
+        for (double time : collectiveWriteTimes) {
+            averageCollectiveWriteTime += time;
+        }
+        averageCollectiveWriteTime /= repeatCount;
+        printf("[%s] elapsed time: %f seconds\n", filename.c_str(), averageCollectiveWriteTime);
+    }
+
 
     MPI_Finalize();
     return 0;
