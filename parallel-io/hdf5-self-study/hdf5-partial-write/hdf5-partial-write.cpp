@@ -77,11 +77,11 @@ void partialWrite2D(const hid_t fileId) {
     );
 
     // Offset to bottom-right corner of the dataset
-    hsize_t offset[2] = {4,3};
+    hsize_t offset_bottom_right[2] = {4,3};
     status = H5Sselect_hyperslab(
         dataspace,
         H5S_SELECT_SET,
-        offset,
+        offset_bottom_right,
         stride,
         count,
         block
