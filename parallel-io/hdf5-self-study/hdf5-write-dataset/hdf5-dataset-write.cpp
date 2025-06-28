@@ -115,8 +115,10 @@ void writeAttribute(const char* attributeName, double attributeValue, hid_t file
     // Remember to close any HDF5 resources you open here
     hid_t attributespace_id = H5Screate(H5S_SCALAR); // Create a scalar dataspace for the attributes
     
+    hid_t dataset_id = H5Dopen(fileId, datasetName, H5P_DEFAULT);
+
     hid_t attribute_id = H5Acreate(
-        datasetName, 
+        dataset_id, 
         attributeName, 
         H5T_NATIVE_DOUBLE,
         attributespace_id, 
@@ -155,7 +157,6 @@ int main(int argc, char** argv) {
             "my_datasets.h5",  // File name
             H5F_ACC_TRUNC , // Override existing file if it exists
             H5P_DEFAULT,     // Default file creation properties
-            H5P_DEFAULT      // Default file access properties
         );
 
         // Write some datasets to the file.
