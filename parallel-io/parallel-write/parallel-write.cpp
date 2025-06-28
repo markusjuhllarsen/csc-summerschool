@@ -24,9 +24,9 @@ void single_writer(const std::vector<int>& localData, const char* filename) {
 
     // You can assume that 'localData' has same length in all MPI processes:
     const size_t numElementsPerRank = localData.size();
-
+    
     // "Spokesperson strategy": Send all data to rank 0 and write it from there.
-    const std::vector<int> receiveBuffer(
+    std::vector<int> receiveBuffer(
         (rank == 0) ? ntasks * numElementsPerRank : 0
     );
 
@@ -36,6 +36,10 @@ void single_writer(const std::vector<int>& localData, const char* filename) {
 
     if (rank == 0) {
         FILE *fileptr = fopen(filename, "wb");
+        if (fileptr == NULL) {
+            fprintf(stderr, "Failed to open file %s for writing!\n", filename);
+            MPI_Abort(MPI_COMM_WORLD, 1);
+        }
         fwrite(receiveBuffer.data(), sizeof(int), receiveBuffer.size(), fileptr);
         fclose(fileptr);
     }
