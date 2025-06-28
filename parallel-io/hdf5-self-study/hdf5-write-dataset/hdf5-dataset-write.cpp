@@ -153,10 +153,11 @@ int main(int argc, char** argv) {
         }
 
         // ### PART 1 ###
-        hid_t fileId = H5Fopen(
+        hid_t fileId = H5Fcreate(
             "my_datasets.h5",  // File name
             H5F_ACC_TRUNC , // Override existing file if it exists
             H5P_DEFAULT,     // Default file creation properties
+            H5P_DEFAULT      // Default file access properties
         );
 
         // Write some datasets to the file.
