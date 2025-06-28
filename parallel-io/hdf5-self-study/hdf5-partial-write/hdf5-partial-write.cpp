@@ -20,14 +20,22 @@ void partialWrite1D(const hid_t fileId) {
     }
 
     // TODO: Write the 'data' array into the dataset. Ensure only the first 8 elements of the dataset are written to.
-
-    // TODO: cleanup of HDF5 objects created in this function
+    herr_t status = H5Dwrite(
+        dataset, 
+        H5T_NATIVE_INT, 
+        dataspace, 
+        dataspace, 
+        H5P_DEFAULT, 
+        data
+    );
+    H5Dclose(dataset);
+    H5Sclose(dataspace);
 }
 
 void partialWrite2D(const hid_t fileId) {
 
     // Create a 2D dataspace and a corresponding dataset
-    const hsize_t dims[3] = { 6, 6 };
+    const hsize_t dims[2] = { 6, 6 };
     hid_t dataspace = H5Screate_simple(2, dims, NULL);
 
     hid_t dataset = H5Dcreate(fileId, "MyDataset2D", H5T_NATIVE_INT, dataspace, H5P_DEFAULT, H5P_DEFAULT, H5P_DEFAULT);
@@ -44,9 +52,31 @@ void partialWrite2D(const hid_t fileId) {
 
     // TODO: write the 'data' array to the dataset as instructed in the exercise README.md.
     // The resulting dataset should have its top-left and top-right block replaced with 'data' contents
+    hsize_t memspaceDims[2] = { rows, cols };
+    hid_t memspace = H5Screate_simple(2, memspaceDims, NULL);
 
+    hsize_t offset[2] = { 0, 0 }; // Start writing at the top-left corner
+    hsize_t stride[2] = { 1, 1 }; // Write every element in the block
+    hsize_t block[2] = { rows, cols }; // Block size to write
+    hsize_t count[2] = { 1, 1 }; // Write a 2x3 block
 
-    // TODO: cleanup
+    // Select the hyperslab in the file
+    herr_t status = H5Sselect_hyperslab(
+        dataspace, 
+        H5S_SELECT_SET, 
+        offset, 
+        stride, 
+        count, 
+        block
+    );
+
+    // Write the data
+    status = H5Dwrite(dataset, H5T_NATIVE_INT, memspace, dataspace, H5P_DEFAULT, data);
+
+    // Close resources
+    H5Sclose(memspace);
+    H5Dclose(dataset);
+    H5Sclose(dataspace);
 }
 
 int main(int argc, char** argv) {
