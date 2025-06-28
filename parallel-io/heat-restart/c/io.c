@@ -142,11 +142,31 @@ void read_field(field *temperature1, field *temperature2, char *filename,
 void write_restart(field *temperature, parallel_data *parallel, int iter)
 {
     // TODO: create a file called CHECKPOINT (defined in heat.h)
-    hid_t file_id = H5Fcreate(CHECKPOINT, H5F_ACC_TRUNC, H5P_DEFAULT, H5P_DEFAULT);
+    hid_t file_id = H5Fcreate(
+        CHECKPOINT, 
+        H5F_ACC_TRUNC, 
+        H5P_DEFAULT, 
+        H5P_DEFAULT
+    );
 
     // TODO: define a dataspace with the dimensions of the full
     //   temperature field and create the dataset.
     hsize_t full_size[2] = {temperature->nx_full, temperature->ny_full};
+    
+    hid_t dataspace_id = H5Screate_simple(
+        2, 
+        full_size, 
+        NULL
+    );
+    hid_t dataset_id = H5Dcreate(
+        file_id, 
+        "temperature", 
+        H5T_NATIVE_DOUBLE, 
+        dataspace_id,
+        H5P_DEFAULT, 
+        H5P_DEFAULT, 
+        H5P_DEFAULT
+    );
 
     // TODO: use hyperslabs to define the part of the file that
     //   each rank writes.
@@ -155,15 +175,39 @@ void write_restart(field *temperature, parallel_data *parallel, int iter)
     //   domain for each rank and user hyperslabs to select
     //   the part containing the data (not including the ghost
     //   cells).
-    
+    hsize_t local_size[2] = {temperature->nx, temperature->ny};
+    hid_t local_dataspace_id = H5Screate_simple(
+        2, 
+        local_size, 
+        NULL
+    );
+
 
     // TODO: write data using a collective write operation.
 
     // TODO: write the current iteration number as an
     //   attribute to the dataset containing the temperature
     //   field.
+    hid_t attr_dataspace_id = H5Screate(H5S_SCALAR);
+    
+    hid_t attr_id = H5Acreate(
+        dataset_id, 
+        "iteration", 
+        H5T_NATIVE_INT, 
+        attr_dataspace_id,
+        H5P_DEFAULT, 
+        H5P_DEFAULT, 
+        H5P_DEFAULT
+    );
+    herr_t status = H5Awrite(attr_id, H5T_NATIVE_INT, &iter);
 
     // TODO: close all handles.
+    H5Aclose(attr_id);
+    H5Sclose(attr_dataspace_id);
+    H5Dclose(dataset_id);
+    H5Sclose(local_dataspace_id);
+    H5Sclose(dataspace_id);
+    H5Fclose(file_id);
 }
 
 /* Read an HDF restart checkpoint file that contains the current
