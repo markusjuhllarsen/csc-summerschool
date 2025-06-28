@@ -72,9 +72,11 @@ void partialWrite2D(const hid_t fileId) {
         offset, 
         stride, 
         count, 
-        block    // TODO: write the 'data' array to the dataset as instructed in the exercise README.md.
+        block
 
     );
+
+    status = H5Dwrite(dataset, H5T_NATIVE_INT, memspace, dataspace, H5P_DEFAULT, data);
 
     // Offset to bottom-right corner of the dataset
     hsize_t offset_bottom_right[2] = {4,3};
