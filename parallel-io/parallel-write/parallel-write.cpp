@@ -18,18 +18,50 @@ void debug_read_file(const char* filename);
 
 void single_writer(const std::vector<int>& localData, const char* filename) {
     // Gets called from all MPI ranks. 'localData' contains different data on each rank.
-    // TODO: Gather contents of 'localData' to one MPI process and write it all to file 'filename' ("spokesperson" strategy).
-    // The output should be ordered such that data from rank 0 comes first, then rank 1, and so on
+    int rank, ntasks;
+    MPI_Comm_rank(MPI_COMM_WORLD, &rank);
+    MPI_Comm_size(MPI_COMM_WORLD, &ntasks);
 
     // You can assume that 'localData' has same length in all MPI processes:
     const size_t numElementsPerRank = localData.size();
 
+    // "Spokesperson strategy": Send all data to rank 0 and write it from there.
+    const std::vector<int> receiveBuffer(
+        (rank == 0) ? ntasks * numElementsPerRank : 0
+    );
+
+    MPI_Gather(localData.data(), numElementsPerRank, MPI_INT,
+               receiveBuffer.data(), numElementsPerRank, MPI_INT,
+               0, MPI_COMM_WORLD);
+
+    if (rank == 0) {
+        FILE *fileptr = fopen(filename, "wb");
+        fwrite(receiveBuffer.data(), sizeof(int), receiveBuffer.size(), fileptr);
+        fclose(fileptr);
+    }
 }
 
 void collective_write(const std::vector<int>& localData, const char* filename) {
-    // TODO: Like single_writer(), but implement a parallel write using MPI_File_write_at_all()
+    MPI_File file;
+    MPI_File_open(MPI_COMM_WORLD, filename, MPI_MODE_CREATE | MPI_MODE_WRONLY, MPI_INFO_NULL, &file);
 
-}
+    int ntasks;
+    MPI_Comm_size(MPI_COMM_WORLD, &ntasks);
+
+    // We assume that each rank has the same amount of data
+    MPI_Offset fileSize = localData.size() * sizeof(int) * ntasks;
+    MPI_File_set_size(file, fileSize);
+
+    // Rank is the offset of where to write in the file.
+    int rank;
+    MPI_Comm_rank(MPI_COMM_WORLD, &rank); 
+
+    MPI_Offset writeOffset = (MPI_Offset) (rank * localData.size() * sizeof(int));
+
+    MPI_File_write_at_all(file, offset, localData.data(), localData.size(), MPI_INT, MPI_STATUS_IGNORE);
+
+    MPI_File_close(&file);
+    }
 
 int main(int argc, char **argv) {
 
