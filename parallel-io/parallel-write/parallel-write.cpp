@@ -123,6 +123,10 @@ int main(int argc, char **argv) {
         }
         averageSingleWriteTime /= repeatCount;
         printf("Average elapsed time (single): %f seconds\n", averageSingleWriteTime);
+        for (size_t i = 0; i < singleWriteTimes.size(); ++i) {
+            printf("%f ", singleWriteTimes[i]);
+        }
+        printf("\n");
     }
 
     // ########## Collective write
@@ -151,6 +155,10 @@ int main(int argc, char **argv) {
         }
         averageCollectiveWriteTime /= repeatCount;
         printf("Average elapsed time (collective): %f seconds\n", averageCollectiveWriteTime);
+        for (size_t i = 0; i < collectiveWriteTimes.size(); ++i) {
+            printf("%f ", collectiveWriteTimes[i]);
+        }
+        printf("\n");
     }
 
 
