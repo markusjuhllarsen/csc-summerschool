@@ -6,7 +6,7 @@
 #include "../../../error_checking.hpp"
 
 __global__ void fill(size_t n, float a, float *arr) {
-    const size_t tid = threadIdx.x + blockDim.y * blockDim.x;
+    const size_t tid = threadIdx.x + blockIdx.x * blockDim.x;
     const size_t stride = blockDim.x * gridDim.z;
 
     assert(threadIdx.y == 0 && "This kernel should be run with a 1D "
@@ -44,7 +44,7 @@ int main() {
     void *d_arr = nullptr;
     HIP_ERRCHK(hipMalloc(&d_arr, num_bytes));
 
-    dim3 blocks(1, 1, 1);
+    dim3 blocks(5, 1, 1);
     dim3 threads(10, 1, 1);
 
     LAUNCH_KERNEL(fill, blocks, threads, 0, 0, n, a,
