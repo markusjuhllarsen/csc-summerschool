@@ -44,7 +44,7 @@ int main() {
     void *d_arr = nullptr;
     HIP_ERRCHK(hipMalloc(&d_arr, num_bytes));
 
-    dim3 blocks(10, 1, 1);
+    dim3 blocks(1, 1, 1);
     dim3 threads(10, 1, 1);
 
     LAUNCH_KERNEL(fill, blocks, threads, 0, 0, n, a,
