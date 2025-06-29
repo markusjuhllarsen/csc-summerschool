@@ -18,7 +18,7 @@ int main(int argc, char **argv) {
     // - run it
     // - fix any errors with the launch parameters
     // - repeat
-    LAUNCH_KERNEL(hello, dim3(1, 1, 1), dim3(1024, 1024, 1), 65536, 0);
+    LAUNCH_KERNEL(hello, dim3(1, 1, 1), dim3(20, 20, 1), 65536, 0);
     [[maybe_unused]] const auto result = hipDeviceSynchronize();
 
     return 0;
