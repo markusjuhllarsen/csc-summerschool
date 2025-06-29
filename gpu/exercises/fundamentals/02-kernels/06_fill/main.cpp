@@ -10,9 +10,11 @@ __global__ void fill(float *arr, float a, size_t num_values) {
     // Consult earlier exercises where we launched kernels and the lecture
     // slides for help
     const size_t tid = threadIdx.x + blockIdx.x * blockDim.x;
-    if (tid < num_values) {
-        arr[tid] = a;
-    }
+    // Ensure we do not write out of bounds, as threadid can exceed num_values
+    //  due to the grid and block configuration (e.g. too many blocks)
+    //if (tid < num_values) {
+    arr[tid] = a;
+    //}
 }
 
 int main() {
