@@ -79,14 +79,58 @@ void launch_kernel(const char *kernel_name, const char *file, int32_t line,
 
     // TODO: Do the same for all dimensions of grid size.
     // Hint: hipDeviceAttribute_t::hipDeviceAttributeMaxGridDimX
-    // Compare againts the input argument 'dim3 blocks'
+    // Compare against the input argument 'dim3 blocks'
     // Similarly to blocks, also the grid sizes must be greater than zero in all
     // dimensions
+    const int max_grid_dim_x = get_device_attribute(
+        hipDeviceAttribute_t::hipDeviceAttributeMaxGridDimX);
+    if (blocks.x <= 0 || max_grid_dim_x < blocks.x) {
+        std::fprintf(stderr,
+                     "Grid size out of bounds in dimension X: %d > %d, for kernel "
+                     "\"%s\" in %s on line %d\n",
+                     blocks.x, max_grid_dim_x,
+                     kernel_name, file, line);
+        exit(EXIT_FAILURE);
+    }
+
+    const int max_grid_dim_y = get_device_attribute(
+        hipDeviceAttribute_t::hipDeviceAttributeMaxGridDimY);
+    if (blocks.y <= 0 || max_grid_dim_y < blocks.y) {
+        std::fprintf(stderr,
+                     "Grid size out of bounds in dimension Y: %d > %d, for kernel "
+                     "\"%s\" in %s on line %d\n",
+                     blocks.y, max_grid_dim_y,
+                     kernel_name, file, line);
+        exit(EXIT_FAILURE);
+    }
+
+    const int max_grid_dim_z = get_device_attribute(
+        hipDeviceAttribute_t::hipDeviceAttributeMaxGridDimZ);
+    if (blocks.z <= 0 || max_grid_dim_z < blocks.z) {
+        std::fprintf(stderr,
+                     "Grid size out of bounds in dimension Z: %d > %d, for kernel "
+                     "\"%s\" in %s on line %d\n",
+                     blocks.z, max_grid_dim_z,
+                     kernel_name, file, line);
+        exit(EXIT_FAILURE);
+    }
 
     // TODO: Finally make sure the total number of threads per block is less
     // than the maximum: i.e.
     // hipDeviceAttribute_t::hipDeviceAttributeMaxThreadsPerBlock >=
     // threads.x * threads.y * threads.z
+    const int max_threads_per_block = get_device_attribute(
+        hipDeviceAttribute_t::hipDeviceAttributeMaxThreadsPerBlock);
+    const int total_threads_per_block = threads.x * threads.y * threads.z;
+    if (total_threads_per_block <= 0 ||
+        max_threads_per_block < total_threads_per_block) {
+        std::fprintf(stderr,
+                     "Total threads per block out of bounds: %d > %d, for kernel "
+                     "\"%s\" in %s on line %d\n",
+                     total_threads_per_block, max_threads_per_block,
+                     kernel_name, file, line);
+        exit(EXIT_FAILURE);
+    }
 
     // Reset the error variable to success.
     result = hipGetLastError();
