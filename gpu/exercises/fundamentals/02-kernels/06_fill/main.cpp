@@ -18,7 +18,7 @@ __global__ void fill(float *arr, float a, size_t num_values) {
 }
 
 int main() {
-    static constexpr size_t num_values = 1000000;
+    static constexpr size_t num_values = 1000001;
     static constexpr size_t num_bytes = sizeof(float) * num_values;
     static constexpr float a = 3.4f;
 
