@@ -7,7 +7,7 @@
 
 __global__ void fill(size_t n, float a, float *arr) {
     const size_t tid = threadIdx.x + blockIdx.x * blockDim.x;
-    const size_t stride = blockDim.x * gridDim.z;
+    const size_t stride = blockDim.x * gridDim.x;
 
     assert(threadIdx.y == 0 && "This kernel should be run with a 1D "
                                "configuration, change the launch parameters");
