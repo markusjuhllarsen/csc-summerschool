@@ -11,18 +11,17 @@ __global__ void fill(float *arr, float a, size_t num_values) {
     // slides for help
     const size_t tid = threadIdx.x + blockIdx.x * blockDim.x;
     // Ensure we do not write out of bounds, as threadid can exceed num_values
-    //  due to the grid and block configuration (e.g. too many blocks)
-    //if (tid < num_values) {
-    arr[tid] = a;
-    //}
+    // if more threads are launched than needed.
+    if (tid < num_values) {
+        arr[tid] = a;
+    }
 }
 
 int main() {
-    static constexpr size_t num_values = 1000001;
+    static constexpr size_t num_values = 1000000;
     static constexpr size_t num_bytes = sizeof(float) * num_values;
     static constexpr float a = 3.4f;
 
-    float *d_arr = nullptr;
     // TODO: Allocate memory on the GPU
     HIP_ERRCHK(hipMalloc(&d_arr, num_bytes));
 
