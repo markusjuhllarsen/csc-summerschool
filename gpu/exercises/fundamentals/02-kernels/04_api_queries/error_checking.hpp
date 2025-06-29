@@ -47,12 +47,35 @@ void launch_kernel(const char *kernel_name, const char *file, int32_t line,
     const int max_threads_x = get_device_attribute(
         hipDeviceAttribute_t::hipDeviceAttributeMaxBlockDimX);
     if (threads.x <= 0 || max_threads_x < threads.x) {
-        // TODO
-        // The given threads.x is not within the correct limits.
-        // Print error message and exit.
-        // See above how it's done for the shared memory check.
+        std::fprintf(stderr,
+                     "Thread count out of bounds in dimension X: %d > %d, for kernel "
+                     "\"%s\" in %s on line %d\n",
+                     threads.x, max_threads_x,
+                     kernel_name, file, line);
+        exit(EXIT_FAILURE);
     }
-    // TODO: Do the same for y and z dimensions.
+
+    const int max_threads_y = get_device_attribute(
+        hipDeviceAttribute_t::hipDeviceAttributeMaxBlockDimY);
+    if (threads.y <= 0 || max_threads_y < threads.y) {
+        std::fprintf(stderr,
+                     "Thread count out of bounds in dimension Y: %d > %d, for kernel "
+                     "\"%s\" in %s on line %d\n",
+                     threads.y, max_threads_y,
+                     kernel_name, file, line);
+        exit(EXIT_FAILURE);
+    }
+
+    const int max_threads_z = get_device_attribute(
+        hipDeviceAttribute_t::hipDeviceAttributeMaxBlockDimZ);
+    if (threads.z <= 0 || max_threads_z < threads.z) {
+        std::fprintf(stderr,
+                     "Thread count out of bounds in dimension Z: %d > %d, for kernel "
+                     "\"%s\" in %s on line %d\n",
+                     threads.z, max_threads_z,
+                     kernel_name, file, line);
+        exit(EXIT_FAILURE);
+    }
 
     // TODO: Do the same for all dimensions of grid size.
     // Hint: hipDeviceAttribute_t::hipDeviceAttributeMaxGridDimX
