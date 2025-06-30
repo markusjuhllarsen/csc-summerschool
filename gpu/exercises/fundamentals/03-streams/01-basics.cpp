@@ -62,9 +62,9 @@ int main() {
   // Synchronize the stream to ensure all operations are complete
   // before checking the results and freeing the device memory
   HIP_ERRCHK(hipStreamSynchronize(stream));
-  printf("error: %f", max_error(a, N));
-  HIP_ERRCHK(hipFree(d_a));  
-  
+  printf("error: %f\n", max_error(a, N));
+  HIP_ERRCHK(hipFree(d_a));
+
   free(a);
   HIP_ERRCHK(hipStreamDestroy(stream));
 
