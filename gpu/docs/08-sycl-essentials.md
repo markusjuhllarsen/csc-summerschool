@@ -358,7 +358,7 @@ cgh.parallel_for(nd_range<1>(range<1>(N),range<1>(64)), [=](nd_item<1> item){
   q.memcpy(d_y, y.data(), N * sizeof(int)).wait(); 
 
   q.submit([&](handler& cgh) {
-    cgh.parallel_for(range<1>(N), [=](sid<1> id) {
+    cgh.parallel_for(range<1>(N), [=](id<1> id) {
       d_y[id] += 1;
     });
   }).wait();
@@ -404,7 +404,7 @@ cgh.parallel_for(nd_range<1>(range<1>(N),range<1>(64)), [=](nd_item<1> item){
         - dependencies and order need to be set in other ways
     - **in-order**: 
         - `queue q{property::queue::in_order()};`
-        - creates a linear task graph
+        - creates a linear execution task graph
         - a task/kernel  will start execution only when the preceding is completed
         - no concurrent execution
 
@@ -618,4 +618,5 @@ auto exception_handler = [] (exception_list exceptions) {
  - Portability, Productivity, Performance
  - **queues**, **command groups**
  - **buffers and accessors API**, **unified shared memory**
+ - **kernels** are executed as **lambdas**, **range** or **nd-range**
  - various ways to enforce dependencies, basic profiling, error handling
