@@ -55,8 +55,19 @@ int main() {
   kernel_a<<<gridsize, blocksize,0,stream_a>>>(d_a, N);
   HIP_ERRCHK(hipGetLastError());
 
+  HIP_ERRCHK(hipStreamWaitEvent(stream_b, event_b, 0));
+
+  // Create an event to measure kernel_b execution time
+  hipEvent_t start_event_b, end_event_b;
+  float t_kernel_b_ms;
+
+  HIP_ERRCHK(hipEventCreate(&start_event_b));
+  HIP_ERRCHK(hipEventCreate(&end_event_b));
+  HIP_ERRCHK(hipEventRecord(start_event_b, stream_b));
   kernel_b<<<gridsize, blocksize,0,stream_b>>>(d_b, N);
   HIP_ERRCHK(hipGetLastError());
+  HIP_ERRCHK(hipEventRecord(end_event_b, stream_b));
+  HIP_ERRCHK(hipEventElapsedTime(&t_kernel_b_ms, start_event_b, end_event_b));
 
   kernel_c<<<gridsize, blocksize,0,stream_c>>>(d_c, N);
   HIP_ERRCHK(hipGetLastError());
@@ -70,7 +81,7 @@ int main() {
   for (int i = 0; i < 20; ++i) printf("%f ", a[i]);
   printf("\n");
 
-  HIP_ERRCHK(hipStreamSynchronize(stream_b));
+  HIP_ERRCHK(hipEventSynchronize(event_b));
   for (int i = 0; i < 20; ++i) printf("%f ", b[i]);
   printf("\n");
 
