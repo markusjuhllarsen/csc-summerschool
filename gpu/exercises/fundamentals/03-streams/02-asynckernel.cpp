@@ -25,35 +25,42 @@ int main() {
   float *b; float *d_b;
   float *c; float *d_c;
 
+  hipStream_t stream[3];
+  for (int i = 0; i<3; ++i) 
+    HIP_ERRCHK(hipStreamCreate(&stream[i]));
+
   // Host allocations
   a = (float*) malloc(N_bytes);
   b = (float*) malloc(N_bytes);
   c = (float*) malloc(N_bytes);
 
   // Device allocations
-  HIP_ERRCHK(hipMalloc((void**)&d_a, N_bytes));
-  HIP_ERRCHK(hipMalloc((void**)&d_b, N_bytes));
-  HIP_ERRCHK(hipMalloc((void**)&d_c, N_bytes));
-  
+  HIP_ERRCHK(hipMallocAsync((void**)&d_a, N_bytes, stream[0]));
+  HIP_ERRCHK(hipMallocAsync((void**)&d_b, N_bytes, stream[1]));
+  HIP_ERRCHK(hipMallocAsync((void**)&d_c, N_bytes, stream[2]));
+
   // warmup
   kernel_c<<<gridsize, blocksize>>>(d_a, N);
   HIP_ERRCHK(hipMemcpy(a, d_a, N_bytes/100, hipMemcpyDefault));
   HIP_ERRCHK(hipDeviceSynchronize());
 
   // Execute kernels in sequence
-  kernel_a<<<gridsize, blocksize,0,0>>>(d_a, N);
+  kernel_a<<<gridsize, blocksize,0,stream[0]>>>(d_a, N);
   HIP_ERRCHK(hipGetLastError());
 
-  kernel_b<<<gridsize, blocksize,0,0>>>(d_b, N);
+  kernel_b<<<gridsize, blocksize,0,stream[1]>>>(d_b, N);
   HIP_ERRCHK(hipGetLastError());
 
-  kernel_c<<<gridsize, blocksize,0,0>>>(d_c, N);
+  kernel_c<<<gridsize, blocksize,0,stream[2]>>>(d_c, N);
   HIP_ERRCHK(hipGetLastError());
 
   // Copy results back
-  HIP_ERRCHK(hipMemcpy(a, d_a, N_bytes, hipMemcpyDefault));
-  HIP_ERRCHK(hipMemcpy(b, d_b, N_bytes, hipMemcpyDefault));
-  HIP_ERRCHK(hipMemcpy(c, d_c, N_bytes, hipMemcpyDefault));
+  HIP_ERRCHK(hipStreamSynchronize(stream[0]));
+  HIP_ERRCHK(hipMemcpyAsync(a, d_a, N_bytes, hipMemcpyDefault, stream[0]));
+  HIP_ERRCHK(hipStreamSynchronize(stream[1]));
+  HIP_ERRCHK(hipMemcpyAsync(b, d_b, N_bytes, hipMemcpyDefault, stream[1]));
+  HIP_ERRCHK(hipStreamSynchronize(stream[2]));
+  HIP_ERRCHK(hipMemcpyAsync(c, d_c, N_bytes, hipMemcpyDefault, stream[2]));
 
   for (int i = 0; i < 20; ++i) printf("%f ", a[i]);
   printf("\n");
@@ -70,5 +77,9 @@ int main() {
   free(a);
   free(b);
   free(c);
+
+  HIP_ERRCHK(hipStreamDestroy(stream[0]));
+  HIP_ERRCHK(hipStreamDestroy(stream[1]));
+  HIP_ERRCHK(hipStreamDestroy(stream[2]));
 
 }
