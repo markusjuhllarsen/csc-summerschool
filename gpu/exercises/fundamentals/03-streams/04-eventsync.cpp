@@ -59,7 +59,6 @@ int main() {
 
   // Create an event to measure kernel_b execution time
   hipEvent_t start_event_b, end_event_b;
-  float t_kernel_b_ms;
 
   HIP_ERRCHK(hipEventCreate(&start_event_b));
   HIP_ERRCHK(hipEventCreate(&end_event_b));
