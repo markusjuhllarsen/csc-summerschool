@@ -46,10 +46,10 @@ int main() {
   HIP_ERRCHK(hipMalloc((void**)&d_b, N_bytes));
   HIP_ERRCHK(hipMalloc((void**)&d_c, N_bytes));
   
-  hipEvent_t end_a, start_a, end_b, start_b, end_c, start_c;
-  hipEvent_t* all_events[6] = {&start_a, &end_a, &start_b, &end_b, &start_c, &end_c};
+  hipEvent_t end_a, start_b, end_b, end_c;
+  hipEvent_t* all_events[4] = {&end_a, &start_b, &end_b, &end_c};
 
-  for (int i = 0; i < 6; ++i) HIP_ERRCHK(hipEventCreate(all_events[i]));
+  for (int i = 0; i < 4; ++i) HIP_ERRCHK(hipEventCreate(all_events[i]));
 
   // warmup
   kernel_c<<<gridsize, blocksize>>>(d_a, N);
@@ -57,7 +57,6 @@ int main() {
   HIP_ERRCHK(hipDeviceSynchronize());
 
   // Execute kernels in sequence
-  HIP_ERRCHK(hipEventRecord(start_a, stream_a));
   kernel_a<<<gridsize, blocksize,0,stream_a>>>(d_a, N);
   HIP_ERRCHK(hipGetLastError());
   HIP_ERRCHK(hipEventRecord(end_a, stream_a));
@@ -69,7 +68,6 @@ int main() {
   HIP_ERRCHK(hipGetLastError());
   HIP_ERRCHK(hipEventRecord(end_b, stream_b));
 
-  HIP_ERRCHK(hipEventRecord(start_c, stream_c));
   kernel_c<<<gridsize, blocksize,0,stream_c>>>(d_c, N);
   HIP_ERRCHK(hipGetLastError());
   HIP_ERRCHK(hipEventRecord(end_c, stream_c));
@@ -103,7 +101,7 @@ int main() {
   HIP_ERRCHK(hipStreamDestroy(stream_b));
   HIP_ERRCHK(hipStreamDestroy(stream_c));
 
-  for (int i = 0; i < 6; ++i) {
+  for (int i = 0; i < 4; ++i) {
     HIP_ERRCHK(hipEventDestroy(*all_events[i]));
   }
 
