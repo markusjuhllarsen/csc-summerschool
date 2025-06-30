@@ -36,9 +36,9 @@ int main() {
   hipStream_t stream_b; 
   hipStream_t stream_c; 
 
-  hipStreamCreate(&stream_a);
-  hipStreamCreate(&stream_b);
-  hipStreamCreate(&stream_c);
+  HIP_ERRCHK(hipStreamCreate(&stream_a));
+  HIP_ERRCHK(hipStreamCreate(&stream_b));
+  HIP_ERRCHK(hipStreamCreate(&stream_c));
 
   // Device allocations
   HIP_ERRCHK(hipMalloc((void**)&d_a, N_bytes));
@@ -61,16 +61,19 @@ int main() {
   HIP_ERRCHK(hipGetLastError());
 
   // Copy results back
-  HIP_ERRCHK(hipMemcpy(a, d_a, N_bytes, hipMemcpyDefault));
-  HIP_ERRCHK(hipMemcpy(b, d_b, N_bytes, hipMemcpyDefault));
-  HIP_ERRCHK(hipMemcpy(c, d_c, N_bytes, hipMemcpyDefault));
+  HIP_ERRCHK(hipMemcpyAsync(a, d_a, N_bytes, hipMemcpyDefault, stream_a));
+  HIP_ERRCHK(hipMemcpyAsync(b, d_b, N_bytes, hipMemcpyDefault, stream_b));
+  HIP_ERRCHK(hipMemcpyAsync(c, d_c, N_bytes, hipMemcpyDefault, stream_c));
 
+  HIP_ERRCHK(hipStreamSynchronize(stream_a));
   for (int i = 0; i < 20; ++i) printf("%f ", a[i]);
   printf("\n");
 
+  HIP_ERRCHK(hipStreamSynchronize(stream_b));
   for (int i = 0; i < 20; ++i) printf("%f ", b[i]);
   printf("\n");
 
+  HIP_ERRCHK(hipStreamSynchronize(stream_c));
   for (int i = 0; i < 20; ++i) printf("%f ", c[i]);
   printf("\n");
 
