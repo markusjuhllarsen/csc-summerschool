@@ -46,6 +46,7 @@ int main() {
   float *a;
 
   // TODO: allocate hip managed memory for pointer a
+  HIP_ERRCHK(hipMallocManaged((void**)&a, N_bytes));
 
   memset(a, 0, N_bytes);
 
@@ -53,9 +54,10 @@ int main() {
   HIP_ERRCHK(hipGetLastError());
   
   // TODO: Synchronize
+  HIP_ERRCHK(hipStreamSynchronize(0));
 
   printf("error: %f\n", max_error(a, N));
 
-
   // TODO: Free memory
+  HIP_ERRCHK(hipFree(a));
 }
