@@ -67,7 +67,6 @@ int main() {
   kernel_b<<<gridsize, blocksize,0,stream_b>>>(d_b, N);
   HIP_ERRCHK(hipGetLastError());
   HIP_ERRCHK(hipEventRecord(end_event_b, stream_b));
-  HIP_ERRCHK(hipEventElapsedTime(&t_kernel_b_ms, start_event_b, end_event_b));
 
   kernel_c<<<gridsize, blocksize,0,stream_c>>>(d_c, N);
   HIP_ERRCHK(hipGetLastError());
@@ -81,7 +80,7 @@ int main() {
   for (int i = 0; i < 20; ++i) printf("%f ", a[i]);
   printf("\n");
 
-  HIP_ERRCHK(hipEventSynchronize(event_b));
+  HIP_ERRCHK(hipEventSynchronize(end_event_b));
   for (int i = 0; i < 20; ++i) printf("%f ", b[i]);
   printf("\n");
 
@@ -89,6 +88,7 @@ int main() {
   for (int i = 0; i < 20; ++i) printf("%f ", c[i]);
   printf("\n");
 
+  HIP_ERRCHK(hipEventElapsedTime(&t_kernel_b_ms, start_event_b, end_event_b));
   printf("kernel_b time: %f us\n", 1000*t_kernel_b_ms);
 
   // Free device and host memory allocations
@@ -99,6 +99,9 @@ int main() {
   HIP_ERRCHK(hipStreamDestroy(stream_a));
   HIP_ERRCHK(hipStreamDestroy(stream_b));
   HIP_ERRCHK(hipStreamDestroy(stream_c));
+
+  HIP_ERRCHK(hipEventDestroy(start_event_b));
+  HIP_ERRCHK(hipEventDestroy(end_event_b));
 
   free(a);
   free(b);
