@@ -28,9 +28,13 @@ int main() {
   float *c; float *d_c;
 
   // Host allocations
-  a = (float*) malloc(N_bytes);
-  b = (float*) malloc(N_bytes);
-  c = (float*) malloc(N_bytes);
+  // Aynchronous memory copies require pinned memory
+  HIP_ERRCHK(hipHostMalloc((void**)&d_a, N_bytes));
+  HIP_ERRCHK(hipHostMalloc((void**)&d_b, N_bytes));
+  HIP_ERRCHK(hipHostMalloc((void**)&d_c, N_bytes));
+  //a = (float*) malloc(N_bytes);
+  //b = (float*) malloc(N_bytes);
+  //c = (float*) malloc(N_bytes);
 
   hipStream_t stream_a; 
   hipStream_t stream_b; 
@@ -52,19 +56,18 @@ int main() {
 
   // Execute kernels in sequence
   kernel_a<<<gridsize, blocksize,0,stream_a>>>(d_a, N);
+  HIP_ERRCHK(hipMemcpyAsync(a, d_a, N_bytes, hipMemcpyDefault, stream_a));
   HIP_ERRCHK(hipGetLastError());
 
   kernel_b<<<gridsize, blocksize,0,stream_b>>>(d_b, N);
+  HIP_ERRCHK(hipMemcpyAsync(b, d_b, N_bytes, hipMemcpyDefault, stream_b));
   HIP_ERRCHK(hipGetLastError());
 
   kernel_c<<<gridsize, blocksize,0,stream_c>>>(d_c, N);
+  HIP_ERRCHK(hipMemcpyAsync(c, d_c, N_bytes, hipMemcpyDefault, stream_c));
   HIP_ERRCHK(hipGetLastError());
 
-  // Copy results back
-  HIP_ERRCHK(hipMemcpyAsync(a, d_a, N_bytes, hipMemcpyDefault, stream_a));
-  HIP_ERRCHK(hipMemcpyAsync(b, d_b, N_bytes, hipMemcpyDefault, stream_b));
-  HIP_ERRCHK(hipMemcpyAsync(c, d_c, N_bytes, hipMemcpyDefault, stream_c));
-
+  // Wait for resutls before printing
   HIP_ERRCHK(hipStreamSynchronize(stream_a));
   for (int i = 0; i < 20; ++i) printf("%f ", a[i]);
   printf("\n");
@@ -87,8 +90,8 @@ int main() {
   HIP_ERRCHK(hipStreamDestroy(stream_b));
   HIP_ERRCHK(hipStreamDestroy(stream_c));
 
-  free(a);
-  free(b);
-  free(c);
+  HIP_ERRCHK(hipHostFree(a));
+  HIP_ERRCHK(hipHostFree(b));
+  HIP_ERRCHK(hipHostFree(c));
 
 }
