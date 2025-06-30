@@ -46,45 +46,48 @@ int main() {
   HIP_ERRCHK(hipMalloc((void**)&d_b, N_bytes));
   HIP_ERRCHK(hipMalloc((void**)&d_c, N_bytes));
   
+  hipEvent_t end_a, start_a, end_b, start_b, end_c, start_c;
+  hipEvent_t* all_events[6] = {&start_a, &end_a, &start_b, &end_b, &start_c, &end_c};
+
+  for (int i = 0; i < 6; ++i) HIP_ERRCHK(hipEventCreate(all_events[i]));
+
   // warmup
   kernel_c<<<gridsize, blocksize>>>(d_a, N);
   HIP_ERRCHK(hipMemcpy(a, d_a, N_bytes/100, hipMemcpyDefault));
   HIP_ERRCHK(hipDeviceSynchronize());
 
   // Execute kernels in sequence
+  HIP_ERRCHK(hipEventRecord(start_a, stream_a));
   kernel_a<<<gridsize, blocksize,0,stream_a>>>(d_a, N);
   HIP_ERRCHK(hipGetLastError());
+  HIP_ERRCHK(hipEventRecord(end_a, stream_a));
 
-  // Create an event to measure kernel_b execution time
-  hipEvent_t start_event_b, end_event_b;
+  HIP_ERRCHK(hipStreamWaitEvent(stream_b, end_a, 0));
 
-  HIP_ERRCHK(hipEventCreate(&start_event_b));
-  HIP_ERRCHK(hipEventCreate(&end_event_b));
-
-  HIP_ERRCHK(hipStreamWaitEvent(stream_b, start_event_b, 0));
-
-  HIP_ERRCHK(hipEventRecord(start_event_b, stream_b));
+  HIP_ERRCHK(hipEventRecord(start_b, stream_b));
   kernel_b<<<gridsize, blocksize,0,stream_b>>>(d_b, N);
   HIP_ERRCHK(hipGetLastError());
-  HIP_ERRCHK(hipEventRecord(end_event_b, stream_b));
+  HIP_ERRCHK(hipEventRecord(end_b, stream_b));
 
+  HIP_ERRCHK(hipEventRecord(start_c, stream_c));
   kernel_c<<<gridsize, blocksize,0,stream_c>>>(d_c, N);
   HIP_ERRCHK(hipGetLastError());
+  HIP_ERRCHK(hipEventRecord(end_c, stream_c));
 
   // Copy results back
   HIP_ERRCHK(hipMemcpyAsync(a, d_a, N_bytes, hipMemcpyDefault, stream_a));
   HIP_ERRCHK(hipMemcpyAsync(b, d_b, N_bytes, hipMemcpyDefault, stream_b));
   HIP_ERRCHK(hipMemcpyAsync(c, d_c, N_bytes, hipMemcpyDefault, stream_c));
 
-  HIP_ERRCHK(hipStreamSynchronize(stream_a));
+  HIP_ERRCHK(hipEventSynchronize(end_a));
   for (int i = 0; i < 20; ++i) printf("%f ", a[i]);
   printf("\n");
 
-  HIP_ERRCHK(hipEventSynchronize(end_event_b));
+  HIP_ERRCHK(hipEventSynchronize(end_b));
   for (int i = 0; i < 20; ++i) printf("%f ", b[i]);
   printf("\n");
 
-  HIP_ERRCHK(hipStreamSynchronize(stream_c));
+  HIP_ERRCHK(hipEventSynchronize(end_c));
   for (int i = 0; i < 20; ++i) printf("%f ", c[i]);
   printf("\n");
 
@@ -100,8 +103,9 @@ int main() {
   HIP_ERRCHK(hipStreamDestroy(stream_b));
   HIP_ERRCHK(hipStreamDestroy(stream_c));
 
-  HIP_ERRCHK(hipEventDestroy(start_event_b));
-  HIP_ERRCHK(hipEventDestroy(end_event_b));
+  for (int i = 0; i < 6; ++i) {
+    HIP_ERRCHK(hipEventDestroy(*all_events[i]));
+  }
 
   free(a);
   free(b);
