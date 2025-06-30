@@ -6,2410 +6,2410 @@
 ,{"args":{"name":"GPU2"},"ph":"M","pid":8,"name":"process_name","sort_index":4}
 ,{"args":{"name":"GPU3"},"ph":"M","pid":9,"name":"process_name","sort_index":5}
 ,{"args":{"name":"GPU4"},"ph":"M","pid":10,"name":"process_name","sort_index":6}
-,{"ph":"X","name":"CopyHostToDevice","pid":"1","tid":"0","ts":"1049968556029","dur":"2408",
+,{"ph":"X","name":"CopyHostToDevice","pid":"1","tid":"0","ts":"1050401181967","dur":"2405",
   "args":{
-    "BeginNs":"1049968556029103",
-    "EndNs":"1049968558437776",
+    "BeginNs":"1050401181967883",
+    "EndNs":"1050401184373355",
     "dev-id":"4",
     "queue-id":"4",
     "Name":"CopyHostToDevice",
-    "pid":"18217",
-    "tid":"18217",
+    "pid":"21040",
+    "tid":"21040",
     "stream-id":"0",
     "Data":"",
-    "DurationNs":"2408673"
+    "DurationNs":"2405472"
   }
 }
-,{"ph":"X","name":"CopyDeviceToHost","pid":"1","tid":"0","ts":"1049989715721","dur":"2686",
+,{"ph":"X","name":"CopyDeviceToHost","pid":"1","tid":"0","ts":"1050401281082","dur":"2685",
   "args":{
-    "BeginNs":"1049989715721046",
-    "EndNs":"1049989718407483",
+    "BeginNs":"1050401281082663",
+    "EndNs":"1050401283768459",
     "dev-id":"4",
     "queue-id":"4",
     "Name":"CopyDeviceToHost",
-    "pid":"18217",
-    "tid":"18217",
+    "pid":"21040",
+    "tid":"21040",
     "stream-id":"0",
     "Data":"",
-    "DurationNs":"2686437"
+    "DurationNs":"2685796"
   }
 }
-,{"ph":"X","name":"CopyHostToDevice","pid":"1","tid":"0","ts":"1049989766694","dur":"2438",
+,{"ph":"X","name":"CopyHostToDevice","pid":"1","tid":"0","ts":"1050401334762","dur":"2443",
   "args":{
-    "BeginNs":"1049989766694868",
-    "EndNs":"1049989769133141",
+    "BeginNs":"1050401334762263",
+    "EndNs":"1050401337205335",
     "dev-id":"4",
     "queue-id":"4",
     "Name":"CopyHostToDevice",
-    "pid":"18217",
-    "tid":"18217",
+    "pid":"21040",
+    "tid":"21040",
     "stream-id":"0",
     "Data":"",
-    "DurationNs":"2438273"
+    "DurationNs":"2443072"
   }
 }
-,{"ph":"X","name":"CopyDeviceToHost","pid":"1","tid":"0","ts":"1050010954199","dur":"2667",
+,{"ph":"X","name":"CopyDeviceToHost","pid":"1","tid":"0","ts":"1050401448463","dur":"2668",
   "args":{
-    "BeginNs":"1050010954199028",
-    "EndNs":"1050010956866905",
+    "BeginNs":"1050401448463458",
+    "EndNs":"1050401451131974",
     "dev-id":"4",
     "queue-id":"4",
     "Name":"CopyDeviceToHost",
-    "pid":"18217",
-    "tid":"18217",
+    "pid":"21040",
+    "tid":"21040",
     "stream-id":"0",
     "Data":"",
-    "DurationNs":"2667877"
+    "DurationNs":"2668516"
   }
 }
-,{"ph":"X","name":"CopyHostToDevice","pid":"1","tid":"3","ts":"1050011029075","dur":"599",
+,{"ph":"X","name":"CopyHostToDevice","pid":"1","tid":"2","ts":"1050401514792","dur":"600",
   "args":{
-    "BeginNs":"1050011029075428",
-    "EndNs":"1050011029675277",
-    "dev-id":"4",
-    "queue-id":"2",
-    "Name":"CopyHostToDevice",
-    "pid":"18217",
-    "tid":"18217",
-    "stream-id":"3",
-    "Data":"",
-    "DurationNs":"599849"
-  }
-}
-,{"ph":"X","name":"CopyDeviceToHost","pid":"1","tid":"3","ts":"1050032121226","dur":"696",
-  "args":{
-    "BeginNs":"1050032121226237",
-    "EndNs":"1050032121922567",
-    "dev-id":"4",
-    "queue-id":"2",
-    "Name":"CopyDeviceToHost",
-    "pid":"18217",
-    "tid":"18217",
-    "stream-id":"3",
-    "Data":"",
-    "DurationNs":"696330"
-  }
-}
-,{"ph":"X","name":"CopyHostToDevice","pid":"1","tid":"1","ts":"1050011014804","dur":"600",
-  "args":{
-    "BeginNs":"1050011014804969",
-    "EndNs":"1050011015405458",
-    "dev-id":"4",
-    "queue-id":"0",
-    "Name":"CopyHostToDevice",
-    "pid":"18217",
-    "tid":"18217",
-    "stream-id":"1",
-    "Data":"",
-    "DurationNs":"600489"
-  }
-}
-,{"ph":"X","name":"CopyDeviceToHost","pid":"1","tid":"1","ts":"1050032196686","dur":"678",
-  "args":{
-    "BeginNs":"1050032196686519",
-    "EndNs":"1050032197365248",
-    "dev-id":"4",
-    "queue-id":"0",
-    "Name":"CopyDeviceToHost",
-    "pid":"18217",
-    "tid":"18217",
-    "stream-id":"1",
-    "Data":"",
-    "DurationNs":"678729"
-  }
-}
-,{"ph":"X","name":"CopyHostToDevice","pid":"1","tid":"4","ts":"1050011030399","dur":"655",
-  "args":{
-    "BeginNs":"1050011030399125",
-    "EndNs":"1050011031054815",
-    "dev-id":"4",
-    "queue-id":"3",
-    "Name":"CopyHostToDevice",
-    "pid":"18217",
-    "tid":"18217",
-    "stream-id":"4",
-    "Data":"",
-    "DurationNs":"655690"
-  }
-}
-,{"ph":"X","name":"CopyDeviceToHost","pid":"1","tid":"4","ts":"1050032156456","dur":"41590",
-  "args":{
-    "BeginNs":"1050032156456677",
-    "EndNs":"1050032198047177",
-    "dev-id":"4",
-    "queue-id":"3",
-    "Name":"CopyDeviceToHost",
-    "pid":"18217",
-    "tid":"18217",
-    "stream-id":"4",
-    "Data":"",
-    "DurationNs":"41590500"
-  }
-}
-,{"ph":"X","name":"CopyHostToDevice","pid":"1","tid":"2","ts":"1050011027945","dur":"601",
-  "args":{
-    "BeginNs":"1050011027945811",
-    "EndNs":"1050011028547580",
+    "BeginNs":"1050401514792726",
+    "EndNs":"1050401515393055",
     "dev-id":"4",
     "queue-id":"1",
     "Name":"CopyHostToDevice",
-    "pid":"18217",
-    "tid":"18217",
+    "pid":"21040",
+    "tid":"21040",
     "stream-id":"2",
     "Data":"",
-    "DurationNs":"601769"
+    "DurationNs":"600329"
   }
 }
-,{"ph":"X","name":"CopyDeviceToHost","pid":"1","tid":"2","ts":"1050032206159","dur":"679",
+,{"ph":"X","name":"CopyDeviceToHost","pid":"1","tid":"2","ts":"1050401608077","dur":"1580",
   "args":{
-    "BeginNs":"1050032206159130",
-    "EndNs":"1050032206838660",
+    "BeginNs":"1050401608077235",
+    "EndNs":"1050401609657256",
     "dev-id":"4",
     "queue-id":"1",
     "Name":"CopyDeviceToHost",
-    "pid":"18217",
-    "tid":"18217",
+    "pid":"21040",
+    "tid":"21040",
     "stream-id":"2",
     "Data":"",
-    "DurationNs":"679530"
+    "DurationNs":"1580021"
   }
 }
-,{"ph":"X","name":"CopyHostToDevice","pid":"1","tid":"1","ts":"1050032263036","dur":"2350",
+,{"ph":"X","name":"CopyHostToDevice","pid":"1","tid":"3","ts":"1050401515934","dur":"600",
   "args":{
-    "BeginNs":"1050032263036595",
-    "EndNs":"1050032265387028",
-    "dev-id":"4",
-    "queue-id":"0",
-    "Name":"CopyHostToDevice",
-    "pid":"18217",
-    "tid":"18217",
-    "stream-id":"1",
-    "Data":"",
-    "DurationNs":"2350433"
-  }
-}
-,{"ph":"X","name":"CopyDeviceToHost","pid":"1","tid":"1","ts":"1050053428581","dur":"680",
-  "args":{
-    "BeginNs":"1050053428581258",
-    "EndNs":"1050053429262067",
-    "dev-id":"4",
-    "queue-id":"0",
-    "Name":"CopyDeviceToHost",
-    "pid":"18217",
-    "tid":"18217",
-    "stream-id":"1",
-    "Data":"",
-    "DurationNs":"680809"
-  }
-}
-,{"ph":"X","name":"CopyHostToDevice","pid":"1","tid":"2","ts":"1050032263064","dur":"2352",
-  "args":{
-    "BeginNs":"1050032263064634",
-    "EndNs":"1050032265417627",
-    "dev-id":"4",
-    "queue-id":"1",
-    "Name":"CopyHostToDevice",
-    "pid":"18217",
-    "tid":"18217",
-    "stream-id":"2",
-    "Data":"",
-    "DurationNs":"2352993"
-  }
-}
-,{"ph":"X","name":"CopyDeviceToHost","pid":"1","tid":"2","ts":"1050053436685","dur":"679",
-  "args":{
-    "BeginNs":"1050053436685850",
-    "EndNs":"1050053437364900",
-    "dev-id":"4",
-    "queue-id":"1",
-    "Name":"CopyDeviceToHost",
-    "pid":"18217",
-    "tid":"18217",
-    "stream-id":"2",
-    "Data":"",
-    "DurationNs":"679050"
-  }
-}
-,{"ph":"X","name":"CopyHostToDevice","pid":"1","tid":"3","ts":"1050032263097","dur":"2089",
-  "args":{
-    "BeginNs":"1050032263097275",
-    "EndNs":"1050032265187224",
+    "BeginNs":"1050401515934243",
+    "EndNs":"1050401516534251",
     "dev-id":"4",
     "queue-id":"2",
     "Name":"CopyHostToDevice",
-    "pid":"18217",
-    "tid":"18217",
+    "pid":"21040",
+    "tid":"21040",
     "stream-id":"3",
     "Data":"",
-    "DurationNs":"2089949"
+    "DurationNs":"600008"
   }
 }
-,{"ph":"X","name":"CopyDeviceToHost","pid":"1","tid":"3","ts":"1050053406458","dur":"31584",
+,{"ph":"X","name":"CopyDeviceToHost","pid":"1","tid":"3","ts":"1050401608077","dur":"1846",
   "args":{
-    "BeginNs":"1050053406458548",
-    "EndNs":"1050053438042989",
+    "BeginNs":"1050401608077075",
+    "EndNs":"1050401609923659",
     "dev-id":"4",
     "queue-id":"2",
     "Name":"CopyDeviceToHost",
-    "pid":"18217",
-    "tid":"18217",
+    "pid":"21040",
+    "tid":"21040",
     "stream-id":"3",
     "Data":"",
-    "DurationNs":"31584441"
+    "DurationNs":"1846584"
   }
 }
-,{"ph":"X","name":"CopyHostToDevice","pid":"1","tid":"4","ts":"1050032263123","dur":"1397",
+,{"ph":"X","name":"CopyHostToDevice","pid":"1","tid":"1","ts":"1050401513857","dur":"601",
   "args":{
-    "BeginNs":"1050032263123035",
-    "EndNs":"1050032264520655",
+    "BeginNs":"1050401513857735",
+    "EndNs":"1050401514458863",
+    "dev-id":"4",
+    "queue-id":"0",
+    "Name":"CopyHostToDevice",
+    "pid":"21040",
+    "tid":"21040",
+    "stream-id":"1",
+    "Data":"",
+    "DurationNs":"601128"
+  }
+}
+,{"ph":"X","name":"CopyDeviceToHost","pid":"1","tid":"1","ts":"1050401608071","dur":"2021",
+  "args":{
+    "BeginNs":"1050401608071475",
+    "EndNs":"1050401610092621",
+    "dev-id":"4",
+    "queue-id":"0",
+    "Name":"CopyDeviceToHost",
+    "pid":"21040",
+    "tid":"21040",
+    "stream-id":"1",
+    "Data":"",
+    "DurationNs":"2021146"
+  }
+}
+,{"ph":"X","name":"CopyHostToDevice","pid":"1","tid":"4","ts":"1050401517275","dur":"662",
+  "args":{
+    "BeginNs":"1050401517275381",
+    "EndNs":"1050401517938110",
     "dev-id":"4",
     "queue-id":"3",
     "Name":"CopyHostToDevice",
-    "pid":"18217",
-    "tid":"18217",
+    "pid":"21040",
+    "tid":"21040",
     "stream-id":"4",
     "Data":"",
-    "DurationNs":"1397620"
+    "DurationNs":"662729"
   }
 }
-,{"ph":"X","name":"CopyDeviceToHost","pid":"1","tid":"4","ts":"1050053347685","dur":"91035",
+,{"ph":"X","name":"CopyDeviceToHost","pid":"1","tid":"4","ts":"1050401608081","dur":"2693",
   "args":{
-    "BeginNs":"1050053347685885",
-    "EndNs":"1050053438721559",
+    "BeginNs":"1050401608081075",
+    "EndNs":"1050401610774710",
     "dev-id":"4",
     "queue-id":"3",
     "Name":"CopyDeviceToHost",
-    "pid":"18217",
-    "tid":"18217",
+    "pid":"21040",
+    "tid":"21040",
     "stream-id":"4",
     "Data":"",
-    "DurationNs":"91035674"
+    "DurationNs":"2693635"
   }
 }
-,{"ph":"X","name":"hipHostMalloc","pid":"2","tid":"18217","ts":"1049967892590","dur":"15916",
+,{"ph":"X","name":"CopyHostToDevice","pid":"1","tid":"1","ts":"1050401673475","dur":"2351",
   "args":{
-    "BeginNs":"1049967892590736",
-    "EndNs":"1049967908506996",
-    "pid":"18217",
-    "tid":"18217",
+    "BeginNs":"1050401673475282",
+    "EndNs":"1050401675826674",
+    "dev-id":"4",
+    "queue-id":"0",
+    "Name":"CopyHostToDevice",
+    "pid":"21040",
+    "tid":"21040",
+    "stream-id":"1",
+    "Data":"",
+    "DurationNs":"2351392"
+  }
+}
+,{"ph":"X","name":"CopyDeviceToHost","pid":"1","tid":"1","ts":"1050401767991","dur":"1357",
+  "args":{
+    "BeginNs":"1050401767991749",
+    "EndNs":"1050401769349047",
+    "dev-id":"4",
+    "queue-id":"0",
+    "Name":"CopyDeviceToHost",
+    "pid":"21040",
+    "tid":"21040",
+    "stream-id":"1",
+    "Data":"",
+    "DurationNs":"1357298"
+  }
+}
+,{"ph":"X","name":"CopyHostToDevice","pid":"1","tid":"2","ts":"1050401673501","dur":"2353",
+  "args":{
+    "BeginNs":"1050401673501361",
+    "EndNs":"1050401675854673",
+    "dev-id":"4",
+    "queue-id":"1",
+    "Name":"CopyHostToDevice",
+    "pid":"21040",
+    "tid":"21040",
+    "stream-id":"2",
+    "Data":"",
+    "DurationNs":"2353312"
+  }
+}
+,{"ph":"X","name":"CopyDeviceToHost","pid":"1","tid":"2","ts":"1050401768007","dur":"1348",
+  "args":{
+    "BeginNs":"1050401768007109",
+    "EndNs":"1050401769355287",
+    "dev-id":"4",
+    "queue-id":"1",
+    "Name":"CopyDeviceToHost",
+    "pid":"21040",
+    "tid":"21040",
+    "stream-id":"2",
+    "Data":"",
+    "DurationNs":"1348178"
+  }
+}
+,{"ph":"X","name":"CopyHostToDevice","pid":"1","tid":"3","ts":"1050401673525","dur":"2088",
+  "args":{
+    "BeginNs":"1050401673525682",
+    "EndNs":"1050401675614190",
+    "dev-id":"4",
+    "queue-id":"2",
+    "Name":"CopyHostToDevice",
+    "pid":"21040",
+    "tid":"21040",
+    "stream-id":"3",
+    "Data":"",
+    "DurationNs":"2088508"
+  }
+}
+,{"ph":"X","name":"CopyDeviceToHost","pid":"1","tid":"3","ts":"1050401767991","dur":"2042",
+  "args":{
+    "BeginNs":"1050401767991109",
+    "EndNs":"1050401770034016",
+    "dev-id":"4",
+    "queue-id":"2",
+    "Name":"CopyDeviceToHost",
+    "pid":"21040",
+    "tid":"21040",
+    "stream-id":"3",
+    "Data":"",
+    "DurationNs":"2042907"
+  }
+}
+,{"ph":"X","name":"CopyHostToDevice","pid":"1","tid":"4","ts":"1050401673550","dur":"1397",
+  "args":{
+    "BeginNs":"1050401673550642",
+    "EndNs":"1050401674948581",
+    "dev-id":"4",
+    "queue-id":"3",
+    "Name":"CopyHostToDevice",
+    "pid":"21040",
+    "tid":"21040",
+    "stream-id":"4",
+    "Data":"",
+    "DurationNs":"1397939"
+  }
+}
+,{"ph":"X","name":"CopyDeviceToHost","pid":"1","tid":"4","ts":"1050401767885","dur":"2828",
+  "args":{
+    "BeginNs":"1050401767885188",
+    "EndNs":"1050401770713385",
+    "dev-id":"4",
+    "queue-id":"3",
+    "Name":"CopyDeviceToHost",
+    "pid":"21040",
+    "tid":"21040",
+    "stream-id":"4",
+    "Data":"",
+    "DurationNs":"2828197"
+  }
+}
+,{"ph":"X","name":"hipHostMalloc","pid":"2","tid":"21040","ts":"1050400507491","dur":"16139",
+  "args":{
+    "BeginNs":"1050400507491869",
+    "EndNs":"1050400523631661",
+    "pid":"21040",
+    "tid":"21040",
     "Name":"hipHostMalloc",
-    "args":"( ptr(0x14fd9be00000) size(67108864) flags(0))",
+    "args":"( ptr(0x147babe00000) size(67108864) flags(0))",
     "Data":"",
-    "DurationNs":"15916260"
+    "DurationNs":"16139792"
   }
 }
-,{"ph":"X","name":"hipMalloc","pid":"2","tid":"18217","ts":"1049967908553","dur":"41",
+,{"ph":"X","name":"hipMalloc","pid":"2","tid":"21040","ts":"1050400523678","dur":"40",
   "args":{
-    "BeginNs":"1049967908553315",
-    "EndNs":"1049967908595046",
-    "pid":"18217",
-    "tid":"18217",
+    "BeginNs":"1050400523678341",
+    "EndNs":"1050400523718499",
+    "pid":"21040",
+    "tid":"21040",
     "Name":"hipMalloc",
-    "args":"( ptr(0x14fd97c00000) size(67108864))",
+    "args":"( ptr(0x147ba7c00000) size(67108864))",
     "Data":"",
-    "DurationNs":"41731"
+    "DurationNs":"40158"
   }
 }
-,{"ph":"X","name":"hipEventCreate","pid":"2","tid":"18217","ts":"1049967908596","dur":"12",
+,{"ph":"X","name":"hipEventCreate","pid":"2","tid":"21040","ts":"1050400523719","dur":"13",
   "args":{
-    "BeginNs":"1049967908596549",
-    "EndNs":"1049967908609174",
-    "pid":"18217",
-    "tid":"18217",
+    "BeginNs":"1050400523719892",
+    "EndNs":"1050400523733788",
+    "pid":"21040",
+    "tid":"21040",
     "Name":"hipEventCreate",
     "args":"( event(0x1d435d5b0))",
     "Data":"",
-    "DurationNs":"12625"
+    "DurationNs":"13896"
   }
 }
-,{"ph":"X","name":"hipEventCreate","pid":"2","tid":"18217","ts":"1049967908612","dur":"1",
+,{"ph":"X","name":"hipEventCreate","pid":"2","tid":"21040","ts":"1050400523736","dur":"1",
   "args":{
-    "BeginNs":"1049967908612330",
-    "EndNs":"1049967908612670",
-    "pid":"18217",
-    "tid":"18217",
+    "BeginNs":"1050400523736864",
+    "EndNs":"1050400523737215",
+    "pid":"21040",
+    "tid":"21040",
     "Name":"hipEventCreate",
     "args":"( event(0x1d435d6e0))",
     "Data":"",
-    "DurationNs":"340"
+    "DurationNs":"351"
   }
 }
-,{"ph":"X","name":"hipEventCreate","pid":"2","tid":"18217","ts":"1049967908612","dur":"1",
+,{"ph":"X","name":"hipEventCreate","pid":"2","tid":"21040","ts":"1050400523737","dur":"1",
   "args":{
-    "BeginNs":"1049967908612881",
-    "EndNs":"1049967908613632",
-    "pid":"18217",
-    "tid":"18217",
+    "BeginNs":"1050400523737446",
+    "EndNs":"1050400523738237",
+    "pid":"21040",
+    "tid":"21040",
     "Name":"hipEventCreate",
     "args":"( event(0x1d4425a20))",
     "Data":"",
-    "DurationNs":"751"
+    "DurationNs":"791"
   }
 }
-,{"ph":"X","name":"hipEventCreate","pid":"2","tid":"18217","ts":"1049967908613","dur":"1",
+,{"ph":"X","name":"hipEventCreate","pid":"2","tid":"21040","ts":"1050400523738","dur":"1",
   "args":{
-    "BeginNs":"1049967908613793",
-    "EndNs":"1049967908613993",
-    "pid":"18217",
-    "tid":"18217",
+    "BeginNs":"1050400523738407",
+    "EndNs":"1050400523738608",
+    "pid":"21040",
+    "tid":"21040",
     "Name":"hipEventCreate",
     "args":"( event(0x1d4425b00))",
     "Data":"",
-    "DurationNs":"200"
+    "DurationNs":"201"
   }
 }
-,{"ph":"X","name":"hipEventCreate","pid":"2","tid":"18217","ts":"1049967908616","dur":"1",
+,{"ph":"X","name":"hipEventCreate","pid":"2","tid":"21040","ts":"1050400523740","dur":"1",
   "args":{
-    "BeginNs":"1049967908616488",
-    "EndNs":"1049967908616748",
-    "pid":"18217",
-    "tid":"18217",
+    "BeginNs":"1050400523740552",
+    "EndNs":"1050400523740942",
+    "pid":"21040",
+    "tid":"21040",
     "Name":"hipEventCreate",
     "args":"( event(0x1d4425be0))",
     "Data":"",
-    "DurationNs":"260"
+    "DurationNs":"390"
   }
 }
-,{"ph":"X","name":"hipEventCreate","pid":"2","tid":"18217","ts":"1049967908616","dur":"1",
+,{"ph":"X","name":"hipEventCreate","pid":"2","tid":"21040","ts":"1050400523741","dur":"1",
   "args":{
-    "BeginNs":"1049967908616909",
-    "EndNs":"1049967908617079",
-    "pid":"18217",
-    "tid":"18217",
+    "BeginNs":"1050400523741113",
+    "EndNs":"1050400523741323",
+    "pid":"21040",
+    "tid":"21040",
     "Name":"hipEventCreate",
     "args":"( event(0x1d4425cc0))",
     "Data":"",
-    "DurationNs":"170"
+    "DurationNs":"210"
   }
 }
-,{"ph":"X","name":"hipEventCreate","pid":"2","tid":"18217","ts":"1049967908617","dur":"1",
+,{"ph":"X","name":"hipEventCreate","pid":"2","tid":"21040","ts":"1050400523741","dur":"1",
   "args":{
-    "BeginNs":"1049967908617239",
-    "EndNs":"1049967908617450",
-    "pid":"18217",
-    "tid":"18217",
+    "BeginNs":"1050400523741483",
+    "EndNs":"1050400523741684",
+    "pid":"21040",
+    "tid":"21040",
     "Name":"hipEventCreate",
     "args":"( event(0x1d4425da0))",
     "Data":"",
-    "DurationNs":"211"
+    "DurationNs":"201"
   }
 }
-,{"ph":"X","name":"hipEventCreate","pid":"2","tid":"18217","ts":"1049967908619","dur":"1",
+,{"ph":"X","name":"hipEventCreate","pid":"2","tid":"21040","ts":"1050400523743","dur":"1",
   "args":{
-    "BeginNs":"1049967908619373",
-    "EndNs":"1049967908619524",
-    "pid":"18217",
-    "tid":"18217",
+    "BeginNs":"1050400523743587",
+    "EndNs":"1050400523743738",
+    "pid":"21040",
+    "tid":"21040",
     "Name":"hipEventCreate",
     "args":"( event(0x1d4425e80))",
     "Data":"",
     "DurationNs":"151"
   }
 }
-,{"ph":"X","name":"hipEventCreate","pid":"2","tid":"18217","ts":"1049967908619","dur":"1",
+,{"ph":"X","name":"hipEventCreate","pid":"2","tid":"21040","ts":"1050400523743","dur":"1",
   "args":{
-    "BeginNs":"1049967908619684",
-    "EndNs":"1049967908619904",
-    "pid":"18217",
-    "tid":"18217",
+    "BeginNs":"1050400523743908",
+    "EndNs":"1050400523744108",
+    "pid":"21040",
+    "tid":"21040",
     "Name":"hipEventCreate",
     "args":"( event(0x1d4425f60))",
     "Data":"",
-    "DurationNs":"220"
+    "DurationNs":"200"
   }
 }
-,{"ph":"X","name":"hipEventCreate","pid":"2","tid":"18217","ts":"1049967908621","dur":"1",
+,{"ph":"X","name":"hipEventCreate","pid":"2","tid":"21040","ts":"1050400523745","dur":"1",
   "args":{
-    "BeginNs":"1049967908621848",
-    "EndNs":"1049967908622129",
-    "pid":"18217",
-    "tid":"18217",
+    "BeginNs":"1050400523745992",
+    "EndNs":"1050400523746333",
+    "pid":"21040",
+    "tid":"21040",
     "Name":"hipEventCreate",
     "args":"( event(0x1d4426040))",
     "Data":"",
-    "DurationNs":"281"
+    "DurationNs":"341"
   }
 }
-,{"ph":"X","name":"hipStreamCreate","pid":"2","tid":"18217","ts":"1049967908624","dur":"614242",
+,{"ph":"X","name":"hipStreamCreate","pid":"2","tid":"21040","ts":"1050400523748","dur":"625146",
   "args":{
-    "BeginNs":"1049967908624243",
-    "EndNs":"1049968522866778",
-    "pid":"18217",
-    "tid":"18217",
+    "BeginNs":"1050400523748417",
+    "EndNs":"1050401148894645",
+    "pid":"21040",
+    "tid":"21040",
     "Name":"hipStreamCreate",
     "args":"( stream(1))",
     "Data":"",
-    "DurationNs":"614242535"
+    "DurationNs":"625146228"
   }
 }
-,{"ph":"X","name":"hipStreamCreate","pid":"2","tid":"18217","ts":"1049968522869","dur":"9600",
+,{"ph":"X","name":"hipStreamCreate","pid":"2","tid":"21040","ts":"1050401148897","dur":"9735",
   "args":{
-    "BeginNs":"1049968522869413",
-    "EndNs":"1049968532469919",
-    "pid":"18217",
-    "tid":"18217",
+    "BeginNs":"1050401148897670",
+    "EndNs":"1050401158632675",
+    "pid":"21040",
+    "tid":"21040",
     "Name":"hipStreamCreate",
     "args":"( stream(2))",
     "Data":"",
-    "DurationNs":"9600506"
+    "DurationNs":"9735005"
   }
 }
-,{"ph":"X","name":"hipStreamCreate","pid":"2","tid":"18217","ts":"1049968532474","dur":"9607",
+,{"ph":"X","name":"hipStreamCreate","pid":"2","tid":"21040","ts":"1050401158637","dur":"8873",
   "args":{
-    "BeginNs":"1049968532474728",
-    "EndNs":"1049968542082558",
-    "pid":"18217",
-    "tid":"18217",
+    "BeginNs":"1050401158637084",
+    "EndNs":"1050401167510631",
+    "pid":"21040",
+    "tid":"21040",
     "Name":"hipStreamCreate",
     "args":"( stream(3))",
     "Data":"",
-    "DurationNs":"9607830"
+    "DurationNs":"8873547"
   }
 }
-,{"ph":"X","name":"hipStreamCreate","pid":"2","tid":"18217","ts":"1049968542083","dur":"9954",
+,{"ph":"X","name":"hipStreamCreate","pid":"2","tid":"21040","ts":"1050401167511","dur":"10450",
   "args":{
-    "BeginNs":"1049968542083470",
-    "EndNs":"1049968552038322",
-    "pid":"18217",
-    "tid":"18217",
+    "BeginNs":"1050401167511502",
+    "EndNs":"1050401177961603",
+    "pid":"21040",
+    "tid":"21040",
     "Name":"hipStreamCreate",
     "args":"( stream(4))",
     "Data":"",
-    "DurationNs":"9954852"
+    "DurationNs":"10450101"
   }
 }
-,{"ph":"X","name":"hipEventRecord","pid":"2","tid":"18217","ts":"1049968554030","dur":"1051",
+,{"ph":"X","name":"hipEventRecord","pid":"2","tid":"21040","ts":"1050401179953","dur":"1069",
   "args":{
-    "BeginNs":"1049968554030531",
-    "EndNs":"1049968555081777",
-    "pid":"18217",
-    "tid":"18217",
+    "BeginNs":"1050401179953050",
+    "EndNs":"1050401181022251",
+    "pid":"21040",
+    "tid":"21040",
     "Name":"hipEventRecord",
     "args":"( event(0x1d435d5b0) stream(5))",
     "Data":"",
-    "DurationNs":"1051246"
+    "DurationNs":"1069201"
   }
 }
-,{"ph":"X","name":"hipMemcpy","pid":"2","tid":"18217","ts":"1049968555084","dur":"3359",
+,{"ph":"X","name":"hipMemcpy","pid":"2","tid":"21040","ts":"1050401181031","dur":"3347",
   "args":{
-    "BeginNs":"1049968555084222",
-    "EndNs":"1049968558443889",
-    "pid":"18217",
-    "tid":"18217",
+    "BeginNs":"1050401181031880",
+    "EndNs":"1050401184379534",
+    "pid":"21040",
+    "tid":"21040",
     "Name":"hipMemcpy",
-    "args":"( dst(0x14fd97c00000) src(0x14fd9be00000) sizeBytes(67108864) kind(1))",
+    "args":"( dst(0x147ba7c00000) src(0x147babe00000) sizeBytes(67108864) kind(1))",
     "Data":"",
-    "DurationNs":"3359667"
+    "DurationNs":"3347654"
   }
 }
-,{"ph":"X","name":"__hipPushCallConfiguration","pid":"2","tid":"18217","ts":"1049968558445","dur":"1",
+,{"ph":"X","name":"__hipPushCallConfiguration","pid":"2","tid":"21040","ts":"1050401184382","dur":"1",
   "args":{
-    "BeginNs":"1049968558445953",
-    "EndNs":"1049968558446384",
-    "pid":"18217",
-    "tid":"18217",
+    "BeginNs":"1050401184382029",
+    "EndNs":"1050401184382460",
+    "pid":"21040",
+    "tid":"21040",
     "Name":"__hipPushCallConfiguration",
     "args":"( gridDim({z(1) y(1) x(65536}) blockDim({z(1) y(1) x(256}) sharedMem(0) stream(5))",
     "Data":"",
     "DurationNs":"431"
   }
 }
-,{"ph":"X","name":"__hipPopCallConfiguration","pid":"2","tid":"18217","ts":"1049968558450","dur":"1",
+,{"ph":"X","name":"__hipPopCallConfiguration","pid":"2","tid":"21040","ts":"1050401184388","dur":"1",
   "args":{
-    "BeginNs":"1049968558450853",
-    "EndNs":"1049968558451083",
-    "pid":"18217",
-    "tid":"18217",
+    "BeginNs":"1050401184388010",
+    "EndNs":"1050401184388171",
+    "pid":"21040",
+    "tid":"21040",
     "Name":"__hipPopCallConfiguration",
     "args":"( gridDim({z(1) y(1) x(65536}) blockDim({z(1) y(1) x(256}) sharedMem(0) stream(5))",
     "Data":"",
-    "DurationNs":"230"
+    "DurationNs":"161"
   }
 }
-,{"ph":"X","name":"hipLaunchKernel","pid":"2","tid":"18217","ts":"1049968558452","dur":"11948",
+,{"ph":"X","name":"hipLaunchKernel","pid":"2","tid":"21040","ts":"1050401184389","dur":"11574",
   "args":{
-    "BeginNs":"1049968558452286",
-    "EndNs":"1049968570401120",
-    "pid":"18217",
-    "tid":"18217",
+    "BeginNs":"1050401184389303",
+    "EndNs":"1050401195963340",
+    "pid":"21040",
+    "tid":"21040",
     "Name":"hipLaunchKernel",
-    "args":"( kernel(kernel(float*, int, int)) function_address(0x201510) numBlocks({z(1) y(1) x(65536}) dimBlocks({z(1) y(1) x(256}) args(0x7fff5accfa58) sharedMemBytes(0) stream(5))",
+    "args":"( kernel(kernel(float*, int, int)) function_address(0x201510) numBlocks({z(1) y(1) x(65536}) dimBlocks({z(1) y(1) x(256}) args(0x7ffedc4b72f8) sharedMemBytes(0) stream(5))",
     "Data":"",
-    "DurationNs":"11948834"
+    "DurationNs":"11574037"
   }
 }
-,{"ph":"X","name":"hipMemcpy","pid":"2","tid":"18217","ts":"1049968570421","dur":"21149518",
+,{"ph":"X","name":"hipMemcpy","pid":"2","tid":"21040","ts":"1050401195983","dur":"91935",
   "args":{
-    "BeginNs":"1049968570421019",
-    "EndNs":"1049989719939585",
-    "pid":"18217",
-    "tid":"18217",
+    "BeginNs":"1050401195983829",
+    "EndNs":"1050401287918894",
+    "pid":"21040",
+    "tid":"21040",
     "Name":"hipMemcpy",
-    "args":"( dst(0x14fd9be00000) src(0x14fd97c00000) sizeBytes(67108864) kind(2))",
+    "args":"( dst(0x147babe00000) src(0x147ba7c00000) sizeBytes(67108864) kind(2))",
     "Data":"",
-    "DurationNs":"21149518566"
+    "DurationNs":"91935065"
   }
 }
-,{"ph":"X","name":"hipEventRecord","pid":"2","tid":"18217","ts":"1049989719942","dur":"14",
+,{"ph":"X","name":"hipEventRecord","pid":"2","tid":"21040","ts":"1050401287919","dur":"7",
   "args":{
-    "BeginNs":"1049989719942601",
-    "EndNs":"1049989719957340",
-    "pid":"18217",
-    "tid":"18217",
+    "BeginNs":"1050401287919686",
+    "EndNs":"1050401287927561",
+    "pid":"21040",
+    "tid":"21040",
     "Name":"hipEventRecord",
     "args":"( event(0x1d435d6e0) stream(5))",
     "Data":"",
-    "DurationNs":"14739"
+    "DurationNs":"7875"
   }
 }
-,{"ph":"X","name":"hipEventSynchronize","pid":"2","tid":"18217","ts":"1049989719961","dur":"4",
+,{"ph":"X","name":"hipEventSynchronize","pid":"2","tid":"21040","ts":"1050401287929","dur":"8",
   "args":{
-    "BeginNs":"1049989719961919",
-    "EndNs":"1049989719966898",
-    "pid":"18217",
-    "tid":"18217",
+    "BeginNs":"1050401287929244",
+    "EndNs":"1050401287937250",
+    "pid":"21040",
+    "tid":"21040",
     "Name":"hipEventSynchronize",
     "args":"( event(0x1d435d6e0))",
     "Data":"",
-    "DurationNs":"4979"
+    "DurationNs":"8006"
   }
 }
-,{"ph":"X","name":"hipEventElapsedTime","pid":"2","tid":"18217","ts":"1049989719972","dur":"1",
+,{"ph":"X","name":"hipEventElapsedTime","pid":"2","tid":"21040","ts":"1050401287942","dur":"1",
   "args":{
-    "BeginNs":"1049989719972309",
-    "EndNs":"1049989719973872",
-    "pid":"18217",
-    "tid":"18217",
+    "BeginNs":"1050401287942179",
+    "EndNs":"1050401287943562",
+    "pid":"21040",
+    "tid":"21040",
     "Name":"hipEventElapsedTime",
-    "args":"( ms(21164.9) start(0x1d435d5b0) stop(0x1d435d6e0))",
+    "args":"( ms(106.906) start(0x1d435d5b0) stop(0x1d435d6e0))",
     "Data":"",
-    "DurationNs":"1563"
+    "DurationNs":"1383"
   }
 }
-,{"ph":"X","name":"hipEventRecord","pid":"2","tid":"18217","ts":"1049989766660","dur":"14",
+,{"ph":"X","name":"hipEventRecord","pid":"2","tid":"21040","ts":"1050401334727","dur":"14",
   "args":{
-    "BeginNs":"1049989766660713",
-    "EndNs":"1049989766675351",
-    "pid":"18217",
-    "tid":"18217",
+    "BeginNs":"1050401334727967",
+    "EndNs":"1050401334742525",
+    "pid":"21040",
+    "tid":"21040",
     "Name":"hipEventRecord",
     "args":"( event(0x1d4425f60) stream(5))",
     "Data":"",
-    "DurationNs":"14638"
+    "DurationNs":"14558"
   }
 }
-,{"ph":"X","name":"hipMemcpy","pid":"2","tid":"18217","ts":"1049989766676","dur":"17231",
+,{"ph":"X","name":"hipMemcpy","pid":"2","tid":"21040","ts":"1050401334743","dur":"17163",
   "args":{
-    "BeginNs":"1049989766676684",
-    "EndNs":"1049989783907911",
-    "pid":"18217",
-    "tid":"18217",
+    "BeginNs":"1050401334743878",
+    "EndNs":"1050401351907562",
+    "pid":"21040",
+    "tid":"21040",
     "Name":"hipMemcpy",
-    "args":"( dst(0x14fd97c00000) src(0x14fd9be00000) sizeBytes(67108864) kind(1))",
+    "args":"( dst(0x147ba7c00000) src(0x147babe00000) sizeBytes(67108864) kind(1))",
     "Data":"",
-    "DurationNs":"17231227"
+    "DurationNs":"17163684"
   }
 }
-,{"ph":"X","name":"hipEventRecord","pid":"2","tid":"18217","ts":"1049989783913","dur":"8",
+,{"ph":"X","name":"hipEventRecord","pid":"2","tid":"21040","ts":"1050401351912","dur":"7",
   "args":{
-    "BeginNs":"1049989783913973",
-    "EndNs":"1049989783922389",
-    "pid":"18217",
-    "tid":"18217",
+    "BeginNs":"1050401351912261",
+    "EndNs":"1050401351919865",
+    "pid":"21040",
+    "tid":"21040",
     "Name":"hipEventRecord",
     "args":"( event(0x1d435d5b0) stream(1))",
     "Data":"",
-    "DurationNs":"8416"
+    "DurationNs":"7604"
   }
 }
-,{"ph":"X","name":"__hipPushCallConfiguration","pid":"2","tid":"18217","ts":"1049989783923","dur":"1",
+,{"ph":"X","name":"__hipPushCallConfiguration","pid":"2","tid":"21040","ts":"1050401351920","dur":"1",
   "args":{
-    "BeginNs":"1049989783923311",
-    "EndNs":"1049989783923762",
-    "pid":"18217",
-    "tid":"18217",
+    "BeginNs":"1050401351920827",
+    "EndNs":"1050401351921338",
+    "pid":"21040",
+    "tid":"21040",
     "Name":"__hipPushCallConfiguration",
     "args":"( gridDim({z(1) y(1) x(65536}) blockDim({z(1) y(1) x(256}) sharedMem(0) stream(1))",
     "Data":"",
-    "DurationNs":"451"
+    "DurationNs":"511"
   }
 }
-,{"ph":"X","name":"__hipPopCallConfiguration","pid":"2","tid":"18217","ts":"1049989783927","dur":"1",
+,{"ph":"X","name":"__hipPopCallConfiguration","pid":"2","tid":"21040","ts":"1050401351924","dur":"1",
   "args":{
-    "BeginNs":"1049989783927930",
-    "EndNs":"1049989783928230",
-    "pid":"18217",
-    "tid":"18217",
-    "Name":"__hipPopCallConfiguration",
-    "args":"( gridDim({z(1) y(1) x(65536}) blockDim({z(1) y(1) x(256}) sharedMem(0) stream(1))",
-    "Data":"",
-    "DurationNs":"300"
-  }
-}
-,{"ph":"X","name":"hipLaunchKernel","pid":"2","tid":"18217","ts":"1049989783928","dur":"3557",
-  "args":{
-    "BeginNs":"1049989783928922",
-    "EndNs":"1049989787486392",
-    "pid":"18217",
-    "tid":"18217",
-    "Name":"hipLaunchKernel",
-    "args":"( kernel(kernel(float*, int, int)) function_address(0x201510) numBlocks({z(1) y(1) x(65536}) dimBlocks({z(1) y(1) x(256}) args(0x7fff5accfa28) sharedMemBytes(0) stream(1))",
-    "Data":"",
-    "DurationNs":"3557470"
-  }
-}
-,{"ph":"X","name":"hipEventRecord","pid":"2","tid":"18217","ts":"1049989787489","dur":"6",
-  "args":{
-    "BeginNs":"1049989787489057",
-    "EndNs":"1049989787495640",
-    "pid":"18217",
-    "tid":"18217",
-    "Name":"hipEventRecord",
-    "args":"( event(0x1d435d6e0) stream(1))",
-    "Data":"",
-    "DurationNs":"6583"
-  }
-}
-,{"ph":"X","name":"hipEventRecord","pid":"2","tid":"18217","ts":"1049989787499","dur":"5",
-  "args":{
-    "BeginNs":"1049989787499999",
-    "EndNs":"1049989787505579",
-    "pid":"18217",
-    "tid":"18217",
-    "Name":"hipEventRecord",
-    "args":"( event(0x1d4425a20) stream(2))",
-    "Data":"",
-    "DurationNs":"5580"
-  }
-}
-,{"ph":"X","name":"__hipPushCallConfiguration","pid":"2","tid":"18217","ts":"1049989787506","dur":"1",
-  "args":{
-    "BeginNs":"1049989787506050",
-    "EndNs":"1049989787506231",
-    "pid":"18217",
-    "tid":"18217",
-    "Name":"__hipPushCallConfiguration",
-    "args":"( gridDim({z(1) y(1) x(65536}) blockDim({z(1) y(1) x(256}) sharedMem(0) stream(2))",
-    "Data":"",
-    "DurationNs":"181"
-  }
-}
-,{"ph":"X","name":"__hipPopCallConfiguration","pid":"2","tid":"18217","ts":"1049989787509","dur":"1",
-  "args":{
-    "BeginNs":"1049989787509016",
-    "EndNs":"1049989787509226",
-    "pid":"18217",
-    "tid":"18217",
-    "Name":"__hipPopCallConfiguration",
-    "args":"( gridDim({z(1) y(1) x(65536}) blockDim({z(1) y(1) x(256}) sharedMem(0) stream(2))",
-    "Data":"",
-    "DurationNs":"210"
-  }
-}
-,{"ph":"X","name":"hipLaunchKernel","pid":"2","tid":"18217","ts":"1049989787509","dur":"3512",
-  "args":{
-    "BeginNs":"1049989787509577",
-    "EndNs":"1049989791022532",
-    "pid":"18217",
-    "tid":"18217",
-    "Name":"hipLaunchKernel",
-    "args":"( kernel(kernel(float*, int, int)) function_address(0x201510) numBlocks({z(1) y(1) x(65536}) dimBlocks({z(1) y(1) x(256}) args(0x7fff5accfa28) sharedMemBytes(0) stream(2))",
-    "Data":"",
-    "DurationNs":"3512955"
-  }
-}
-,{"ph":"X","name":"hipEventRecord","pid":"2","tid":"18217","ts":"1049989791023","dur":"6",
-  "args":{
-    "BeginNs":"1049989791023984",
-    "EndNs":"1049989791030437",
-    "pid":"18217",
-    "tid":"18217",
-    "Name":"hipEventRecord",
-    "args":"( event(0x1d4425b00) stream(2))",
-    "Data":"",
-    "DurationNs":"6453"
-  }
-}
-,{"ph":"X","name":"hipEventRecord","pid":"2","tid":"18217","ts":"1049989791034","dur":"5",
-  "args":{
-    "BeginNs":"1049989791034425",
-    "EndNs":"1049989791039655",
-    "pid":"18217",
-    "tid":"18217",
-    "Name":"hipEventRecord",
-    "args":"( event(0x1d4425be0) stream(3))",
-    "Data":"",
-    "DurationNs":"5230"
-  }
-}
-,{"ph":"X","name":"__hipPushCallConfiguration","pid":"2","tid":"18217","ts":"1049989791040","dur":"1",
-  "args":{
-    "BeginNs":"1049989791040196",
-    "EndNs":"1049989791040366",
-    "pid":"18217",
-    "tid":"18217",
-    "Name":"__hipPushCallConfiguration",
-    "args":"( gridDim({z(1) y(1) x(65536}) blockDim({z(1) y(1) x(256}) sharedMem(0) stream(3))",
-    "Data":"",
-    "DurationNs":"170"
-  }
-}
-,{"ph":"X","name":"__hipPopCallConfiguration","pid":"2","tid":"18217","ts":"1049989791043","dur":"1",
-  "args":{
-    "BeginNs":"1049989791043142",
-    "EndNs":"1049989791043382",
-    "pid":"18217",
-    "tid":"18217",
-    "Name":"__hipPopCallConfiguration",
-    "args":"( gridDim({z(1) y(1) x(65536}) blockDim({z(1) y(1) x(256}) sharedMem(0) stream(3))",
-    "Data":"",
-    "DurationNs":"240"
-  }
-}
-,{"ph":"X","name":"hipLaunchKernel","pid":"2","tid":"18217","ts":"1049989791043","dur":"4348",
-  "args":{
-    "BeginNs":"1049989791043683",
-    "EndNs":"1049989795392075",
-    "pid":"18217",
-    "tid":"18217",
-    "Name":"hipLaunchKernel",
-    "args":"( kernel(kernel(float*, int, int)) function_address(0x201510) numBlocks({z(1) y(1) x(65536}) dimBlocks({z(1) y(1) x(256}) args(0x7fff5accfa28) sharedMemBytes(0) stream(3))",
-    "Data":"",
-    "DurationNs":"4348392"
-  }
-}
-,{"ph":"X","name":"hipEventRecord","pid":"2","tid":"18217","ts":"1049989795393","dur":"5",
-  "args":{
-    "BeginNs":"1049989795393428",
-    "EndNs":"1049989795399329",
-    "pid":"18217",
-    "tid":"18217",
-    "Name":"hipEventRecord",
-    "args":"( event(0x1d4425cc0) stream(3))",
-    "Data":"",
-    "DurationNs":"5901"
-  }
-}
-,{"ph":"X","name":"hipEventRecord","pid":"2","tid":"18217","ts":"1049989795403","dur":"9",
-  "args":{
-    "BeginNs":"1049989795403017",
-    "EndNs":"1049989795412104",
-    "pid":"18217",
-    "tid":"18217",
-    "Name":"hipEventRecord",
-    "args":"( event(0x1d4425da0) stream(4))",
-    "Data":"",
-    "DurationNs":"9087"
-  }
-}
-,{"ph":"X","name":"__hipPushCallConfiguration","pid":"2","tid":"18217","ts":"1049989795412","dur":"1",
-  "args":{
-    "BeginNs":"1049989795412515",
-    "EndNs":"1049989795412675",
-    "pid":"18217",
-    "tid":"18217",
-    "Name":"__hipPushCallConfiguration",
-    "args":"( gridDim({z(1) y(1) x(65536}) blockDim({z(1) y(1) x(256}) sharedMem(0) stream(4))",
-    "Data":"",
-    "DurationNs":"160"
-  }
-}
-,{"ph":"X","name":"__hipPopCallConfiguration","pid":"2","tid":"18217","ts":"1049989795413","dur":"1",
-  "args":{
-    "BeginNs":"1049989795413046",
-    "EndNs":"1049989795413216",
-    "pid":"18217",
-    "tid":"18217",
-    "Name":"__hipPopCallConfiguration",
-    "args":"( gridDim({z(1) y(1) x(65536}) blockDim({z(1) y(1) x(256}) sharedMem(0) stream(4))",
-    "Data":"",
-    "DurationNs":"170"
-  }
-}
-,{"ph":"X","name":"hipLaunchKernel","pid":"2","tid":"18217","ts":"1049989795415","dur":"5",
-  "args":{
-    "BeginNs":"1049989795415922",
-    "EndNs":"1049989795420951",
-    "pid":"18217",
-    "tid":"18217",
-    "Name":"hipLaunchKernel",
-    "args":"( kernel(kernel(float*, int, int)) function_address(0x201510) numBlocks({z(1) y(1) x(65536}) dimBlocks({z(1) y(1) x(256}) args(0x7fff5accfa28) sharedMemBytes(0) stream(4))",
-    "Data":"",
-    "DurationNs":"5029"
-  }
-}
-,{"ph":"X","name":"hipEventRecord","pid":"2","tid":"18217","ts":"1049989795421","dur":"3",
-  "args":{
-    "BeginNs":"1049989795421522",
-    "EndNs":"1049989795424799",
-    "pid":"18217",
-    "tid":"18217",
-    "Name":"hipEventRecord",
-    "args":"( event(0x1d4425e80) stream(4))",
-    "Data":"",
-    "DurationNs":"3277"
-  }
-}
-,{"ph":"X","name":"hipMemcpy","pid":"2","tid":"18217","ts":"1049989795427","dur":"21172485",
-  "args":{
-    "BeginNs":"1049989795427674",
-    "EndNs":"1050010967913397",
-    "pid":"18217",
-    "tid":"18217",
-    "Name":"hipMemcpy",
-    "args":"( dst(0x14fd9be00000) src(0x14fd97c00000) sizeBytes(67108864) kind(2))",
-    "Data":"",
-    "DurationNs":"21172485723"
-  }
-}
-,{"ph":"X","name":"hipEventRecord","pid":"2","tid":"18217","ts":"1050010967916","dur":"14",
-  "args":{
-    "BeginNs":"1050010967916102",
-    "EndNs":"1050010967931061",
-    "pid":"18217",
-    "tid":"18217",
-    "Name":"hipEventRecord",
-    "args":"( event(0x1d4426040) stream(5))",
-    "Data":"",
-    "DurationNs":"14959"
-  }
-}
-,{"ph":"X","name":"hipEventSynchronize","pid":"2","tid":"18217","ts":"1050010967932","dur":"1",
-  "args":{
-    "BeginNs":"1050010967932143",
-    "EndNs":"1050010967932864",
-    "pid":"18217",
-    "tid":"18217",
-    "Name":"hipEventSynchronize",
-    "args":"( event(0x1d435d6e0))",
-    "Data":"",
-    "DurationNs":"721"
-  }
-}
-,{"ph":"X","name":"hipEventElapsedTime","pid":"2","tid":"18217","ts":"1050010967944","dur":"2",
-  "args":{
-    "BeginNs":"1050010967944898",
-    "EndNs":"1050010967947372",
-    "pid":"18217",
-    "tid":"18217",
-    "Name":"hipEventElapsedTime",
-    "args":"( ms(21086.7) start(0x1d435d5b0) stop(0x1d435d6e0))",
-    "Data":"",
-    "DurationNs":"2474"
-  }
-}
-,{"ph":"X","name":"hipEventSynchronize","pid":"2","tid":"18217","ts":"1050010967947","dur":"1",
-  "args":{
-    "BeginNs":"1050010967947783",
-    "EndNs":"1050010967948354",
-    "pid":"18217",
-    "tid":"18217",
-    "Name":"hipEventSynchronize",
-    "args":"( event(0x1d4425b00))",
-    "Data":"",
-    "DurationNs":"571"
-  }
-}
-,{"ph":"X","name":"hipEventElapsedTime","pid":"2","tid":"18217","ts":"1050010967951","dur":"1",
-  "args":{
-    "BeginNs":"1050010967951050",
-    "EndNs":"1050010967951861",
-    "pid":"18217",
-    "tid":"18217",
-    "Name":"hipEventElapsedTime",
-    "args":"( ms(21149.4) start(0x1d4425a20) stop(0x1d4425b00))",
-    "Data":"",
-    "DurationNs":"811"
-  }
-}
-,{"ph":"X","name":"hipEventSynchronize","pid":"2","tid":"18217","ts":"1050010967952","dur":"1",
-  "args":{
-    "BeginNs":"1050010967952132",
-    "EndNs":"1050010967952482",
-    "pid":"18217",
-    "tid":"18217",
-    "Name":"hipEventSynchronize",
-    "args":"( event(0x1d4425cc0))",
-    "Data":"",
-    "DurationNs":"350"
-  }
-}
-,{"ph":"X","name":"hipEventElapsedTime","pid":"2","tid":"18217","ts":"1050010967952","dur":"1",
-  "args":{
-    "BeginNs":"1050010967952733",
-    "EndNs":"1050010967953424",
-    "pid":"18217",
-    "tid":"18217",
-    "Name":"hipEventElapsedTime",
-    "args":"( ms(21163.1) start(0x1d4425be0) stop(0x1d4425cc0))",
-    "Data":"",
-    "DurationNs":"691"
-  }
-}
-,{"ph":"X","name":"hipEventSynchronize","pid":"2","tid":"18217","ts":"1050010967955","dur":"1",
-  "args":{
-    "BeginNs":"1050010967955849",
-    "EndNs":"1050010967956159",
-    "pid":"18217",
-    "tid":"18217",
-    "Name":"hipEventSynchronize",
-    "args":"( event(0x1d4425e80))",
-    "Data":"",
-    "DurationNs":"310"
-  }
-}
-,{"ph":"X","name":"hipEventElapsedTime","pid":"2","tid":"18217","ts":"1050010967956","dur":"1",
-  "args":{
-    "BeginNs":"1050010967956430",
-    "EndNs":"1050010967956991",
-    "pid":"18217",
-    "tid":"18217",
-    "Name":"hipEventElapsedTime",
-    "args":"( ms(21151) start(0x1d4425da0) stop(0x1d4425e80))",
-    "Data":"",
-    "DurationNs":"561"
-  }
-}
-,{"ph":"X","name":"hipEventSynchronize","pid":"2","tid":"18217","ts":"1050010967959","dur":"1",
-  "args":{
-    "BeginNs":"1050010967959316",
-    "EndNs":"1050010967959626",
-    "pid":"18217",
-    "tid":"18217",
-    "Name":"hipEventSynchronize",
-    "args":"( event(0x1d4426040))",
-    "Data":"",
-    "DurationNs":"310"
-  }
-}
-,{"ph":"X","name":"hipEventElapsedTime","pid":"2","tid":"18217","ts":"1050010967959","dur":"1",
-  "args":{
-    "BeginNs":"1050010967959907",
-    "EndNs":"1050010967960839",
-    "pid":"18217",
-    "tid":"18217",
-    "Name":"hipEventElapsedTime",
-    "args":"( ms(21201.3) start(0x1d4425f60) stop(0x1d4426040))",
-    "Data":"",
-    "DurationNs":"932"
-  }
-}
-,{"ph":"X","name":"hipEventRecord","pid":"2","tid":"18217","ts":"1050011014747","dur":"19",
-  "args":{
-    "BeginNs":"1050011014747183",
-    "EndNs":"1050011014766390",
-    "pid":"18217",
-    "tid":"18217",
-    "Name":"hipEventRecord",
-    "args":"( event(0x1d4425f60) stream(5))",
-    "Data":"",
-    "DurationNs":"19207"
-  }
-}
-,{"ph":"X","name":"hipEventRecord","pid":"2","tid":"18217","ts":"1050011014775","dur":"6",
-  "args":{
-    "BeginNs":"1050011014775548",
-    "EndNs":"1050011014781780",
-    "pid":"18217",
-    "tid":"18217",
-    "Name":"hipEventRecord",
-    "args":"( event(0x1d435d5b0) stream(1))",
-    "Data":"",
-    "DurationNs":"6232"
-  }
-}
-,{"ph":"X","name":"hipMemcpyAsync","pid":"2","tid":"18217","ts":"1050011014785","dur":"14",
-  "args":{
-    "BeginNs":"1050011014785457",
-    "EndNs":"1050011014799735",
-    "pid":"18217",
-    "tid":"18217",
-    "Name":"hipMemcpyAsync",
-    "args":"( dst(0x14fd97c00000) src(0x14fd9be00000) sizeBytes(16777216) kind(1) stream(1))",
-    "Data":"",
-    "DurationNs":"14278"
-  }
-}
-,{"ph":"X","name":"__hipPushCallConfiguration","pid":"2","tid":"18217","ts":"1050011014800","dur":"1",
-  "args":{
-    "BeginNs":"1050011014800356",
-    "EndNs":"1050011014800887",
-    "pid":"18217",
-    "tid":"18217",
-    "Name":"__hipPushCallConfiguration",
-    "args":"( gridDim({z(1) y(1) x(65536}) blockDim({z(1) y(1) x(256}) sharedMem(0) stream(1))",
-    "Data":"",
-    "DurationNs":"531"
-  }
-}
-,{"ph":"X","name":"__hipPopCallConfiguration","pid":"2","tid":"18217","ts":"1050011014804","dur":"1",
-  "args":{
-    "BeginNs":"1050011014804003",
-    "EndNs":"1050011014804304",
-    "pid":"18217",
-    "tid":"18217",
+    "BeginNs":"1050401351924564",
+    "EndNs":"1050401351924865",
+    "pid":"21040",
+    "tid":"21040",
     "Name":"__hipPopCallConfiguration",
     "args":"( gridDim({z(1) y(1) x(65536}) blockDim({z(1) y(1) x(256}) sharedMem(0) stream(1))",
     "Data":"",
     "DurationNs":"301"
   }
 }
-,{"ph":"X","name":"hipLaunchKernel","pid":"2","tid":"18217","ts":"1050011014805","dur":"36",
+,{"ph":"X","name":"hipLaunchKernel","pid":"2","tid":"21040","ts":"1050401351925","dur":"3550",
   "args":{
-    "BeginNs":"1050011014805105",
-    "EndNs":"1050011014841856",
-    "pid":"18217",
-    "tid":"18217",
+    "BeginNs":"1050401351925616",
+    "EndNs":"1050401355476604",
+    "pid":"21040",
+    "tid":"21040",
     "Name":"hipLaunchKernel",
-    "args":"( kernel(kernel(float*, int, int)) function_address(0x201510) numBlocks({z(1) y(1) x(65536}) dimBlocks({z(1) y(1) x(256}) args(0x7fff5accfa38) sharedMemBytes(0) stream(1))",
+    "args":"( kernel(kernel(float*, int, int)) function_address(0x201510) numBlocks({z(1) y(1) x(65536}) dimBlocks({z(1) y(1) x(256}) args(0x7ffedc4b72c8) sharedMemBytes(0) stream(1))",
     "Data":"",
-    "DurationNs":"36751"
+    "DurationNs":"3550988"
   }
 }
-,{"ph":"X","name":"hipMemcpyAsync","pid":"2","tid":"18217","ts":"1050011014848","dur":"21",
+,{"ph":"X","name":"hipEventRecord","pid":"2","tid":"21040","ts":"1050401355479","dur":"7",
   "args":{
-    "BeginNs":"1050011014848079",
-    "EndNs":"1050011014869921",
-    "pid":"18217",
-    "tid":"18217",
-    "Name":"hipMemcpyAsync",
-    "args":"( dst(0x14fd9be00000) src(0x14fd97c00000) sizeBytes(16777216) kind(2) stream(1))",
-    "Data":"",
-    "DurationNs":"21842"
-  }
-}
-,{"ph":"X","name":"hipEventRecord","pid":"2","tid":"18217","ts":"1050011014870","dur":"7",
-  "args":{
-    "BeginNs":"1050011014870302",
-    "EndNs":"1050011014877756",
-    "pid":"18217",
-    "tid":"18217",
+    "BeginNs":"1050401355479319",
+    "EndNs":"1050401355486443",
+    "pid":"21040",
+    "tid":"21040",
     "Name":"hipEventRecord",
     "args":"( event(0x1d435d6e0) stream(1))",
     "Data":"",
-    "DurationNs":"7454"
+    "DurationNs":"7124"
   }
 }
-,{"ph":"X","name":"hipEventRecord","pid":"2","tid":"18217","ts":"1050011014878","dur":"14",
+,{"ph":"X","name":"hipEventRecord","pid":"2","tid":"21040","ts":"1050401355491","dur":"5",
   "args":{
-    "BeginNs":"1050011014878117",
-    "EndNs":"1050011014892334",
-    "pid":"18217",
-    "tid":"18217",
+    "BeginNs":"1050401355491022",
+    "EndNs":"1050401355496152",
+    "pid":"21040",
+    "tid":"21040",
     "Name":"hipEventRecord",
     "args":"( event(0x1d4425a20) stream(2))",
     "Data":"",
-    "DurationNs":"14217"
+    "DurationNs":"5130"
   }
 }
-,{"ph":"X","name":"hipMemcpyAsync","pid":"2","tid":"18217","ts":"1050011014896","dur":"13032",
+,{"ph":"X","name":"__hipPushCallConfiguration","pid":"2","tid":"21040","ts":"1050401355496","dur":"1",
   "args":{
-    "BeginNs":"1050011014896011",
-    "EndNs":"1050011027928475",
-    "pid":"18217",
-    "tid":"18217",
-    "Name":"hipMemcpyAsync",
-    "args":"( dst(0x14fd98c00000) src(0x14fd9ce00000) sizeBytes(16777216) kind(1) stream(2))",
-    "Data":"",
-    "DurationNs":"13032464"
-  }
-}
-,{"ph":"X","name":"__hipPushCallConfiguration","pid":"2","tid":"18217","ts":"1050011027929","dur":"1",
-  "args":{
-    "BeginNs":"1050011027929337",
-    "EndNs":"1050011027929477",
-    "pid":"18217",
-    "tid":"18217",
+    "BeginNs":"1050401355496723",
+    "EndNs":"1050401355496873",
+    "pid":"21040",
+    "tid":"21040",
     "Name":"__hipPushCallConfiguration",
     "args":"( gridDim({z(1) y(1) x(65536}) blockDim({z(1) y(1) x(256}) sharedMem(0) stream(2))",
-    "Data":"",
-    "DurationNs":"140"
-  }
-}
-,{"ph":"X","name":"__hipPopCallConfiguration","pid":"2","tid":"18217","ts":"1050011027933","dur":"1",
-  "args":{
-    "BeginNs":"1050011027933505",
-    "EndNs":"1050011027933675",
-    "pid":"18217",
-    "tid":"18217",
-    "Name":"__hipPopCallConfiguration",
-    "args":"( gridDim({z(1) y(1) x(65536}) blockDim({z(1) y(1) x(256}) sharedMem(0) stream(2))",
-    "Data":"",
-    "DurationNs":"170"
-  }
-}
-,{"ph":"X","name":"hipLaunchKernel","pid":"2","tid":"18217","ts":"1050011027933","dur":"7",
-  "args":{
-    "BeginNs":"1050011027933976",
-    "EndNs":"1050011027941680",
-    "pid":"18217",
-    "tid":"18217",
-    "Name":"hipLaunchKernel",
-    "args":"( kernel(kernel(float*, int, int)) function_address(0x201510) numBlocks({z(1) y(1) x(65536}) dimBlocks({z(1) y(1) x(256}) args(0x7fff5accfa38) sharedMemBytes(0) stream(2))",
-    "Data":"",
-    "DurationNs":"7704"
-  }
-}
-,{"ph":"X","name":"hipMemcpyAsync","pid":"2","tid":"18217","ts":"1050011027942","dur":"1089",
-  "args":{
-    "BeginNs":"1050011027942512",
-    "EndNs":"1050011029032493",
-    "pid":"18217",
-    "tid":"18217",
-    "Name":"hipMemcpyAsync",
-    "args":"( dst(0x14fd9ce00000) src(0x14fd98c00000) sizeBytes(16777216) kind(2) stream(2))",
-    "Data":"",
-    "DurationNs":"1089981"
-  }
-}
-,{"ph":"X","name":"hipEventRecord","pid":"2","tid":"18217","ts":"1050011029035","dur":"7",
-  "args":{
-    "BeginNs":"1050011029035679",
-    "EndNs":"1050011029043475",
-    "pid":"18217",
-    "tid":"18217",
-    "Name":"hipEventRecord",
-    "args":"( event(0x1d4425b00) stream(2))",
-    "Data":"",
-    "DurationNs":"7796"
-  }
-}
-,{"ph":"X","name":"hipEventRecord","pid":"2","tid":"18217","ts":"1050011029043","dur":"4",
-  "args":{
-    "BeginNs":"1050011029043895",
-    "EndNs":"1050011029048364",
-    "pid":"18217",
-    "tid":"18217",
-    "Name":"hipEventRecord",
-    "args":"( event(0x1d4425be0) stream(3))",
-    "Data":"",
-    "DurationNs":"4469"
-  }
-}
-,{"ph":"X","name":"hipMemcpyAsync","pid":"2","tid":"18217","ts":"1050011029051","dur":"17",
-  "args":{
-    "BeginNs":"1050011029051190",
-    "EndNs":"1050011029068503",
-    "pid":"18217",
-    "tid":"18217",
-    "Name":"hipMemcpyAsync",
-    "args":"( dst(0x14fd99c00000) src(0x14fd9de00000) sizeBytes(16777216) kind(1) stream(3))",
-    "Data":"",
-    "DurationNs":"17313"
-  }
-}
-,{"ph":"X","name":"__hipPushCallConfiguration","pid":"2","tid":"18217","ts":"1050011029068","dur":"1",
-  "args":{
-    "BeginNs":"1050011029068964",
-    "EndNs":"1050011029069154",
-    "pid":"18217",
-    "tid":"18217",
-    "Name":"__hipPushCallConfiguration",
-    "args":"( gridDim({z(1) y(1) x(65536}) blockDim({z(1) y(1) x(256}) sharedMem(0) stream(3))",
-    "Data":"",
-    "DurationNs":"190"
-  }
-}
-,{"ph":"X","name":"__hipPopCallConfiguration","pid":"2","tid":"18217","ts":"1050011029069","dur":"1",
-  "args":{
-    "BeginNs":"1050011029069505",
-    "EndNs":"1050011029069675",
-    "pid":"18217",
-    "tid":"18217",
-    "Name":"__hipPopCallConfiguration",
-    "args":"( gridDim({z(1) y(1) x(65536}) blockDim({z(1) y(1) x(256}) sharedMem(0) stream(3))",
-    "Data":"",
-    "DurationNs":"170"
-  }
-}
-,{"ph":"X","name":"hipLaunchKernel","pid":"2","tid":"18217","ts":"1050011029072","dur":"5",
-  "args":{
-    "BeginNs":"1050011029072851",
-    "EndNs":"1050011029078783",
-    "pid":"18217",
-    "tid":"18217",
-    "Name":"hipLaunchKernel",
-    "args":"( kernel(kernel(float*, int, int)) function_address(0x201510) numBlocks({z(1) y(1) x(65536}) dimBlocks({z(1) y(1) x(256}) args(0x7fff5accfa38) sharedMemBytes(0) stream(3))",
-    "Data":"",
-    "DurationNs":"5932"
-  }
-}
-,{"ph":"X","name":"hipMemcpyAsync","pid":"2","tid":"18217","ts":"1050011029079","dur":"16",
-  "args":{
-    "BeginNs":"1050011029079605",
-    "EndNs":"1050011029096367",
-    "pid":"18217",
-    "tid":"18217",
-    "Name":"hipMemcpyAsync",
-    "args":"( dst(0x14fd9de00000) src(0x14fd99c00000) sizeBytes(16777216) kind(2) stream(3))",
-    "Data":"",
-    "DurationNs":"16762"
-  }
-}
-,{"ph":"X","name":"hipEventRecord","pid":"2","tid":"18217","ts":"1050011029096","dur":"7",
-  "args":{
-    "BeginNs":"1050011029096698",
-    "EndNs":"1050011029103771",
-    "pid":"18217",
-    "tid":"18217",
-    "Name":"hipEventRecord",
-    "args":"( event(0x1d4425cc0) stream(3))",
-    "Data":"",
-    "DurationNs":"7073"
-  }
-}
-,{"ph":"X","name":"hipEventRecord","pid":"2","tid":"18217","ts":"1050011029107","dur":"9",
-  "args":{
-    "BeginNs":"1050011029107428",
-    "EndNs":"1050011029117077",
-    "pid":"18217",
-    "tid":"18217",
-    "Name":"hipEventRecord",
-    "args":"( event(0x1d4425da0) stream(4))",
-    "Data":"",
-    "DurationNs":"9649"
-  }
-}
-,{"ph":"X","name":"hipMemcpyAsync","pid":"2","tid":"18217","ts":"1050011029117","dur":"1261",
-  "args":{
-    "BeginNs":"1050011029117408",
-    "EndNs":"1050011030378901",
-    "pid":"18217",
-    "tid":"18217",
-    "Name":"hipMemcpyAsync",
-    "args":"( dst(0x14fd9ac00000) src(0x14fd9ee00000) sizeBytes(16777216) kind(1) stream(4))",
-    "Data":"",
-    "DurationNs":"1261493"
-  }
-}
-,{"ph":"X","name":"__hipPushCallConfiguration","pid":"2","tid":"18217","ts":"1050011030382","dur":"1",
-  "args":{
-    "BeginNs":"1050011030382809",
-    "EndNs":"1050011030382959",
-    "pid":"18217",
-    "tid":"18217",
-    "Name":"__hipPushCallConfiguration",
-    "args":"( gridDim({z(1) y(1) x(65536}) blockDim({z(1) y(1) x(256}) sharedMem(0) stream(4))",
     "Data":"",
     "DurationNs":"150"
   }
 }
-,{"ph":"X","name":"__hipPopCallConfiguration","pid":"2","tid":"18217","ts":"1050011030383","dur":"1",
+,{"ph":"X","name":"__hipPopCallConfiguration","pid":"2","tid":"21040","ts":"1050401355499","dur":"1",
   "args":{
-    "BeginNs":"1050011030383340",
-    "EndNs":"1050011030383510",
-    "pid":"18217",
-    "tid":"18217",
+    "BeginNs":"1050401355499749",
+    "EndNs":"1050401355499919",
+    "pid":"21040",
+    "tid":"21040",
     "Name":"__hipPopCallConfiguration",
-    "args":"( gridDim({z(1) y(1) x(65536}) blockDim({z(1) y(1) x(256}) sharedMem(0) stream(4))",
+    "args":"( gridDim({z(1) y(1) x(65536}) blockDim({z(1) y(1) x(256}) sharedMem(0) stream(2))",
     "Data":"",
     "DurationNs":"170"
   }
 }
-,{"ph":"X","name":"hipLaunchKernel","pid":"2","tid":"18217","ts":"1050011030383","dur":"7",
+,{"ph":"X","name":"hipLaunchKernel","pid":"2","tid":"21040","ts":"1050401355500","dur":"3536",
   "args":{
-    "BeginNs":"1050011030383831",
-    "EndNs":"1050011030390834",
-    "pid":"18217",
-    "tid":"18217",
+    "BeginNs":"1050401355500320",
+    "EndNs":"1050401359036449",
+    "pid":"21040",
+    "tid":"21040",
     "Name":"hipLaunchKernel",
-    "args":"( kernel(kernel(float*, int, int)) function_address(0x201510) numBlocks({z(1) y(1) x(65536}) dimBlocks({z(1) y(1) x(256}) args(0x7fff5accfa38) sharedMemBytes(0) stream(4))",
+    "args":"( kernel(kernel(float*, int, int)) function_address(0x201510) numBlocks({z(1) y(1) x(65536}) dimBlocks({z(1) y(1) x(256}) args(0x7ffedc4b72c8) sharedMemBytes(0) stream(2))",
     "Data":"",
-    "DurationNs":"7003"
+    "DurationNs":"3536129"
   }
 }
-,{"ph":"X","name":"hipMemcpyAsync","pid":"2","tid":"18217","ts":"1050011030394","dur":"26",
+,{"ph":"X","name":"hipEventRecord","pid":"2","tid":"21040","ts":"1050401359037","dur":"7",
   "args":{
-    "BeginNs":"1050011030394071",
-    "EndNs":"1050011030420692",
-    "pid":"18217",
-    "tid":"18217",
-    "Name":"hipMemcpyAsync",
-    "args":"( dst(0x14fd9ee00000) src(0x14fd9ac00000) sizeBytes(16777216) kind(2) stream(4))",
-    "Data":"",
-    "DurationNs":"26621"
-  }
-}
-,{"ph":"X","name":"hipEventRecord","pid":"2","tid":"18217","ts":"1050011030421","dur":"9",
-  "args":{
-    "BeginNs":"1050011030421133",
-    "EndNs":"1050011030430431",
-    "pid":"18217",
-    "tid":"18217",
+    "BeginNs":"1050401359037902",
+    "EndNs":"1050401359044986",
+    "pid":"21040",
+    "tid":"21040",
     "Name":"hipEventRecord",
-    "args":"( event(0x1d4425e80) stream(4))",
+    "args":"( event(0x1d4425b00) stream(2))",
     "Data":"",
-    "DurationNs":"9298"
+    "DurationNs":"7084"
   }
 }
-,{"ph":"X","name":"hipEventRecord","pid":"2","tid":"18217","ts":"1050011030433","dur":"108",
+,{"ph":"X","name":"hipEventRecord","pid":"2","tid":"21040","ts":"1050401359048","dur":"4",
   "args":{
-    "BeginNs":"1050011030433788",
-    "EndNs":"1050011030542328",
-    "pid":"18217",
-    "tid":"18217",
-    "Name":"hipEventRecord",
-    "args":"( event(0x1d4426040) stream(5))",
-    "Data":"",
-    "DurationNs":"108540"
-  }
-}
-,{"ph":"X","name":"hipEventSynchronize","pid":"2","tid":"18217","ts":"1050011030542","dur":"21166832",
-  "args":{
-    "BeginNs":"1050011030542809",
-    "EndNs":"1050032197375786",
-    "pid":"18217",
-    "tid":"18217",
-    "Name":"hipEventSynchronize",
-    "args":"( event(0x1d435d6e0))",
-    "Data":"",
-    "DurationNs":"21166832977"
-  }
-}
-,{"ph":"X","name":"hipEventElapsedTime","pid":"2","tid":"18217","ts":"1050032197380","dur":"2",
-  "args":{
-    "BeginNs":"1050032197380254",
-    "EndNs":"1050032197383080",
-    "pid":"18217",
-    "tid":"18217",
-    "Name":"hipEventElapsedTime",
-    "args":"( ms(21182.6) start(0x1d435d5b0) stop(0x1d435d6e0))",
-    "Data":"",
-    "DurationNs":"2826"
-  }
-}
-,{"ph":"X","name":"hipEventSynchronize","pid":"2","tid":"18217","ts":"1050032197395","dur":"18510",
-  "args":{
-    "BeginNs":"1050032197395494",
-    "EndNs":"1050032215905656",
-    "pid":"18217",
-    "tid":"18217",
-    "Name":"hipEventSynchronize",
-    "args":"( event(0x1d4425b00))",
-    "Data":"",
-    "DurationNs":"18510162"
-  }
-}
-,{"ph":"X","name":"hipEventElapsedTime","pid":"2","tid":"18217","ts":"1050032215906","dur":"1",
-  "args":{
-    "BeginNs":"1050032215906017",
-    "EndNs":"1050032215906879",
-    "pid":"18217",
-    "tid":"18217",
-    "Name":"hipEventElapsedTime",
-    "args":"( ms(21191.9) start(0x1d4425a20) stop(0x1d4425b00))",
-    "Data":"",
-    "DurationNs":"862"
-  }
-}
-,{"ph":"X","name":"hipEventSynchronize","pid":"2","tid":"18217","ts":"1050032215909","dur":"1",
-  "args":{
-    "BeginNs":"1050032215909584",
-    "EndNs":"1050032215910215",
-    "pid":"18217",
-    "tid":"18217",
-    "Name":"hipEventSynchronize",
-    "args":"( event(0x1d4425cc0))",
-    "Data":"",
-    "DurationNs":"631"
-  }
-}
-,{"ph":"X","name":"hipEventElapsedTime","pid":"2","tid":"18217","ts":"1050032215910","dur":"1",
-  "args":{
-    "BeginNs":"1050032215910406",
-    "EndNs":"1050032215910997",
-    "pid":"18217",
-    "tid":"18217",
-    "Name":"hipEventElapsedTime",
-    "args":"( ms(21092.9) start(0x1d4425be0) stop(0x1d4425cc0))",
-    "Data":"",
-    "DurationNs":"591"
-  }
-}
-,{"ph":"X","name":"hipEventSynchronize","pid":"2","tid":"18217","ts":"1050032215911","dur":"1",
-  "args":{
-    "BeginNs":"1050032215911157",
-    "EndNs":"1050032215911638",
-    "pid":"18217",
-    "tid":"18217",
-    "Name":"hipEventSynchronize",
-    "args":"( event(0x1d4425e80))",
-    "Data":"",
-    "DurationNs":"481"
-  }
-}
-,{"ph":"X","name":"hipEventElapsedTime","pid":"2","tid":"18217","ts":"1050032215913","dur":"1",
-  "args":{
-    "BeginNs":"1050032215913642",
-    "EndNs":"1050032215914313",
-    "pid":"18217",
-    "tid":"18217",
-    "Name":"hipEventElapsedTime",
-    "args":"( ms(21168.9) start(0x1d4425da0) stop(0x1d4425e80))",
-    "Data":"",
-    "DurationNs":"671"
-  }
-}
-,{"ph":"X","name":"hipEventSynchronize","pid":"2","tid":"18217","ts":"1050032215914","dur":"1",
-  "args":{
-    "BeginNs":"1050032215914483",
-    "EndNs":"1050032215915015",
-    "pid":"18217",
-    "tid":"18217",
-    "Name":"hipEventSynchronize",
-    "args":"( event(0x1d4426040))",
-    "Data":"",
-    "DurationNs":"532"
-  }
-}
-,{"ph":"X","name":"hipEventElapsedTime","pid":"2","tid":"18217","ts":"1050032215915","dur":"1",
-  "args":{
-    "BeginNs":"1050032215915165",
-    "EndNs":"1050032215915676",
-    "pid":"18217",
-    "tid":"18217",
-    "Name":"hipEventElapsedTime",
-    "args":"( ms(21192.1) start(0x1d4425f60) stop(0x1d4426040))",
-    "Data":"",
-    "DurationNs":"511"
-  }
-}
-,{"ph":"X","name":"hipEventRecord","pid":"2","tid":"18217","ts":"1050032262968","dur":"23",
-  "args":{
-    "BeginNs":"1050032262968684",
-    "EndNs":"1050032262991939",
-    "pid":"18217",
-    "tid":"18217",
-    "Name":"hipEventRecord",
-    "args":"( event(0x1d4425f60) stream(5))",
-    "Data":"",
-    "DurationNs":"23255"
-  }
-}
-,{"ph":"X","name":"hipEventRecord","pid":"2","tid":"18217","ts":"1050032262993","dur":"16",
-  "args":{
-    "BeginNs":"1050032262993041",
-    "EndNs":"1050032263009573",
-    "pid":"18217",
-    "tid":"18217",
-    "Name":"hipEventRecord",
-    "args":"( event(0x1d435d5b0) stream(1))",
-    "Data":"",
-    "DurationNs":"16532"
-  }
-}
-,{"ph":"X","name":"hipMemcpyAsync","pid":"2","tid":"18217","ts":"1050032263019","dur":"14",
-  "args":{
-    "BeginNs":"1050032263019172",
-    "EndNs":"1050032263033339",
-    "pid":"18217",
-    "tid":"18217",
-    "Name":"hipMemcpyAsync",
-    "args":"( dst(0x14fd97c00000) src(0x14fd9be00000) sizeBytes(16777216) kind(1) stream(1))",
-    "Data":"",
-    "DurationNs":"14167"
-  }
-}
-,{"ph":"X","name":"hipEventRecord","pid":"2","tid":"18217","ts":"1050032263033","dur":"6",
-  "args":{
-    "BeginNs":"1050032263033800",
-    "EndNs":"1050032263040463",
-    "pid":"18217",
-    "tid":"18217",
-    "Name":"hipEventRecord",
-    "args":"( event(0x1d4425a20) stream(2))",
-    "Data":"",
-    "DurationNs":"6663"
-  }
-}
-,{"ph":"X","name":"hipMemcpyAsync","pid":"2","tid":"18217","ts":"1050032263040","dur":"17",
-  "args":{
-    "BeginNs":"1050032263040784",
-    "EndNs":"1050032263058558",
-    "pid":"18217",
-    "tid":"18217",
-    "Name":"hipMemcpyAsync",
-    "args":"( dst(0x14fd98c00000) src(0x14fd9ce00000) sizeBytes(16777216) kind(1) stream(2))",
-    "Data":"",
-    "DurationNs":"17774"
-  }
-}
-,{"ph":"X","name":"hipEventRecord","pid":"2","tid":"18217","ts":"1050032263061","dur":"13",
-  "args":{
-    "BeginNs":"1050032263061995",
-    "EndNs":"1050032263075802",
-    "pid":"18217",
-    "tid":"18217",
+    "BeginNs":"1050401359048813",
+    "EndNs":"1050401359053692",
+    "pid":"21040",
+    "tid":"21040",
     "Name":"hipEventRecord",
     "args":"( event(0x1d4425be0) stream(3))",
     "Data":"",
-    "DurationNs":"13807"
+    "DurationNs":"4879"
   }
 }
-,{"ph":"X","name":"hipMemcpyAsync","pid":"2","tid":"18217","ts":"1050032263076","dur":"14",
+,{"ph":"X","name":"__hipPushCallConfiguration","pid":"2","tid":"21040","ts":"1050401359054","dur":"1",
   "args":{
-    "BeginNs":"1050032263076192",
-    "EndNs":"1050032263090640",
-    "pid":"18217",
-    "tid":"18217",
-    "Name":"hipMemcpyAsync",
-    "args":"( dst(0x14fd99c00000) src(0x14fd9de00000) sizeBytes(16777216) kind(1) stream(3))",
+    "BeginNs":"1050401359054143",
+    "EndNs":"1050401359054314",
+    "pid":"21040",
+    "tid":"21040",
+    "Name":"__hipPushCallConfiguration",
+    "args":"( gridDim({z(1) y(1) x(65536}) blockDim({z(1) y(1) x(256}) sharedMem(0) stream(3))",
     "Data":"",
-    "DurationNs":"14448"
+    "DurationNs":"171"
   }
 }
-,{"ph":"X","name":"hipEventRecord","pid":"2","tid":"18217","ts":"1050032263094","dur":"8",
+,{"ph":"X","name":"__hipPopCallConfiguration","pid":"2","tid":"21040","ts":"1050401359057","dur":"1",
   "args":{
-    "BeginNs":"1050032263094257",
-    "EndNs":"1050032263102593",
-    "pid":"18217",
-    "tid":"18217",
+    "BeginNs":"1050401359057099",
+    "EndNs":"1050401359057299",
+    "pid":"21040",
+    "tid":"21040",
+    "Name":"__hipPopCallConfiguration",
+    "args":"( gridDim({z(1) y(1) x(65536}) blockDim({z(1) y(1) x(256}) sharedMem(0) stream(3))",
+    "Data":"",
+    "DurationNs":"200"
+  }
+}
+,{"ph":"X","name":"hipLaunchKernel","pid":"2","tid":"21040","ts":"1050401359057","dur":"4374",
+  "args":{
+    "BeginNs":"1050401359057640",
+    "EndNs":"1050401363432523",
+    "pid":"21040",
+    "tid":"21040",
+    "Name":"hipLaunchKernel",
+    "args":"( kernel(kernel(float*, int, int)) function_address(0x201510) numBlocks({z(1) y(1) x(65536}) dimBlocks({z(1) y(1) x(256}) args(0x7ffedc4b72c8) sharedMemBytes(0) stream(3))",
+    "Data":"",
+    "DurationNs":"4374883"
+  }
+}
+,{"ph":"X","name":"hipEventRecord","pid":"2","tid":"21040","ts":"1050401363434","dur":"6",
+  "args":{
+    "BeginNs":"1050401363434026",
+    "EndNs":"1050401363440489",
+    "pid":"21040",
+    "tid":"21040",
+    "Name":"hipEventRecord",
+    "args":"( event(0x1d4425cc0) stream(3))",
+    "Data":"",
+    "DurationNs":"6463"
+  }
+}
+,{"ph":"X","name":"hipEventRecord","pid":"2","tid":"21040","ts":"1050401363444","dur":"9",
+  "args":{
+    "BeginNs":"1050401363444156",
+    "EndNs":"1050401363453935",
+    "pid":"21040",
+    "tid":"21040",
     "Name":"hipEventRecord",
     "args":"( event(0x1d4425da0) stream(4))",
     "Data":"",
-    "DurationNs":"8336"
+    "DurationNs":"9779"
   }
 }
-,{"ph":"X","name":"hipMemcpyAsync","pid":"2","tid":"18217","ts":"1050032263102","dur":"13",
+,{"ph":"X","name":"__hipPushCallConfiguration","pid":"2","tid":"21040","ts":"1050401363454","dur":"1",
   "args":{
-    "BeginNs":"1050032263102914",
-    "EndNs":"1050032263116801",
-    "pid":"18217",
-    "tid":"18217",
-    "Name":"hipMemcpyAsync",
-    "args":"( dst(0x14fd9ac00000) src(0x14fd9ee00000) sizeBytes(16777216) kind(1) stream(4))",
+    "BeginNs":"1050401363454335",
+    "EndNs":"1050401363454516",
+    "pid":"21040",
+    "tid":"21040",
+    "Name":"__hipPushCallConfiguration",
+    "args":"( gridDim({z(1) y(1) x(65536}) blockDim({z(1) y(1) x(256}) sharedMem(0) stream(4))",
     "Data":"",
-    "DurationNs":"13887"
+    "DurationNs":"181"
   }
 }
-,{"ph":"X","name":"__hipPushCallConfiguration","pid":"2","tid":"18217","ts":"1050032263118","dur":"2",
+,{"ph":"X","name":"__hipPopCallConfiguration","pid":"2","tid":"21040","ts":"1050401363454","dur":"1",
   "args":{
-    "BeginNs":"1050032263118154",
-    "EndNs":"1050032263120458",
-    "pid":"18217",
-    "tid":"18217",
+    "BeginNs":"1050401363454846",
+    "EndNs":"1050401363455017",
+    "pid":"21040",
+    "tid":"21040",
+    "Name":"__hipPopCallConfiguration",
+    "args":"( gridDim({z(1) y(1) x(65536}) blockDim({z(1) y(1) x(256}) sharedMem(0) stream(4))",
+    "Data":"",
+    "DurationNs":"171"
+  }
+}
+,{"ph":"X","name":"hipLaunchKernel","pid":"2","tid":"21040","ts":"1050401363458","dur":"5",
+  "args":{
+    "BeginNs":"1050401363458013",
+    "EndNs":"1050401363463122",
+    "pid":"21040",
+    "tid":"21040",
+    "Name":"hipLaunchKernel",
+    "args":"( kernel(kernel(float*, int, int)) function_address(0x201510) numBlocks({z(1) y(1) x(65536}) dimBlocks({z(1) y(1) x(256}) args(0x7ffedc4b72c8) sharedMemBytes(0) stream(4))",
+    "Data":"",
+    "DurationNs":"5109"
+  }
+}
+,{"ph":"X","name":"hipEventRecord","pid":"2","tid":"21040","ts":"1050401363463","dur":"2",
+  "args":{
+    "BeginNs":"1050401363463944",
+    "EndNs":"1050401363466239",
+    "pid":"21040",
+    "tid":"21040",
+    "Name":"hipEventRecord",
+    "args":"( event(0x1d4425e80) stream(4))",
+    "Data":"",
+    "DurationNs":"2295"
+  }
+}
+,{"ph":"X","name":"hipMemcpy","pid":"2","tid":"21040","ts":"1050401363469","dur":"87667",
+  "args":{
+    "BeginNs":"1050401363469224",
+    "EndNs":"1050401451136313",
+    "pid":"21040",
+    "tid":"21040",
+    "Name":"hipMemcpy",
+    "args":"( dst(0x147babe00000) src(0x147ba7c00000) sizeBytes(67108864) kind(2))",
+    "Data":"",
+    "DurationNs":"87667089"
+  }
+}
+,{"ph":"X","name":"hipEventRecord","pid":"2","tid":"21040","ts":"1050401451136","dur":"6",
+  "args":{
+    "BeginNs":"1050401451136914",
+    "EndNs":"1050401451142996",
+    "pid":"21040",
+    "tid":"21040",
+    "Name":"hipEventRecord",
+    "args":"( event(0x1d4426040) stream(5))",
+    "Data":"",
+    "DurationNs":"6082"
+  }
+}
+,{"ph":"X","name":"hipEventSynchronize","pid":"2","tid":"21040","ts":"1050401451143","dur":"1",
+  "args":{
+    "BeginNs":"1050401451143577",
+    "EndNs":"1050401451144319",
+    "pid":"21040",
+    "tid":"21040",
+    "Name":"hipEventSynchronize",
+    "args":"( event(0x1d435d6e0))",
+    "Data":"",
+    "DurationNs":"742"
+  }
+}
+,{"ph":"X","name":"hipEventElapsedTime","pid":"2","tid":"21040","ts":"1050401451149","dur":"1",
+  "args":{
+    "BeginNs":"1050401451149689",
+    "EndNs":"1050401451151372",
+    "pid":"21040",
+    "tid":"21040",
+    "Name":"hipEventElapsedTime",
+    "args":"( ms(96.0283) start(0x1d435d5b0) stop(0x1d435d6e0))",
+    "Data":"",
+    "DurationNs":"1683"
+  }
+}
+,{"ph":"X","name":"hipEventSynchronize","pid":"2","tid":"21040","ts":"1050401451151","dur":"1",
+  "args":{
+    "BeginNs":"1050401451151723",
+    "EndNs":"1050401451152044",
+    "pid":"21040",
+    "tid":"21040",
+    "Name":"hipEventSynchronize",
+    "args":"( event(0x1d4425b00))",
+    "Data":"",
+    "DurationNs":"321"
+  }
+}
+,{"ph":"X","name":"hipEventElapsedTime","pid":"2","tid":"21040","ts":"1050401451154","dur":"1",
+  "args":{
+    "BeginNs":"1050401451154729",
+    "EndNs":"1050401451155280",
+    "pid":"21040",
+    "tid":"21040",
+    "Name":"hipEventElapsedTime",
+    "args":"( ms(92.8257) start(0x1d4425a20) stop(0x1d4425b00))",
+    "Data":"",
+    "DurationNs":"551"
+  }
+}
+,{"ph":"X","name":"hipEventSynchronize","pid":"2","tid":"21040","ts":"1050401451155","dur":"1",
+  "args":{
+    "BeginNs":"1050401451155560",
+    "EndNs":"1050401451155831",
+    "pid":"21040",
+    "tid":"21040",
+    "Name":"hipEventSynchronize",
+    "args":"( event(0x1d4425cc0))",
+    "Data":"",
+    "DurationNs":"271"
+  }
+}
+,{"ph":"X","name":"hipEventElapsedTime","pid":"2","tid":"21040","ts":"1050401451156","dur":"1",
+  "args":{
+    "BeginNs":"1050401451156081",
+    "EndNs":"1050401451156472",
+    "pid":"21040",
+    "tid":"21040",
+    "Name":"hipEventElapsedTime",
+    "args":"( ms(89.3889) start(0x1d4425be0) stop(0x1d4425cc0))",
+    "Data":"",
+    "DurationNs":"391"
+  }
+}
+,{"ph":"X","name":"hipEventSynchronize","pid":"2","tid":"21040","ts":"1050401451158","dur":"1",
+  "args":{
+    "BeginNs":"1050401451158847",
+    "EndNs":"1050401451159147",
+    "pid":"21040",
+    "tid":"21040",
+    "Name":"hipEventSynchronize",
+    "args":"( event(0x1d4425e80))",
+    "Data":"",
+    "DurationNs":"300"
+  }
+}
+,{"ph":"X","name":"hipEventElapsedTime","pid":"2","tid":"21040","ts":"1050401451159","dur":"1",
+  "args":{
+    "BeginNs":"1050401451159418",
+    "EndNs":"1050401451159859",
+    "pid":"21040",
+    "tid":"21040",
+    "Name":"hipEventElapsedTime",
+    "args":"( ms(84.9863) start(0x1d4425da0) stop(0x1d4425e80))",
+    "Data":"",
+    "DurationNs":"441"
+  }
+}
+,{"ph":"X","name":"hipEventSynchronize","pid":"2","tid":"21040","ts":"1050401451162","dur":"1",
+  "args":{
+    "BeginNs":"1050401451162213",
+    "EndNs":"1050401451162514",
+    "pid":"21040",
+    "tid":"21040",
+    "Name":"hipEventSynchronize",
+    "args":"( event(0x1d4426040))",
+    "Data":"",
+    "DurationNs":"301"
+  }
+}
+,{"ph":"X","name":"hipEventElapsedTime","pid":"2","tid":"21040","ts":"1050401451162","dur":"1",
+  "args":{
+    "BeginNs":"1050401451162794",
+    "EndNs":"1050401451163396",
+    "pid":"21040",
+    "tid":"21040",
+    "Name":"hipEventElapsedTime",
+    "args":"( ms(116.399) start(0x1d4425f60) stop(0x1d4426040))",
+    "Data":"",
+    "DurationNs":"602"
+  }
+}
+,{"ph":"X","name":"hipEventRecord","pid":"2","tid":"21040","ts":"1050401513812","dur":"12",
+  "args":{
+    "BeginNs":"1050401513812758",
+    "EndNs":"1050401513825423",
+    "pid":"21040",
+    "tid":"21040",
+    "Name":"hipEventRecord",
+    "args":"( event(0x1d4425f60) stream(5))",
+    "Data":"",
+    "DurationNs":"12665"
+  }
+}
+,{"ph":"X","name":"hipEventRecord","pid":"2","tid":"21040","ts":"1050401513831","dur":"9",
+  "args":{
+    "BeginNs":"1050401513831174",
+    "EndNs":"1050401513841003",
+    "pid":"21040",
+    "tid":"21040",
+    "Name":"hipEventRecord",
+    "args":"( event(0x1d435d5b0) stream(1))",
+    "Data":"",
+    "DurationNs":"9829"
+  }
+}
+,{"ph":"X","name":"hipMemcpyAsync","pid":"2","tid":"21040","ts":"1050401513844","dur":"10",
+  "args":{
+    "BeginNs":"1050401513844570",
+    "EndNs":"1050401513855261",
+    "pid":"21040",
+    "tid":"21040",
+    "Name":"hipMemcpyAsync",
+    "args":"( dst(0x147ba7c00000) src(0x147babe00000) sizeBytes(16777216) kind(1) stream(1))",
+    "Data":"",
+    "DurationNs":"10691"
+  }
+}
+,{"ph":"X","name":"__hipPushCallConfiguration","pid":"2","tid":"21040","ts":"1050401513855","dur":"1",
+  "args":{
+    "BeginNs":"1050401513855762",
+    "EndNs":"1050401513855942",
+    "pid":"21040",
+    "tid":"21040",
     "Name":"__hipPushCallConfiguration",
     "args":"( gridDim({z(1) y(1) x(65536}) blockDim({z(1) y(1) x(256}) sharedMem(0) stream(1))",
     "Data":"",
-    "DurationNs":"2304"
+    "DurationNs":"180"
   }
 }
-,{"ph":"X","name":"__hipPopCallConfiguration","pid":"2","tid":"18217","ts":"1050032263125","dur":"1",
+,{"ph":"X","name":"__hipPopCallConfiguration","pid":"2","tid":"21040","ts":"1050401513858","dur":"1",
   "args":{
-    "BeginNs":"1050032263125388",
-    "EndNs":"1050032263126079",
-    "pid":"18217",
-    "tid":"18217",
+    "BeginNs":"1050401513858837",
+    "EndNs":"1050401513859028",
+    "pid":"21040",
+    "tid":"21040",
     "Name":"__hipPopCallConfiguration",
     "args":"( gridDim({z(1) y(1) x(65536}) blockDim({z(1) y(1) x(256}) sharedMem(0) stream(1))",
     "Data":"",
-    "DurationNs":"691"
+    "DurationNs":"191"
   }
 }
-,{"ph":"X","name":"hipLaunchKernel","pid":"2","tid":"18217","ts":"1050032263127","dur":"35",
+,{"ph":"X","name":"hipLaunchKernel","pid":"2","tid":"21040","ts":"1050401513859","dur":"10",
   "args":{
-    "BeginNs":"1050032263127702",
-    "EndNs":"1050032263162790",
-    "pid":"18217",
-    "tid":"18217",
+    "BeginNs":"1050401513859569",
+    "EndNs":"1050401513870530",
+    "pid":"21040",
+    "tid":"21040",
     "Name":"hipLaunchKernel",
-    "args":"( kernel(kernel(float*, int, int)) function_address(0x201510) numBlocks({z(1) y(1) x(65536}) dimBlocks({z(1) y(1) x(256}) args(0x7fff5accfa38) sharedMemBytes(0) stream(1))",
+    "args":"( kernel(kernel(float*, int, int)) function_address(0x201510) numBlocks({z(1) y(1) x(65536}) dimBlocks({z(1) y(1) x(256}) args(0x7ffedc4b72d8) sharedMemBytes(0) stream(1))",
     "Data":"",
-    "DurationNs":"35088"
+    "DurationNs":"10961"
   }
 }
-,{"ph":"X","name":"__hipPushCallConfiguration","pid":"2","tid":"18217","ts":"1050032263169","dur":"1",
+,{"ph":"X","name":"hipMemcpyAsync","pid":"2","tid":"21040","ts":"1050401513875","dur":"19",
   "args":{
-    "BeginNs":"1050032263169744",
-    "EndNs":"1050032263169854",
-    "pid":"18217",
-    "tid":"18217",
+    "BeginNs":"1050401513875219",
+    "EndNs":"1050401513895128",
+    "pid":"21040",
+    "tid":"21040",
+    "Name":"hipMemcpyAsync",
+    "args":"( dst(0x147babe00000) src(0x147ba7c00000) sizeBytes(16777216) kind(2) stream(1))",
+    "Data":"",
+    "DurationNs":"19909"
+  }
+}
+,{"ph":"X","name":"hipEventRecord","pid":"2","tid":"21040","ts":"1050401513895","dur":"31",
+  "args":{
+    "BeginNs":"1050401513895488",
+    "EndNs":"1050401513926699",
+    "pid":"21040",
+    "tid":"21040",
+    "Name":"hipEventRecord",
+    "args":"( event(0x1d435d6e0) stream(1))",
+    "Data":"",
+    "DurationNs":"31211"
+  }
+}
+,{"ph":"X","name":"hipEventRecord","pid":"2","tid":"21040","ts":"1050401513927","dur":"16",
+  "args":{
+    "BeginNs":"1050401513927120",
+    "EndNs":"1050401513944103",
+    "pid":"21040",
+    "tid":"21040",
+    "Name":"hipEventRecord",
+    "args":"( event(0x1d4425a20) stream(2))",
+    "Data":"",
+    "DurationNs":"16983"
+  }
+}
+,{"ph":"X","name":"hipMemcpyAsync","pid":"2","tid":"21040","ts":"1050401513947","dur":"836",
+  "args":{
+    "BeginNs":"1050401513947730",
+    "EndNs":"1050401514784119",
+    "pid":"21040",
+    "tid":"21040",
+    "Name":"hipMemcpyAsync",
+    "args":"( dst(0x147ba8c00000) src(0x147bace00000) sizeBytes(16777216) kind(1) stream(2))",
+    "Data":"",
+    "DurationNs":"836389"
+  }
+}
+,{"ph":"X","name":"__hipPushCallConfiguration","pid":"2","tid":"21040","ts":"1050401514784","dur":"1",
+  "args":{
+    "BeginNs":"1050401514784921",
+    "EndNs":"1050401514785071",
+    "pid":"21040",
+    "tid":"21040",
     "Name":"__hipPushCallConfiguration",
     "args":"( gridDim({z(1) y(1) x(65536}) blockDim({z(1) y(1) x(256}) sharedMem(0) stream(2))",
+    "Data":"",
+    "DurationNs":"150"
+  }
+}
+,{"ph":"X","name":"__hipPopCallConfiguration","pid":"2","tid":"21040","ts":"1050401514788","dur":"1",
+  "args":{
+    "BeginNs":"1050401514788428",
+    "EndNs":"1050401514788588",
+    "pid":"21040",
+    "tid":"21040",
+    "Name":"__hipPopCallConfiguration",
+    "args":"( gridDim({z(1) y(1) x(65536}) blockDim({z(1) y(1) x(256}) sharedMem(0) stream(2))",
+    "Data":"",
+    "DurationNs":"160"
+  }
+}
+,{"ph":"X","name":"hipLaunchKernel","pid":"2","tid":"21040","ts":"1050401514788","dur":"7",
+  "args":{
+    "BeginNs":"1050401514788929",
+    "EndNs":"1050401514796043",
+    "pid":"21040",
+    "tid":"21040",
+    "Name":"hipLaunchKernel",
+    "args":"( kernel(kernel(float*, int, int)) function_address(0x201510) numBlocks({z(1) y(1) x(65536}) dimBlocks({z(1) y(1) x(256}) args(0x7ffedc4b72d8) sharedMemBytes(0) stream(2))",
+    "Data":"",
+    "DurationNs":"7114"
+  }
+}
+,{"ph":"X","name":"hipMemcpyAsync","pid":"2","tid":"21040","ts":"1050401514797","dur":"1089",
+  "args":{
+    "BeginNs":"1050401514797405",
+    "EndNs":"1050401515886765",
+    "pid":"21040",
+    "tid":"21040",
+    "Name":"hipMemcpyAsync",
+    "args":"( dst(0x147bace00000) src(0x147ba8c00000) sizeBytes(16777216) kind(2) stream(2))",
+    "Data":"",
+    "DurationNs":"1089360"
+  }
+}
+,{"ph":"X","name":"hipEventRecord","pid":"2","tid":"21040","ts":"1050401515889","dur":"7",
+  "args":{
+    "BeginNs":"1050401515889891",
+    "EndNs":"1050401515897265",
+    "pid":"21040",
+    "tid":"21040",
+    "Name":"hipEventRecord",
+    "args":"( event(0x1d4425b00) stream(2))",
+    "Data":"",
+    "DurationNs":"7374"
+  }
+}
+,{"ph":"X","name":"hipEventRecord","pid":"2","tid":"21040","ts":"1050401515897","dur":"9",
+  "args":{
+    "BeginNs":"1050401515897666",
+    "EndNs":"1050401515906984",
+    "pid":"21040",
+    "tid":"21040",
+    "Name":"hipEventRecord",
+    "args":"( event(0x1d4425be0) stream(3))",
+    "Data":"",
+    "DurationNs":"9318"
+  }
+}
+,{"ph":"X","name":"hipMemcpyAsync","pid":"2","tid":"21040","ts":"1050401515910","dur":"17",
+  "args":{
+    "BeginNs":"1050401515910140",
+    "EndNs":"1050401515927183",
+    "pid":"21040",
+    "tid":"21040",
+    "Name":"hipMemcpyAsync",
+    "args":"( dst(0x147ba9c00000) src(0x147bade00000) sizeBytes(16777216) kind(1) stream(3))",
+    "Data":"",
+    "DurationNs":"17043"
+  }
+}
+,{"ph":"X","name":"__hipPushCallConfiguration","pid":"2","tid":"21040","ts":"1050401515927","dur":"1",
+  "args":{
+    "BeginNs":"1050401515927664",
+    "EndNs":"1050401515927825",
+    "pid":"21040",
+    "tid":"21040",
+    "Name":"__hipPushCallConfiguration",
+    "args":"( gridDim({z(1) y(1) x(65536}) blockDim({z(1) y(1) x(256}) sharedMem(0) stream(3))",
+    "Data":"",
+    "DurationNs":"161"
+  }
+}
+,{"ph":"X","name":"__hipPopCallConfiguration","pid":"2","tid":"21040","ts":"1050401515928","dur":"1",
+  "args":{
+    "BeginNs":"1050401515928225",
+    "EndNs":"1050401515928406",
+    "pid":"21040",
+    "tid":"21040",
+    "Name":"__hipPopCallConfiguration",
+    "args":"( gridDim({z(1) y(1) x(65536}) blockDim({z(1) y(1) x(256}) sharedMem(0) stream(3))",
+    "Data":"",
+    "DurationNs":"181"
+  }
+}
+,{"ph":"X","name":"hipLaunchKernel","pid":"2","tid":"21040","ts":"1050401515931","dur":"5",
+  "args":{
+    "BeginNs":"1050401515931141",
+    "EndNs":"1050401515936592",
+    "pid":"21040",
+    "tid":"21040",
+    "Name":"hipLaunchKernel",
+    "args":"( kernel(kernel(float*, int, int)) function_address(0x201510) numBlocks({z(1) y(1) x(65536}) dimBlocks({z(1) y(1) x(256}) args(0x7ffedc4b72d8) sharedMemBytes(0) stream(3))",
+    "Data":"",
+    "DurationNs":"5451"
+  }
+}
+,{"ph":"X","name":"hipMemcpyAsync","pid":"2","tid":"21040","ts":"1050401515937","dur":"15",
+  "args":{
+    "BeginNs":"1050401515937483",
+    "EndNs":"1050401515952783",
+    "pid":"21040",
+    "tid":"21040",
+    "Name":"hipMemcpyAsync",
+    "args":"( dst(0x147bade00000) src(0x147ba9c00000) sizeBytes(16777216) kind(2) stream(3))",
+    "Data":"",
+    "DurationNs":"15300"
+  }
+}
+,{"ph":"X","name":"hipEventRecord","pid":"2","tid":"21040","ts":"1050401515953","dur":"16",
+  "args":{
+    "BeginNs":"1050401515953124",
+    "EndNs":"1050401515969405",
+    "pid":"21040",
+    "tid":"21040",
+    "Name":"hipEventRecord",
+    "args":"( event(0x1d4425cc0) stream(3))",
+    "Data":"",
+    "DurationNs":"16281"
+  }
+}
+,{"ph":"X","name":"hipEventRecord","pid":"2","tid":"21040","ts":"1050401515972","dur":"15",
+  "args":{
+    "BeginNs":"1050401515972812",
+    "EndNs":"1050401515988562",
+    "pid":"21040",
+    "tid":"21040",
+    "Name":"hipEventRecord",
+    "args":"( event(0x1d4425da0) stream(4))",
+    "Data":"",
+    "DurationNs":"15750"
+  }
+}
+,{"ph":"X","name":"hipMemcpyAsync","pid":"2","tid":"21040","ts":"1050401515988","dur":"1269",
+  "args":{
+    "BeginNs":"1050401515988943",
+    "EndNs":"1050401517258201",
+    "pid":"21040",
+    "tid":"21040",
+    "Name":"hipMemcpyAsync",
+    "args":"( dst(0x147baac00000) src(0x147baee00000) sizeBytes(16777216) kind(1) stream(4))",
+    "Data":"",
+    "DurationNs":"1269258"
+  }
+}
+,{"ph":"X","name":"__hipPushCallConfiguration","pid":"2","tid":"21040","ts":"1050401517261","dur":"1",
+  "args":{
+    "BeginNs":"1050401517261748",
+    "EndNs":"1050401517261939",
+    "pid":"21040",
+    "tid":"21040",
+    "Name":"__hipPushCallConfiguration",
+    "args":"( gridDim({z(1) y(1) x(65536}) blockDim({z(1) y(1) x(256}) sharedMem(0) stream(4))",
+    "Data":"",
+    "DurationNs":"191"
+  }
+}
+,{"ph":"X","name":"__hipPopCallConfiguration","pid":"2","tid":"21040","ts":"1050401517262","dur":"1",
+  "args":{
+    "BeginNs":"1050401517262390",
+    "EndNs":"1050401517262570",
+    "pid":"21040",
+    "tid":"21040",
+    "Name":"__hipPopCallConfiguration",
+    "args":"( gridDim({z(1) y(1) x(65536}) blockDim({z(1) y(1) x(256}) sharedMem(0) stream(4))",
+    "Data":"",
+    "DurationNs":"180"
+  }
+}
+,{"ph":"X","name":"hipLaunchKernel","pid":"2","tid":"21040","ts":"1050401517262","dur":"6",
+  "args":{
+    "BeginNs":"1050401517262961",
+    "EndNs":"1050401517269543",
+    "pid":"21040",
+    "tid":"21040",
+    "Name":"hipLaunchKernel",
+    "args":"( kernel(kernel(float*, int, int)) function_address(0x201510) numBlocks({z(1) y(1) x(65536}) dimBlocks({z(1) y(1) x(256}) args(0x7ffedc4b72d8) sharedMemBytes(0) stream(4))",
+    "Data":"",
+    "DurationNs":"6582"
+  }
+}
+,{"ph":"X","name":"hipMemcpyAsync","pid":"2","tid":"21040","ts":"1050401517272","dur":"27",
+  "args":{
+    "BeginNs":"1050401517272980",
+    "EndNs":"1050401517300223",
+    "pid":"21040",
+    "tid":"21040",
+    "Name":"hipMemcpyAsync",
+    "args":"( dst(0x147baee00000) src(0x147baac00000) sizeBytes(16777216) kind(2) stream(4))",
+    "Data":"",
+    "DurationNs":"27243"
+  }
+}
+,{"ph":"X","name":"hipEventRecord","pid":"2","tid":"21040","ts":"1050401517300","dur":"20",
+  "args":{
+    "BeginNs":"1050401517300624",
+    "EndNs":"1050401517320723",
+    "pid":"21040",
+    "tid":"21040",
+    "Name":"hipEventRecord",
+    "args":"( event(0x1d4425e80) stream(4))",
+    "Data":"",
+    "DurationNs":"20099"
+  }
+}
+,{"ph":"X","name":"hipEventRecord","pid":"2","tid":"21040","ts":"1050401517323","dur":"114",
+  "args":{
+    "BeginNs":"1050401517323999",
+    "EndNs":"1050401517438160",
+    "pid":"21040",
+    "tid":"21040",
+    "Name":"hipEventRecord",
+    "args":"( event(0x1d4426040) stream(5))",
+    "Data":"",
+    "DurationNs":"114161"
+  }
+}
+,{"ph":"X","name":"hipEventSynchronize","pid":"2","tid":"21040","ts":"1050401517439","dur":"92660",
+  "args":{
+    "BeginNs":"1050401517439172",
+    "EndNs":"1050401610099942",
+    "pid":"21040",
+    "tid":"21040",
+    "Name":"hipEventSynchronize",
+    "args":"( event(0x1d435d6e0))",
+    "Data":"",
+    "DurationNs":"92660770"
+  }
+}
+,{"ph":"X","name":"hipEventElapsedTime","pid":"2","tid":"21040","ts":"1050401610100","dur":"1",
+  "args":{
+    "BeginNs":"1050401610100954",
+    "EndNs":"1050401610102057",
+    "pid":"21040",
+    "tid":"21040",
+    "Name":"hipEventElapsedTime",
+    "args":"( ms(96.2475) start(0x1d435d5b0) stop(0x1d435d6e0))",
+    "Data":"",
+    "DurationNs":"1103"
+  }
+}
+,{"ph":"X","name":"hipEventSynchronize","pid":"2","tid":"21040","ts":"1050401610105","dur":"1",
+  "args":{
+    "BeginNs":"1050401610105163",
+    "EndNs":"1050401610105573",
+    "pid":"21040",
+    "tid":"21040",
+    "Name":"hipEventSynchronize",
+    "args":"( event(0x1d4425b00))",
+    "Data":"",
+    "DurationNs":"410"
+  }
+}
+,{"ph":"X","name":"hipEventElapsedTime","pid":"2","tid":"21040","ts":"1050401610105","dur":"1",
+  "args":{
+    "BeginNs":"1050401610105854",
+    "EndNs":"1050401610106345",
+    "pid":"21040",
+    "tid":"21040",
+    "Name":"hipEventElapsedTime",
+    "args":"( ms(95.7091) start(0x1d4425a20) stop(0x1d4425b00))",
+    "Data":"",
+    "DurationNs":"491"
+  }
+}
+,{"ph":"X","name":"hipEventSynchronize","pid":"2","tid":"21040","ts":"1050401610108","dur":"1",
+  "args":{
+    "BeginNs":"1050401610108699",
+    "EndNs":"1050401610108910",
+    "pid":"21040",
+    "tid":"21040",
+    "Name":"hipEventSynchronize",
+    "args":"( event(0x1d4425cc0))",
+    "Data":"",
+    "DurationNs":"211"
+  }
+}
+,{"ph":"X","name":"hipEventElapsedTime","pid":"2","tid":"21040","ts":"1050401610109","dur":"1",
+  "args":{
+    "BeginNs":"1050401610109190",
+    "EndNs":"1050401610109611",
+    "pid":"21040",
+    "tid":"21040",
+    "Name":"hipEventElapsedTime",
+    "args":"( ms(94.0046) start(0x1d4425be0) stop(0x1d4425cc0))",
+    "Data":"",
+    "DurationNs":"421"
+  }
+}
+,{"ph":"X","name":"hipEventSynchronize","pid":"2","tid":"21040","ts":"1050401610109","dur":"672",
+  "args":{
+    "BeginNs":"1050401610109852",
+    "EndNs":"1050401610781853",
+    "pid":"21040",
+    "tid":"21040",
+    "Name":"hipEventSynchronize",
+    "args":"( event(0x1d4425e80))",
+    "Data":"",
+    "DurationNs":"672001"
+  }
+}
+,{"ph":"X","name":"hipEventElapsedTime","pid":"2","tid":"21040","ts":"1050401610784","dur":"1",
+  "args":{
+    "BeginNs":"1050401610784589",
+    "EndNs":"1050401610785250",
+    "pid":"21040",
+    "tid":"21040",
+    "Name":"hipEventElapsedTime",
+    "args":"( ms(94.7729) start(0x1d4425da0) stop(0x1d4425e80))",
+    "Data":"",
+    "DurationNs":"661"
+  }
+}
+,{"ph":"X","name":"hipEventSynchronize","pid":"2","tid":"21040","ts":"1050401610785","dur":"16",
+  "args":{
+    "BeginNs":"1050401610785530",
+    "EndNs":"1050401610802393",
+    "pid":"21040",
+    "tid":"21040",
+    "Name":"hipEventSynchronize",
+    "args":"( event(0x1d4426040))",
+    "Data":"",
+    "DurationNs":"16863"
+  }
+}
+,{"ph":"X","name":"hipEventElapsedTime","pid":"2","tid":"21040","ts":"1050401610802","dur":"1",
+  "args":{
+    "BeginNs":"1050401610802674",
+    "EndNs":"1050401610803074",
+    "pid":"21040",
+    "tid":"21040",
+    "Name":"hipEventElapsedTime",
+    "args":"( ms(96.9685) start(0x1d4425f60) stop(0x1d4426040))",
+    "Data":"",
+    "DurationNs":"400"
+  }
+}
+,{"ph":"X","name":"hipEventRecord","pid":"2","tid":"21040","ts":"1050401673428","dur":"12",
+  "args":{
+    "BeginNs":"1050401673428902",
+    "EndNs":"1050401673441266",
+    "pid":"21040",
+    "tid":"21040",
+    "Name":"hipEventRecord",
+    "args":"( event(0x1d4425f60) stream(5))",
+    "Data":"",
+    "DurationNs":"12364"
+  }
+}
+,{"ph":"X","name":"hipEventRecord","pid":"2","tid":"21040","ts":"1050401673442","dur":"13",
+  "args":{
+    "BeginNs":"1050401673442017",
+    "EndNs":"1050401673455653",
+    "pid":"21040",
+    "tid":"21040",
+    "Name":"hipEventRecord",
+    "args":"( event(0x1d435d5b0) stream(1))",
+    "Data":"",
+    "DurationNs":"13636"
+  }
+}
+,{"ph":"X","name":"hipMemcpyAsync","pid":"2","tid":"21040","ts":"1050401673463","dur":"8",
+  "args":{
+    "BeginNs":"1050401673463308",
+    "EndNs":"1050401673471955",
+    "pid":"21040",
+    "tid":"21040",
+    "Name":"hipMemcpyAsync",
+    "args":"( dst(0x147ba7c00000) src(0x147babe00000) sizeBytes(16777216) kind(1) stream(1))",
+    "Data":"",
+    "DurationNs":"8647"
+  }
+}
+,{"ph":"X","name":"hipEventRecord","pid":"2","tid":"21040","ts":"1050401673472","dur":"8",
+  "args":{
+    "BeginNs":"1050401673472306",
+    "EndNs":"1050401673480421",
+    "pid":"21040",
+    "tid":"21040",
+    "Name":"hipEventRecord",
+    "args":"( event(0x1d4425a20) stream(2))",
+    "Data":"",
+    "DurationNs":"8115"
+  }
+}
+,{"ph":"X","name":"hipMemcpyAsync","pid":"2","tid":"21040","ts":"1050401673480","dur":"16",
+  "args":{
+    "BeginNs":"1050401673480762",
+    "EndNs":"1050401673497154",
+    "pid":"21040",
+    "tid":"21040",
+    "Name":"hipMemcpyAsync",
+    "args":"( dst(0x147ba8c00000) src(0x147bace00000) sizeBytes(16777216) kind(1) stream(2))",
+    "Data":"",
+    "DurationNs":"16392"
+  }
+}
+,{"ph":"X","name":"hipEventRecord","pid":"2","tid":"21040","ts":"1050401673500","dur":"7",
+  "args":{
+    "BeginNs":"1050401673500560",
+    "EndNs":"1050401673507915",
+    "pid":"21040",
+    "tid":"21040",
+    "Name":"hipEventRecord",
+    "args":"( event(0x1d4425be0) stream(3))",
+    "Data":"",
+    "DurationNs":"7355"
+  }
+}
+,{"ph":"X","name":"hipMemcpyAsync","pid":"2","tid":"21040","ts":"1050401673508","dur":"12",
+  "args":{
+    "BeginNs":"1050401673508235",
+    "EndNs":"1050401673521020",
+    "pid":"21040",
+    "tid":"21040",
+    "Name":"hipMemcpyAsync",
+    "args":"( dst(0x147ba9c00000) src(0x147bade00000) sizeBytes(16777216) kind(1) stream(3))",
+    "Data":"",
+    "DurationNs":"12785"
+  }
+}
+,{"ph":"X","name":"hipEventRecord","pid":"2","tid":"21040","ts":"1050401673524","dur":"8",
+  "args":{
+    "BeginNs":"1050401673524407",
+    "EndNs":"1050401673532442",
+    "pid":"21040",
+    "tid":"21040",
+    "Name":"hipEventRecord",
+    "args":"( event(0x1d4425da0) stream(4))",
+    "Data":"",
+    "DurationNs":"8035"
+  }
+}
+,{"ph":"X","name":"hipMemcpyAsync","pid":"2","tid":"21040","ts":"1050401673532","dur":"13",
+  "args":{
+    "BeginNs":"1050401673532833",
+    "EndNs":"1050401673545988",
+    "pid":"21040",
+    "tid":"21040",
+    "Name":"hipMemcpyAsync",
+    "args":"( dst(0x147baac00000) src(0x147baee00000) sizeBytes(16777216) kind(1) stream(4))",
+    "Data":"",
+    "DurationNs":"13155"
+  }
+}
+,{"ph":"X","name":"__hipPushCallConfiguration","pid":"2","tid":"21040","ts":"1050401673546","dur":"1",
+  "args":{
+    "BeginNs":"1050401673546429",
+    "EndNs":"1050401673547030",
+    "pid":"21040",
+    "tid":"21040",
+    "Name":"__hipPushCallConfiguration",
+    "args":"( gridDim({z(1) y(1) x(65536}) blockDim({z(1) y(1) x(256}) sharedMem(0) stream(1))",
+    "Data":"",
+    "DurationNs":"601"
+  }
+}
+,{"ph":"X","name":"__hipPopCallConfiguration","pid":"2","tid":"21040","ts":"1050401673550","dur":"1",
+  "args":{
+    "BeginNs":"1050401673550347",
+    "EndNs":"1050401673550527",
+    "pid":"21040",
+    "tid":"21040",
+    "Name":"__hipPopCallConfiguration",
+    "args":"( gridDim({z(1) y(1) x(65536}) blockDim({z(1) y(1) x(256}) sharedMem(0) stream(1))",
+    "Data":"",
+    "DurationNs":"180"
+  }
+}
+,{"ph":"X","name":"hipLaunchKernel","pid":"2","tid":"21040","ts":"1050401673551","dur":"10",
+  "args":{
+    "BeginNs":"1050401673551038",
+    "EndNs":"1050401673561138",
+    "pid":"21040",
+    "tid":"21040",
+    "Name":"hipLaunchKernel",
+    "args":"( kernel(kernel(float*, int, int)) function_address(0x201510) numBlocks({z(1) y(1) x(65536}) dimBlocks({z(1) y(1) x(256}) args(0x7ffedc4b72d8) sharedMemBytes(0) stream(1))",
+    "Data":"",
+    "DurationNs":"10100"
+  }
+}
+,{"ph":"X","name":"__hipPushCallConfiguration","pid":"2","tid":"21040","ts":"1050401673569","dur":"1",
+  "args":{
+    "BeginNs":"1050401673569454",
+    "EndNs":"1050401673569574",
+    "pid":"21040",
+    "tid":"21040",
+    "Name":"__hipPushCallConfiguration",
+    "args":"( gridDim({z(1) y(1) x(65536}) blockDim({z(1) y(1) x(256}) sharedMem(0) stream(2))",
+    "Data":"",
+    "DurationNs":"120"
+  }
+}
+,{"ph":"X","name":"__hipPopCallConfiguration","pid":"2","tid":"21040","ts":"1050401673569","dur":"1",
+  "args":{
+    "BeginNs":"1050401673569865",
+    "EndNs":"1050401673569985",
+    "pid":"21040",
+    "tid":"21040",
+    "Name":"__hipPopCallConfiguration",
+    "args":"( gridDim({z(1) y(1) x(65536}) blockDim({z(1) y(1) x(256}) sharedMem(0) stream(2))",
+    "Data":"",
+    "DurationNs":"120"
+  }
+}
+,{"ph":"X","name":"hipLaunchKernel","pid":"2","tid":"21040","ts":"1050401673570","dur":"4",
+  "args":{
+    "BeginNs":"1050401673570255",
+    "EndNs":"1050401673575225",
+    "pid":"21040",
+    "tid":"21040",
+    "Name":"hipLaunchKernel",
+    "args":"( kernel(kernel(float*, int, int)) function_address(0x201510) numBlocks({z(1) y(1) x(65536}) dimBlocks({z(1) y(1) x(256}) args(0x7ffedc4b72d8) sharedMemBytes(0) stream(2))",
+    "Data":"",
+    "DurationNs":"4970"
+  }
+}
+,{"ph":"X","name":"__hipPushCallConfiguration","pid":"2","tid":"21040","ts":"1050401673578","dur":"1",
+  "args":{
+    "BeginNs":"1050401673578662",
+    "EndNs":"1050401673578772",
+    "pid":"21040",
+    "tid":"21040",
+    "Name":"__hipPushCallConfiguration",
+    "args":"( gridDim({z(1) y(1) x(65536}) blockDim({z(1) y(1) x(256}) sharedMem(0) stream(3))",
     "Data":"",
     "DurationNs":"110"
   }
 }
-,{"ph":"X","name":"__hipPopCallConfiguration","pid":"2","tid":"18217","ts":"1050032263170","dur":"1",
+,{"ph":"X","name":"__hipPopCallConfiguration","pid":"2","tid":"21040","ts":"1050401673579","dur":"1",
   "args":{
-    "BeginNs":"1050032263170144",
-    "EndNs":"1050032263170275",
-    "pid":"18217",
-    "tid":"18217",
+    "BeginNs":"1050401673579062",
+    "EndNs":"1050401673579183",
+    "pid":"21040",
+    "tid":"21040",
     "Name":"__hipPopCallConfiguration",
-    "args":"( gridDim({z(1) y(1) x(65536}) blockDim({z(1) y(1) x(256}) sharedMem(0) stream(2))",
-    "Data":"",
-    "DurationNs":"131"
-  }
-}
-,{"ph":"X","name":"hipLaunchKernel","pid":"2","tid":"18217","ts":"1050032263170","dur":"6",
-  "args":{
-    "BeginNs":"1050032263170555",
-    "EndNs":"1050032263177238",
-    "pid":"18217",
-    "tid":"18217",
-    "Name":"hipLaunchKernel",
-    "args":"( kernel(kernel(float*, int, int)) function_address(0x201510) numBlocks({z(1) y(1) x(65536}) dimBlocks({z(1) y(1) x(256}) args(0x7fff5accfa38) sharedMemBytes(0) stream(2))",
-    "Data":"",
-    "DurationNs":"6683"
-  }
-}
-,{"ph":"X","name":"__hipPushCallConfiguration","pid":"2","tid":"18217","ts":"1050032263181","dur":"1",
-  "args":{
-    "BeginNs":"1050032263181015",
-    "EndNs":"1050032263181136",
-    "pid":"18217",
-    "tid":"18217",
-    "Name":"__hipPushCallConfiguration",
     "args":"( gridDim({z(1) y(1) x(65536}) blockDim({z(1) y(1) x(256}) sharedMem(0) stream(3))",
     "Data":"",
     "DurationNs":"121"
   }
 }
-,{"ph":"X","name":"__hipPopCallConfiguration","pid":"2","tid":"18217","ts":"1050032263181","dur":"1",
+,{"ph":"X","name":"hipLaunchKernel","pid":"2","tid":"21040","ts":"1050401673579","dur":"5",
   "args":{
-    "BeginNs":"1050032263181416",
-    "EndNs":"1050032263181536",
-    "pid":"18217",
-    "tid":"18217",
-    "Name":"__hipPopCallConfiguration",
-    "args":"( gridDim({z(1) y(1) x(65536}) blockDim({z(1) y(1) x(256}) sharedMem(0) stream(3))",
-    "Data":"",
-    "DurationNs":"120"
-  }
-}
-,{"ph":"X","name":"hipLaunchKernel","pid":"2","tid":"18217","ts":"1050032263181","dur":"7",
-  "args":{
-    "BeginNs":"1050032263181807",
-    "EndNs":"1050032263189111",
-    "pid":"18217",
-    "tid":"18217",
+    "BeginNs":"1050401673579453",
+    "EndNs":"1050401673585325",
+    "pid":"21040",
+    "tid":"21040",
     "Name":"hipLaunchKernel",
-    "args":"( kernel(kernel(float*, int, int)) function_address(0x201510) numBlocks({z(1) y(1) x(65536}) dimBlocks({z(1) y(1) x(256}) args(0x7fff5accfa38) sharedMemBytes(0) stream(3))",
+    "args":"( kernel(kernel(float*, int, int)) function_address(0x201510) numBlocks({z(1) y(1) x(65536}) dimBlocks({z(1) y(1) x(256}) args(0x7ffedc4b72d8) sharedMemBytes(0) stream(3))",
     "Data":"",
-    "DurationNs":"7304"
+    "DurationNs":"5872"
   }
 }
-,{"ph":"X","name":"__hipPushCallConfiguration","pid":"2","tid":"18217","ts":"1050032263192","dur":"1",
+,{"ph":"X","name":"__hipPushCallConfiguration","pid":"2","tid":"21040","ts":"1050401673588","dur":"1",
   "args":{
-    "BeginNs":"1050032263192407",
-    "EndNs":"1050032263192518",
-    "pid":"18217",
-    "tid":"18217",
+    "BeginNs":"1050401673588992",
+    "EndNs":"1050401673589102",
+    "pid":"21040",
+    "tid":"21040",
     "Name":"__hipPushCallConfiguration",
     "args":"( gridDim({z(1) y(1) x(65536}) blockDim({z(1) y(1) x(256}) sharedMem(0) stream(4))",
     "Data":"",
-    "DurationNs":"111"
+    "DurationNs":"110"
   }
 }
-,{"ph":"X","name":"__hipPopCallConfiguration","pid":"2","tid":"18217","ts":"1050032263192","dur":"1",
+,{"ph":"X","name":"__hipPopCallConfiguration","pid":"2","tid":"21040","ts":"1050401673589","dur":"1",
   "args":{
-    "BeginNs":"1050032263192778",
-    "EndNs":"1050032263192908",
-    "pid":"18217",
-    "tid":"18217",
+    "BeginNs":"1050401673589392",
+    "EndNs":"1050401673589513",
+    "pid":"21040",
+    "tid":"21040",
     "Name":"__hipPopCallConfiguration",
     "args":"( gridDim({z(1) y(1) x(65536}) blockDim({z(1) y(1) x(256}) sharedMem(0) stream(4))",
     "Data":"",
-    "DurationNs":"130"
+    "DurationNs":"121"
   }
 }
-,{"ph":"X","name":"hipLaunchKernel","pid":"2","tid":"18217","ts":"1050032263206","dur":"4",
+,{"ph":"X","name":"hipLaunchKernel","pid":"2","tid":"21040","ts":"1050401673599","dur":"6",
   "args":{
-    "BeginNs":"1050032263206535",
-    "EndNs":"1050032263211124",
-    "pid":"18217",
-    "tid":"18217",
+    "BeginNs":"1050401673599793",
+    "EndNs":"1050401673606305",
+    "pid":"21040",
+    "tid":"21040",
     "Name":"hipLaunchKernel",
-    "args":"( kernel(kernel(float*, int, int)) function_address(0x201510) numBlocks({z(1) y(1) x(65536}) dimBlocks({z(1) y(1) x(256}) args(0x7fff5accfa38) sharedMemBytes(0) stream(4))",
+    "args":"( kernel(kernel(float*, int, int)) function_address(0x201510) numBlocks({z(1) y(1) x(65536}) dimBlocks({z(1) y(1) x(256}) args(0x7ffedc4b72d8) sharedMemBytes(0) stream(4))",
     "Data":"",
-    "DurationNs":"4589"
+    "DurationNs":"6512"
   }
 }
-,{"ph":"X","name":"hipMemcpyAsync","pid":"2","tid":"18217","ts":"1050032263212","dur":"18",
+,{"ph":"X","name":"hipMemcpyAsync","pid":"2","tid":"21040","ts":"1050401673606","dur":"16",
   "args":{
-    "BeginNs":"1050032263212045",
-    "EndNs":"1050032263230251",
-    "pid":"18217",
-    "tid":"18217",
+    "BeginNs":"1050401673606826",
+    "EndNs":"1050401673623268",
+    "pid":"21040",
+    "tid":"21040",
     "Name":"hipMemcpyAsync",
-    "args":"( dst(0x14fd9be00000) src(0x14fd97c00000) sizeBytes(16777216) kind(2) stream(1))",
+    "args":"( dst(0x147babe00000) src(0x147ba7c00000) sizeBytes(16777216) kind(2) stream(1))",
     "Data":"",
-    "DurationNs":"18206"
+    "DurationNs":"16442"
   }
 }
-,{"ph":"X","name":"hipEventRecord","pid":"2","tid":"18217","ts":"1050032263230","dur":"6",
+,{"ph":"X","name":"hipEventRecord","pid":"2","tid":"21040","ts":"1050401673623","dur":"6",
   "args":{
-    "BeginNs":"1050032263230571",
-    "EndNs":"1050032263237545",
-    "pid":"18217",
-    "tid":"18217",
+    "BeginNs":"1050401673623599",
+    "EndNs":"1050401673630562",
+    "pid":"21040",
+    "tid":"21040",
     "Name":"hipEventRecord",
     "args":"( event(0x1d435d6e0) stream(1))",
     "Data":"",
-    "DurationNs":"6974"
+    "DurationNs":"6963"
   }
 }
-,{"ph":"X","name":"hipMemcpyAsync","pid":"2","tid":"18217","ts":"1050032263241","dur":"21",
+,{"ph":"X","name":"hipMemcpyAsync","pid":"2","tid":"21040","ts":"1050401673633","dur":"17",
   "args":{
-    "BeginNs":"1050032263241442",
-    "EndNs":"1050032263262553",
-    "pid":"18217",
-    "tid":"18217",
+    "BeginNs":"1050401673633969",
+    "EndNs":"1050401673651863",
+    "pid":"21040",
+    "tid":"21040",
     "Name":"hipMemcpyAsync",
-    "args":"( dst(0x14fd9ce00000) src(0x14fd98c00000) sizeBytes(16777216) kind(2) stream(2))",
+    "args":"( dst(0x147bace00000) src(0x147ba8c00000) sizeBytes(16777216) kind(2) stream(2))",
     "Data":"",
-    "DurationNs":"21111"
+    "DurationNs":"17894"
   }
 }
-,{"ph":"X","name":"hipEventRecord","pid":"2","tid":"18217","ts":"1050032263262","dur":"6",
+,{"ph":"X","name":"hipEventRecord","pid":"2","tid":"21040","ts":"1050401673652","dur":"6",
   "args":{
-    "BeginNs":"1050032263262844",
-    "EndNs":"1050032263269106",
-    "pid":"18217",
-    "tid":"18217",
+    "BeginNs":"1050401673652174",
+    "EndNs":"1050401673658556",
+    "pid":"21040",
+    "tid":"21040",
     "Name":"hipEventRecord",
     "args":"( event(0x1d4425b00) stream(2))",
     "Data":"",
-    "DurationNs":"6262"
+    "DurationNs":"6382"
   }
 }
-,{"ph":"X","name":"hipMemcpyAsync","pid":"2","tid":"18217","ts":"1050032263272","dur":"15",
+,{"ph":"X","name":"hipMemcpyAsync","pid":"2","tid":"21040","ts":"1050401673662","dur":"15",
   "args":{
-    "BeginNs":"1050032263272342",
-    "EndNs":"1050032263287411",
-    "pid":"18217",
-    "tid":"18217",
+    "BeginNs":"1050401673662304",
+    "EndNs":"1050401673677383",
+    "pid":"21040",
+    "tid":"21040",
     "Name":"hipMemcpyAsync",
-    "args":"( dst(0x14fd9de00000) src(0x14fd99c00000) sizeBytes(16777216) kind(2) stream(3))",
+    "args":"( dst(0x147bade00000) src(0x147ba9c00000) sizeBytes(16777216) kind(2) stream(3))",
     "Data":"",
-    "DurationNs":"15069"
+    "DurationNs":"15079"
   }
 }
-,{"ph":"X","name":"hipEventRecord","pid":"2","tid":"18217","ts":"1050032263287","dur":"6",
+,{"ph":"X","name":"hipEventRecord","pid":"2","tid":"21040","ts":"1050401673677","dur":"5",
   "args":{
-    "BeginNs":"1050032263287702",
-    "EndNs":"1050032263293874",
-    "pid":"18217",
-    "tid":"18217",
+    "BeginNs":"1050401673677683",
+    "EndNs":"1050401673683505",
+    "pid":"21040",
+    "tid":"21040",
     "Name":"hipEventRecord",
     "args":"( event(0x1d4425cc0) stream(3))",
     "Data":"",
-    "DurationNs":"6172"
+    "DurationNs":"5822"
   }
 }
-,{"ph":"X","name":"hipMemcpyAsync","pid":"2","tid":"18217","ts":"1050032263294","dur":"15",
+,{"ph":"X","name":"hipMemcpyAsync","pid":"2","tid":"21040","ts":"1050401673683","dur":"15",
   "args":{
-    "BeginNs":"1050032263294185",
-    "EndNs":"1050032263309244",
-    "pid":"18217",
-    "tid":"18217",
+    "BeginNs":"1050401673683815",
+    "EndNs":"1050401673699165",
+    "pid":"21040",
+    "tid":"21040",
     "Name":"hipMemcpyAsync",
-    "args":"( dst(0x14fd9ee00000) src(0x14fd9ac00000) sizeBytes(16777216) kind(2) stream(4))",
+    "args":"( dst(0x147baee00000) src(0x147baac00000) sizeBytes(16777216) kind(2) stream(4))",
     "Data":"",
-    "DurationNs":"15059"
+    "DurationNs":"15350"
   }
 }
-,{"ph":"X","name":"hipEventRecord","pid":"2","tid":"18217","ts":"1050032263312","dur":"5",
+,{"ph":"X","name":"hipEventRecord","pid":"2","tid":"21040","ts":"1050401673702","dur":"5",
   "args":{
-    "BeginNs":"1050032263312460",
-    "EndNs":"1050032263318181",
-    "pid":"18217",
-    "tid":"18217",
+    "BeginNs":"1050401673702492",
+    "EndNs":"1050401673708173",
+    "pid":"21040",
+    "tid":"21040",
     "Name":"hipEventRecord",
     "args":"( event(0x1d4425e80) stream(4))",
     "Data":"",
-    "DurationNs":"5721"
+    "DurationNs":"5681"
   }
 }
-,{"ph":"X","name":"hipEventRecord","pid":"2","tid":"18217","ts":"1050032263318","dur":"114",
+,{"ph":"X","name":"hipEventRecord","pid":"2","tid":"21040","ts":"1050401673708","dur":"109",
   "args":{
-    "BeginNs":"1050032263318532",
-    "EndNs":"1050032263433384",
-    "pid":"18217",
-    "tid":"18217",
+    "BeginNs":"1050401673708503",
+    "EndNs":"1050401673818105",
+    "pid":"21040",
+    "tid":"21040",
     "Name":"hipEventRecord",
     "args":"( event(0x1d4426040) stream(5))",
     "Data":"",
-    "DurationNs":"114852"
+    "DurationNs":"109602"
   }
 }
-,{"ph":"X","name":"hipEventSynchronize","pid":"2","tid":"18217","ts":"1050032263436","dur":"21168472",
+,{"ph":"X","name":"hipEventSynchronize","pid":"2","tid":"21040","ts":"1050401673821","dur":"95535",
   "args":{
-    "BeginNs":"1050032263436590",
-    "EndNs":"1050053431908606",
-    "pid":"18217",
-    "tid":"18217",
+    "BeginNs":"1050401673821312",
+    "EndNs":"1050401769356580",
+    "pid":"21040",
+    "tid":"21040",
     "Name":"hipEventSynchronize",
     "args":"( event(0x1d435d6e0))",
     "Data":"",
-    "DurationNs":"21168472016"
+    "DurationNs":"95535268"
   }
 }
-,{"ph":"X","name":"hipEventElapsedTime","pid":"2","tid":"18217","ts":"1050053431911","dur":"2",
+,{"ph":"X","name":"hipEventElapsedTime","pid":"2","tid":"21040","ts":"1050401769357","dur":"5",
   "args":{
-    "BeginNs":"1050053431911952",
-    "EndNs":"1050053431914678",
-    "pid":"18217",
-    "tid":"18217",
+    "BeginNs":"1050401769357101",
+    "EndNs":"1050401769362812",
+    "pid":"21040",
+    "tid":"21040",
     "Name":"hipEventElapsedTime",
-    "args":"( ms(21166.2) start(0x1d435d5b0) stop(0x1d435d6e0))",
+    "args":"( ms(95.8869) start(0x1d435d5b0) stop(0x1d435d6e0))",
     "Data":"",
-    "DurationNs":"2726"
+    "DurationNs":"5711"
   }
 }
-,{"ph":"X","name":"hipEventSynchronize","pid":"2","tid":"18217","ts":"1050053431915","dur":"5455",
+,{"ph":"X","name":"hipEventSynchronize","pid":"2","tid":"21040","ts":"1050401769363","dur":"1",
   "args":{
-    "BeginNs":"1050053431915149",
-    "EndNs":"1050053437370826",
-    "pid":"18217",
-    "tid":"18217",
+    "BeginNs":"1050401769363163",
+    "EndNs":"1050401769363493",
+    "pid":"21040",
+    "tid":"21040",
     "Name":"hipEventSynchronize",
     "args":"( event(0x1d4425b00))",
     "Data":"",
-    "DurationNs":"5455677"
+    "DurationNs":"330"
   }
 }
-,{"ph":"X","name":"hipEventElapsedTime","pid":"2","tid":"18217","ts":"1050053437380","dur":"1",
+,{"ph":"X","name":"hipEventElapsedTime","pid":"2","tid":"21040","ts":"1050401769366","dur":"1",
   "args":{
-    "BeginNs":"1050053437380425",
-    "EndNs":"1050053437381256",
-    "pid":"18217",
-    "tid":"18217",
+    "BeginNs":"1050401769366770",
+    "EndNs":"1050401769367321",
+    "pid":"21040",
+    "tid":"21040",
     "Name":"hipEventElapsedTime",
-    "args":"( ms(21174.3) start(0x1d4425a20) stop(0x1d4425b00))",
+    "args":"( ms(95.8699) start(0x1d4425a20) stop(0x1d4425b00))",
     "Data":"",
-    "DurationNs":"831"
+    "DurationNs":"551"
   }
 }
-,{"ph":"X","name":"hipEventSynchronize","pid":"2","tid":"18217","ts":"1050053437381","dur":"667",
+,{"ph":"X","name":"hipEventSynchronize","pid":"2","tid":"21040","ts":"1050401769367","dur":"673",
   "args":{
-    "BeginNs":"1050053437381527",
-    "EndNs":"1050053438049501",
-    "pid":"18217",
-    "tid":"18217",
+    "BeginNs":"1050401769367611",
+    "EndNs":"1050401770041266",
+    "pid":"21040",
+    "tid":"21040",
     "Name":"hipEventSynchronize",
     "args":"( event(0x1d4425cc0))",
     "Data":"",
-    "DurationNs":"667974"
+    "DurationNs":"673655"
   }
 }
-,{"ph":"X","name":"hipEventElapsedTime","pid":"2","tid":"18217","ts":"1050053438049","dur":"1",
+,{"ph":"X","name":"hipEventElapsedTime","pid":"2","tid":"21040","ts":"1050401770041","dur":"1",
   "args":{
-    "BeginNs":"1050053438049731",
-    "EndNs":"1050053438050683",
-    "pid":"18217",
-    "tid":"18217",
+    "BeginNs":"1050401770041557",
+    "EndNs":"1050401770041967",
+    "pid":"21040",
+    "tid":"21040",
     "Name":"hipEventElapsedTime",
-    "args":"( ms(21175) start(0x1d4425be0) stop(0x1d4425cc0))",
+    "args":"( ms(96.5247) start(0x1d4425be0) stop(0x1d4425cc0))",
     "Data":"",
-    "DurationNs":"952"
+    "DurationNs":"410"
   }
 }
-,{"ph":"X","name":"hipEventSynchronize","pid":"2","tid":"18217","ts":"1050053438053","dur":"675",
+,{"ph":"X","name":"hipEventSynchronize","pid":"2","tid":"21040","ts":"1050401770044","dur":"675",
   "args":{
-    "BeginNs":"1050053438053168",
-    "EndNs":"1050053438728436",
-    "pid":"18217",
-    "tid":"18217",
+    "BeginNs":"1050401770044563",
+    "EndNs":"1050401770720141",
+    "pid":"21040",
+    "tid":"21040",
     "Name":"hipEventSynchronize",
     "args":"( event(0x1d4425e80))",
     "Data":"",
-    "DurationNs":"675268"
+    "DurationNs":"675578"
   }
 }
-,{"ph":"X","name":"hipEventElapsedTime","pid":"2","tid":"18217","ts":"1050053438728","dur":"1",
+,{"ph":"X","name":"hipEventElapsedTime","pid":"2","tid":"21040","ts":"1050401770720","dur":"2",
   "args":{
-    "BeginNs":"1050053438728686",
-    "EndNs":"1050053438729297",
-    "pid":"18217",
-    "tid":"18217",
+    "BeginNs":"1050401770720431",
+    "EndNs":"1050401770722435",
+    "pid":"21040",
+    "tid":"21040",
     "Name":"hipEventElapsedTime",
-    "args":"( ms(21175.6) start(0x1d4425da0) stop(0x1d4425e80))",
+    "args":"( ms(97.1802) start(0x1d4425da0) stop(0x1d4425e80))",
     "Data":"",
-    "DurationNs":"611"
+    "DurationNs":"2004"
   }
 }
-,{"ph":"X","name":"hipEventSynchronize","pid":"2","tid":"18217","ts":"1050053438733","dur":"15",
+,{"ph":"X","name":"hipEventSynchronize","pid":"2","tid":"21040","ts":"1050401770725","dur":"14",
   "args":{
-    "BeginNs":"1050053438733405",
-    "EndNs":"1050053438748545",
-    "pid":"18217",
-    "tid":"18217",
+    "BeginNs":"1050401770725571",
+    "EndNs":"1050401770740410",
+    "pid":"21040",
+    "tid":"21040",
     "Name":"hipEventSynchronize",
     "args":"( event(0x1d4426040))",
     "Data":"",
-    "DurationNs":"15140"
+    "DurationNs":"14839"
   }
 }
-,{"ph":"X","name":"hipEventElapsedTime","pid":"2","tid":"18217","ts":"1050053438748","dur":"1",
+,{"ph":"X","name":"hipEventElapsedTime","pid":"2","tid":"21040","ts":"1050401770740","dur":"1",
   "args":{
-    "BeginNs":"1050053438748805",
-    "EndNs":"1050053438749567",
-    "pid":"18217",
-    "tid":"18217",
+    "BeginNs":"1050401770740711",
+    "EndNs":"1050401770741132",
+    "pid":"21040",
+    "tid":"21040",
     "Name":"hipEventElapsedTime",
-    "args":"( ms(21175.7) start(0x1d4425f60) stop(0x1d4426040))",
-    "Data":"",
-    "DurationNs":"762"
-  }
-}
-,{"ph":"X","name":"hipEventDestroy","pid":"2","tid":"18217","ts":"1050053499992","dur":"3",
-  "args":{
-    "BeginNs":"1050053499992680",
-    "EndNs":"1050053499995836",
-    "pid":"18217",
-    "tid":"18217",
-    "Name":"hipEventDestroy",
-    "args":"( event(0x1d435d5b0))",
-    "Data":"",
-    "DurationNs":"3156"
-  }
-}
-,{"ph":"X","name":"hipEventDestroy","pid":"2","tid":"18217","ts":"1050053500006","dur":"1",
-  "args":{
-    "BeginNs":"1050053500006326",
-    "EndNs":"1050053500007048",
-    "pid":"18217",
-    "tid":"18217",
-    "Name":"hipEventDestroy",
-    "args":"( event(0x1d435d6e0))",
-    "Data":"",
-    "DurationNs":"722"
-  }
-}
-,{"ph":"X","name":"hipEventDestroy","pid":"2","tid":"18217","ts":"1050053500007","dur":"1",
-  "args":{
-    "BeginNs":"1050053500007238",
-    "EndNs":"1050053500008340",
-    "pid":"18217",
-    "tid":"18217",
-    "Name":"hipEventDestroy",
-    "args":"( event(0x1d4425a20))",
-    "Data":"",
-    "DurationNs":"1102"
-  }
-}
-,{"ph":"X","name":"hipEventDestroy","pid":"2","tid":"18217","ts":"1050053500010","dur":"1",
-  "args":{
-    "BeginNs":"1050053500010304",
-    "EndNs":"1050053500010665",
-    "pid":"18217",
-    "tid":"18217",
-    "Name":"hipEventDestroy",
-    "args":"( event(0x1d4425b00))",
-    "Data":"",
-    "DurationNs":"361"
-  }
-}
-,{"ph":"X","name":"hipEventDestroy","pid":"2","tid":"18217","ts":"1050053500010","dur":"1",
-  "args":{
-    "BeginNs":"1050053500010825",
-    "EndNs":"1050053500011627",
-    "pid":"18217",
-    "tid":"18217",
-    "Name":"hipEventDestroy",
-    "args":"( event(0x1d4425be0))",
-    "Data":"",
-    "DurationNs":"802"
-  }
-}
-,{"ph":"X","name":"hipEventDestroy","pid":"2","tid":"18217","ts":"1050053500011","dur":"1",
-  "args":{
-    "BeginNs":"1050053500011797",
-    "EndNs":"1050053500012298",
-    "pid":"18217",
-    "tid":"18217",
-    "Name":"hipEventDestroy",
-    "args":"( event(0x1d4425cc0))",
-    "Data":"",
-    "DurationNs":"501"
-  }
-}
-,{"ph":"X","name":"hipEventDestroy","pid":"2","tid":"18217","ts":"1050053500014","dur":"1",
-  "args":{
-    "BeginNs":"1050053500014161",
-    "EndNs":"1050053500015183",
-    "pid":"18217",
-    "tid":"18217",
-    "Name":"hipEventDestroy",
-    "args":"( event(0x1d4425da0))",
-    "Data":"",
-    "DurationNs":"1022"
-  }
-}
-,{"ph":"X","name":"hipEventDestroy","pid":"2","tid":"18217","ts":"1050053500015","dur":"1",
-  "args":{
-    "BeginNs":"1050053500015344",
-    "EndNs":"1050053500015765",
-    "pid":"18217",
-    "tid":"18217",
-    "Name":"hipEventDestroy",
-    "args":"( event(0x1d4425e80))",
+    "args":"( ms(97.2906) start(0x1d4425f60) stop(0x1d4426040))",
     "Data":"",
     "DurationNs":"421"
   }
 }
-,{"ph":"X","name":"hipEventDestroy","pid":"2","tid":"18217","ts":"1050053500020","dur":"1",
+,{"ph":"X","name":"hipEventDestroy","pid":"2","tid":"21040","ts":"1050401831968","dur":"3",
   "args":{
-    "BeginNs":"1050053500020434",
-    "EndNs":"1050053500020995",
-    "pid":"18217",
-    "tid":"18217",
+    "BeginNs":"1050401831968380",
+    "EndNs":"1050401831971927",
+    "pid":"21040",
+    "tid":"21040",
     "Name":"hipEventDestroy",
-    "args":"( event(0x1d4425f60))",
+    "args":"( event(0x1d435d5b0))",
+    "Data":"",
+    "DurationNs":"3547"
+  }
+}
+,{"ph":"X","name":"hipEventDestroy","pid":"2","tid":"21040","ts":"1050401831977","dur":"1",
+  "args":{
+    "BeginNs":"1050401831977748",
+    "EndNs":"1050401831978079",
+    "pid":"21040",
+    "tid":"21040",
+    "Name":"hipEventDestroy",
+    "args":"( event(0x1d435d6e0))",
+    "Data":"",
+    "DurationNs":"331"
+  }
+}
+,{"ph":"X","name":"hipEventDestroy","pid":"2","tid":"21040","ts":"1050401831978","dur":"1",
+  "args":{
+    "BeginNs":"1050401831978259",
+    "EndNs":"1050401831978820",
+    "pid":"21040",
+    "tid":"21040",
+    "Name":"hipEventDestroy",
+    "args":"( event(0x1d4425a20))",
     "Data":"",
     "DurationNs":"561"
   }
 }
-,{"ph":"X","name":"hipEventDestroy","pid":"2","tid":"18217","ts":"1050053500021","dur":"1",
+,{"ph":"X","name":"hipEventDestroy","pid":"2","tid":"21040","ts":"1050401831982","dur":"1",
   "args":{
-    "BeginNs":"1050053500021155",
-    "EndNs":"1050053500021415",
-    "pid":"18217",
-    "tid":"18217",
+    "BeginNs":"1050401831982607",
+    "EndNs":"1050401831982958",
+    "pid":"21040",
+    "tid":"21040",
+    "Name":"hipEventDestroy",
+    "args":"( event(0x1d4425b00))",
+    "Data":"",
+    "DurationNs":"351"
+  }
+}
+,{"ph":"X","name":"hipEventDestroy","pid":"2","tid":"21040","ts":"1050401831983","dur":"1",
+  "args":{
+    "BeginNs":"1050401831983138",
+    "EndNs":"1050401831983900",
+    "pid":"21040",
+    "tid":"21040",
+    "Name":"hipEventDestroy",
+    "args":"( event(0x1d4425be0))",
+    "Data":"",
+    "DurationNs":"762"
+  }
+}
+,{"ph":"X","name":"hipEventDestroy","pid":"2","tid":"21040","ts":"1050401831984","dur":"1",
+  "args":{
+    "BeginNs":"1050401831984060",
+    "EndNs":"1050401831984401",
+    "pid":"21040",
+    "tid":"21040",
+    "Name":"hipEventDestroy",
+    "args":"( event(0x1d4425cc0))",
+    "Data":"",
+    "DurationNs":"341"
+  }
+}
+,{"ph":"X","name":"hipEventDestroy","pid":"2","tid":"21040","ts":"1050401831986","dur":"1",
+  "args":{
+    "BeginNs":"1050401831986295",
+    "EndNs":"1050401831986796",
+    "pid":"21040",
+    "tid":"21040",
+    "Name":"hipEventDestroy",
+    "args":"( event(0x1d4425da0))",
+    "Data":"",
+    "DurationNs":"501"
+  }
+}
+,{"ph":"X","name":"hipEventDestroy","pid":"2","tid":"21040","ts":"1050401831986","dur":"1",
+  "args":{
+    "BeginNs":"1050401831986956",
+    "EndNs":"1050401831987266",
+    "pid":"21040",
+    "tid":"21040",
+    "Name":"hipEventDestroy",
+    "args":"( event(0x1d4425e80))",
+    "Data":"",
+    "DurationNs":"310"
+  }
+}
+,{"ph":"X","name":"hipEventDestroy","pid":"2","tid":"21040","ts":"1050401831989","dur":"1",
+  "args":{
+    "BeginNs":"1050401831989481",
+    "EndNs":"1050401831989801",
+    "pid":"21040",
+    "tid":"21040",
+    "Name":"hipEventDestroy",
+    "args":"( event(0x1d4425f60))",
+    "Data":"",
+    "DurationNs":"320"
+  }
+}
+,{"ph":"X","name":"hipEventDestroy","pid":"2","tid":"21040","ts":"1050401831989","dur":"1",
+  "args":{
+    "BeginNs":"1050401831989962",
+    "EndNs":"1050401831990242",
+    "pid":"21040",
+    "tid":"21040",
     "Name":"hipEventDestroy",
     "args":"( event(0x1d4426040))",
     "Data":"",
-    "DurationNs":"260"
+    "DurationNs":"280"
   }
 }
-,{"ph":"X","name":"hipStreamDestroy","pid":"2","tid":"18217","ts":"1050053500022","dur":"550",
+,{"ph":"X","name":"hipStreamDestroy","pid":"2","tid":"21040","ts":"1050401831991","dur":"519",
   "args":{
-    "BeginNs":"1050053500022938",
-    "EndNs":"1050053500573124",
-    "pid":"18217",
-    "tid":"18217",
+    "BeginNs":"1050401831991585",
+    "EndNs":"1050401832511542",
+    "pid":"21040",
+    "tid":"21040",
     "Name":"hipStreamDestroy",
     "args":"( stream(1))",
     "Data":"",
-    "DurationNs":"550186"
+    "DurationNs":"519957"
   }
 }
-,{"ph":"X","name":"hipStreamDestroy","pid":"2","tid":"18217","ts":"1050053500578","dur":"11678",
+,{"ph":"X","name":"hipStreamDestroy","pid":"2","tid":"21040","ts":"1050401832516","dur":"412",
   "args":{
-    "BeginNs":"1050053500578464",
-    "EndNs":"1050053512256844",
-    "pid":"18217",
-    "tid":"18217",
+    "BeginNs":"1050401832516261",
+    "EndNs":"1050401832928610",
+    "pid":"21040",
+    "tid":"21040",
     "Name":"hipStreamDestroy",
     "args":"( stream(2))",
     "Data":"",
-    "DurationNs":"11678380"
+    "DurationNs":"412349"
   }
 }
-,{"ph":"X","name":"hipStreamDestroy","pid":"2","tid":"18217","ts":"1050053512257","dur":"378",
+,{"ph":"X","name":"hipStreamDestroy","pid":"2","tid":"21040","ts":"1050401832929","dur":"368",
   "args":{
-    "BeginNs":"1050053512257776",
-    "EndNs":"1050053512635999",
-    "pid":"18217",
-    "tid":"18217",
+    "BeginNs":"1050401832929211",
+    "EndNs":"1050401833297364",
+    "pid":"21040",
+    "tid":"21040",
     "Name":"hipStreamDestroy",
     "args":"( stream(3))",
     "Data":"",
-    "DurationNs":"378223"
+    "DurationNs":"368153"
   }
 }
-,{"ph":"X","name":"hipStreamDestroy","pid":"2","tid":"18217","ts":"1050053512636","dur":"373",
+,{"ph":"X","name":"hipStreamDestroy","pid":"2","tid":"21040","ts":"1050401833297","dur":"462",
   "args":{
-    "BeginNs":"1050053512636590",
-    "EndNs":"1050053513010193",
-    "pid":"18217",
-    "tid":"18217",
+    "BeginNs":"1050401833297975",
+    "EndNs":"1050401833760441",
+    "pid":"21040",
+    "tid":"21040",
     "Name":"hipStreamDestroy",
     "args":"( stream(4))",
     "Data":"",
-    "DurationNs":"373603"
+    "DurationNs":"462466"
   }
 }
-,{"ph":"X","name":"hipHostFree","pid":"2","tid":"18217","ts":"1050053513015","dur":"3420",
+,{"ph":"X","name":"hipHostFree","pid":"2","tid":"21040","ts":"1050401833765","dur":"3402",
   "args":{
-    "BeginNs":"1050053513015804",
-    "EndNs":"1050053516435909",
-    "pid":"18217",
-    "tid":"18217",
+    "BeginNs":"1050401833765701",
+    "EndNs":"1050401837167880",
+    "pid":"21040",
+    "tid":"21040",
     "Name":"hipHostFree",
-    "args":"( ptr(0x14fd9be00000))",
+    "args":"( ptr(0x147babe00000))",
     "Data":"",
-    "DurationNs":"3420105"
+    "DurationNs":"3402179"
   }
 }
-,{"ph":"X","name":"hipFree","pid":"2","tid":"18217","ts":"1050053516437","dur":"30",
+,{"ph":"X","name":"hipFree","pid":"2","tid":"21040","ts":"1050401837170","dur":"31",
   "args":{
-    "BeginNs":"1050053516437813",
-    "EndNs":"1050053516468292",
-    "pid":"18217",
-    "tid":"18217",
+    "BeginNs":"1050401837170115",
+    "EndNs":"1050401837201345",
+    "pid":"21040",
+    "tid":"21040",
     "Name":"hipFree",
-    "args":"( ptr(0x14fd97c00000))",
+    "args":"( ptr(0x147ba7c00000))",
     "Data":"",
-    "DurationNs":"30479"
+    "DurationNs":"31230"
   }
 }
-,{"ph":"X","name":"kernel(float*, int, int)","pid":"10","tid":"5","ts":"1049968570407","dur":"21145214",
+,{"ph":"X","name":"kernel(float*, int, int)","pid":"10","tid":"5","ts":"1050401195969","dur":"85057",
   "args":{
-    "BeginNs":"1049968570407231",
-    "EndNs":"1049989715621364",
+    "BeginNs":"1050401195969200",
+    "EndNs":"1050401281027142",
     "dev-id":"4",
     "queue-id":"4",
     "Name":"kernel(float*, int, int)",
-    "pid":"18217",
-    "tid":"18217",
+    "pid":"21040",
+    "tid":"21040",
     "stream-id":"5",
     "Data":"",
-    "DurationNs":"21145214133"
+    "DurationNs":"85057942"
   }
 }
-,{"ph":"X","name":"kernel(float*, int, int)","pid":"10","tid":"1","ts":"1049989787841","dur":"21082749",
+,{"ph":"X","name":"kernel(float*, int, int)","pid":"10","tid":"1","ts":"1050401355850","dur":"92056",
   "args":{
-    "BeginNs":"1049989787841473",
-    "EndNs":"1050010870590557",
+    "BeginNs":"1050401355850057",
+    "EndNs":"1050401447906172",
     "dev-id":"4",
     "queue-id":"0",
     "Name":"kernel(float*, int, int)",
-    "pid":"18217",
-    "tid":"18217",
+    "pid":"21040",
+    "tid":"21040",
     "stream-id":"1",
     "Data":"",
-    "DurationNs":"21082749084"
+    "DurationNs":"92056115"
   }
 }
-,{"ph":"X","name":"kernel(float*, int, int)","pid":"10","tid":"2","ts":"1049989791376","dur":"21145469",
+,{"ph":"X","name":"kernel(float*, int, int)","pid":"10","tid":"2","ts":"1050401359392","dur":"88886",
   "args":{
-    "BeginNs":"1049989791376379",
-    "EndNs":"1050010936846147",
+    "BeginNs":"1050401359392344",
+    "EndNs":"1050401448279296",
     "dev-id":"4",
     "queue-id":"1",
     "Name":"kernel(float*, int, int)",
-    "pid":"18217",
-    "tid":"18217",
+    "pid":"21040",
+    "tid":"21040",
     "stream-id":"2",
     "Data":"",
-    "DurationNs":"21145469768"
+    "DurationNs":"88886952"
   }
 }
-,{"ph":"X","name":"kernel(float*, int, int)","pid":"10","tid":"4","ts":"1049989795607","dur":"21150746",
+,{"ph":"X","name":"kernel(float*, int, int)","pid":"10","tid":"4","ts":"1050401363648","dur":"84754",
   "args":{
-    "BeginNs":"1049989795607958",
-    "EndNs":"1050010946353958",
+    "BeginNs":"1050401363648722",
+    "EndNs":"1050401448403457",
     "dev-id":"4",
     "queue-id":"3",
     "Name":"kernel(float*, int, int)",
-    "pid":"18217",
-    "tid":"18217",
+    "pid":"21040",
+    "tid":"21040",
     "stream-id":"4",
     "Data":"",
-    "DurationNs":"21150746000"
+    "DurationNs":"84754735"
   }
 }
-,{"ph":"X","name":"kernel(float*, int, int)","pid":"10","tid":"3","ts":"1049989795745","dur":"21158407",
+,{"ph":"X","name":"kernel(float*, int, int)","pid":"10","tid":"3","ts":"1050401363788","dur":"84615",
   "args":{
-    "BeginNs":"1049989795745559",
-    "EndNs":"1050010954152627",
+    "BeginNs":"1050401363788563",
+    "EndNs":"1050401448404417",
     "dev-id":"4",
     "queue-id":"2",
     "Name":"kernel(float*, int, int)",
-    "pid":"18217",
-    "tid":"18217",
+    "pid":"21040",
+    "tid":"21040",
     "stream-id":"3",
     "Data":"",
-    "DurationNs":"21158407068"
+    "DurationNs":"84615854"
   }
 }
-,{"ph":"X","name":"<barrier packet>","pid":"10","tid":"0","ts":"1049989795432","dur":"21158764",
+,{"ph":"X","name":"<barrier packet>","pid":"10","tid":"0","ts":"1050401363473","dur":"84987",
   "args":{
-    "BeginNs":"1049989795432464",
-    "EndNs":"1050010954197429",
+    "BeginNs":"1050401363473573",
+    "EndNs":"1050401448461522",
     "dev-id":"4",
     "queue-id":"4",
     "Name":"<barrier packet>",
-    "pid":"18217",
-    "tid":"18217",
+    "pid":"21040",
+    "tid":"21040",
     "stream-id":"0",
     "Data":"",
-    "DurationNs":"21158764965"
+    "DurationNs":"84987949"
   }
 }
-,{"ph":"X","name":"kernel(float*, int, int)","pid":"10","tid":"3","ts":"1050011030043","dur":"21091163",
+,{"ph":"X","name":"kernel(float*, int, int)","pid":"10","tid":"2","ts":"1050401515760","dur":"92266",
   "args":{
-    "BeginNs":"1050011030043582",
-    "EndNs":"1050032121206717",
-    "dev-id":"4",
-    "queue-id":"2",
-    "Name":"kernel(float*, int, int)",
-    "pid":"18217",
-    "tid":"18217",
-    "stream-id":"3",
-    "Data":"",
-    "DurationNs":"21091163135"
-  }
-}
-,{"ph":"X","name":"kernel(float*, int, int)","pid":"10","tid":"1","ts":"1050011015576","dur":"21181103",
-  "args":{
-    "BeginNs":"1050011015576358",
-    "EndNs":"1050032196679479",
-    "dev-id":"4",
-    "queue-id":"0",
-    "Name":"kernel(float*, int, int)",
-    "pid":"18217",
-    "tid":"18217",
-    "stream-id":"1",
-    "Data":"",
-    "DurationNs":"21181103121"
-  }
-}
-,{"ph":"X","name":"kernel(float*, int, int)","pid":"10","tid":"4","ts":"1050011031422","dur":"21124986",
-  "args":{
-    "BeginNs":"1050011031422340",
-    "EndNs":"1050032156408516",
-    "dev-id":"4",
-    "queue-id":"3",
-    "Name":"kernel(float*, int, int)",
-    "pid":"18217",
-    "tid":"18217",
-    "stream-id":"4",
-    "Data":"",
-    "DurationNs":"21124986176"
-  }
-}
-,{"ph":"X","name":"kernel(float*, int, int)","pid":"10","tid":"2","ts":"1050011028907","dur":"21177227",
-  "args":{
-    "BeginNs":"1050011028907905",
-    "EndNs":"1050032206135130",
+    "BeginNs":"1050401515760961",
+    "EndNs":"1050401608027475",
     "dev-id":"4",
     "queue-id":"1",
     "Name":"kernel(float*, int, int)",
-    "pid":"18217",
-    "tid":"18217",
+    "pid":"21040",
+    "tid":"21040",
     "stream-id":"2",
     "Data":"",
-    "DurationNs":"21177227225"
+    "DurationNs":"92266514"
   }
 }
-,{"ph":"X","name":"kernel(float*, int, int)","pid":"10","tid":"1","ts":"1050032265749","dur":"21162824",
+,{"ph":"X","name":"kernel(float*, int, int)","pid":"10","tid":"3","ts":"1050401516901","dur":"91151",
   "args":{
-    "BeginNs":"1050032265749952",
-    "EndNs":"1050053428574858",
-    "dev-id":"4",
-    "queue-id":"0",
-    "Name":"kernel(float*, int, int)",
-    "pid":"18217",
-    "tid":"18217",
-    "stream-id":"1",
-    "Data":"",
-    "DurationNs":"21162824906"
-  }
-}
-,{"ph":"X","name":"kernel(float*, int, int)","pid":"10","tid":"2","ts":"1050032265775","dur":"21170892",
-  "args":{
-    "BeginNs":"1050032265775552",
-    "EndNs":"1050053436668090",
-    "dev-id":"4",
-    "queue-id":"1",
-    "Name":"kernel(float*, int, int)",
-    "pid":"18217",
-    "tid":"18217",
-    "stream-id":"2",
-    "Data":"",
-    "DurationNs":"21170892538"
-  }
-}
-,{"ph":"X","name":"kernel(float*, int, int)","pid":"10","tid":"3","ts":"1050032265548","dur":"21140884",
-  "args":{
-    "BeginNs":"1050032265548669",
-    "EndNs":"1050053406433268",
+    "BeginNs":"1050401516901936",
+    "EndNs":"1050401608053715",
     "dev-id":"4",
     "queue-id":"2",
     "Name":"kernel(float*, int, int)",
-    "pid":"18217",
-    "tid":"18217",
+    "pid":"21040",
+    "tid":"21040",
     "stream-id":"3",
     "Data":"",
-    "DurationNs":"21140884599"
+    "DurationNs":"91151779"
   }
 }
-,{"ph":"X","name":"kernel(float*, int, int)","pid":"10","tid":"4","ts":"1050032264701","dur":"21082955",
+,{"ph":"X","name":"kernel(float*, int, int)","pid":"10","tid":"1","ts":"1050401514629","dur":"93385",
   "args":{
-    "BeginNs":"1050032264701457",
-    "EndNs":"1050053347656765",
+    "BeginNs":"1050401514629905",
+    "EndNs":"1050401608014994",
+    "dev-id":"4",
+    "queue-id":"0",
+    "Name":"kernel(float*, int, int)",
+    "pid":"21040",
+    "tid":"21040",
+    "stream-id":"1",
+    "Data":"",
+    "DurationNs":"93385089"
+  }
+}
+,{"ph":"X","name":"kernel(float*, int, int)","pid":"10","tid":"4","ts":"1050401518305","dur":"89757",
+  "args":{
+    "BeginNs":"1050401518305955",
+    "EndNs":"1050401608062995",
     "dev-id":"4",
     "queue-id":"3",
     "Name":"kernel(float*, int, int)",
-    "pid":"18217",
-    "tid":"18217",
+    "pid":"21040",
+    "tid":"21040",
     "stream-id":"4",
     "Data":"",
-    "DurationNs":"21082955308"
+    "DurationNs":"89757040"
   }
 }
-,{"ts":1049968556029,"ph":"s","cat":"DataFlow","id":0,"pid":2,"tid":18217,"name":"dep"}
-,{"ts":1049968556029,"ph":"t","cat":"DataFlow","id":0,"pid":1,"tid":0,"name":"dep"}
-,{"ts":1049979145180,"ph":"s","cat":"DataFlow","id":1,"pid":2,"tid":18217,"name":"dep"}
-,{"ts":1049989715721,"ph":"t","cat":"DataFlow","id":1,"pid":1,"tid":0,"name":"dep"}
-,{"ts":1049989766694,"ph":"s","cat":"DataFlow","id":2,"pid":2,"tid":18217,"name":"dep"}
-,{"ts":1049989766694,"ph":"t","cat":"DataFlow","id":2,"pid":1,"tid":0,"name":"dep"}
-,{"ts":1050000381669,"ph":"s","cat":"DataFlow","id":3,"pid":2,"tid":18217,"name":"dep"}
-,{"ts":1050010954199,"ph":"t","cat":"DataFlow","id":3,"pid":1,"tid":0,"name":"dep"}
-,{"ts":1050011014792,"ph":"s","cat":"DataFlow","id":4,"pid":2,"tid":18217,"name":"dep"}
-,{"ts":1050011014804,"ph":"t","cat":"DataFlow","id":4,"pid":1,"tid":1,"name":"dep"}
-,{"ts":1050011014858,"ph":"s","cat":"DataFlow","id":5,"pid":2,"tid":18217,"name":"dep"}
-,{"ts":1050032196686,"ph":"t","cat":"DataFlow","id":5,"pid":1,"tid":1,"name":"dep"}
-,{"ts":1050011021412,"ph":"s","cat":"DataFlow","id":6,"pid":2,"tid":18217,"name":"dep"}
-,{"ts":1050011027945,"ph":"t","cat":"DataFlow","id":6,"pid":1,"tid":2,"name":"dep"}
-,{"ts":1050011028486,"ph":"s","cat":"DataFlow","id":7,"pid":2,"tid":18217,"name":"dep"}
-,{"ts":1050032206159,"ph":"t","cat":"DataFlow","id":7,"pid":1,"tid":2,"name":"dep"}
-,{"ts":1050011029059,"ph":"s","cat":"DataFlow","id":8,"pid":2,"tid":18217,"name":"dep"}
-,{"ts":1050011029075,"ph":"t","cat":"DataFlow","id":8,"pid":1,"tid":3,"name":"dep"}
-,{"ts":1050011029087,"ph":"s","cat":"DataFlow","id":9,"pid":2,"tid":18217,"name":"dep"}
-,{"ts":1050032121226,"ph":"t","cat":"DataFlow","id":9,"pid":1,"tid":3,"name":"dep"}
-,{"ts":1050011029747,"ph":"s","cat":"DataFlow","id":10,"pid":2,"tid":18217,"name":"dep"}
-,{"ts":1050011030399,"ph":"t","cat":"DataFlow","id":10,"pid":1,"tid":4,"name":"dep"}
-,{"ts":1050011030407,"ph":"s","cat":"DataFlow","id":11,"pid":2,"tid":18217,"name":"dep"}
-,{"ts":1050032156456,"ph":"t","cat":"DataFlow","id":11,"pid":1,"tid":4,"name":"dep"}
-,{"ts":1050032263026,"ph":"s","cat":"DataFlow","id":12,"pid":2,"tid":18217,"name":"dep"}
-,{"ts":1050032263036,"ph":"t","cat":"DataFlow","id":12,"pid":1,"tid":1,"name":"dep"}
-,{"ts":1050032263048,"ph":"s","cat":"DataFlow","id":13,"pid":2,"tid":18217,"name":"dep"}
-,{"ts":1050032263064,"ph":"t","cat":"DataFlow","id":13,"pid":1,"tid":2,"name":"dep"}
-,{"ts":1050032263083,"ph":"s","cat":"DataFlow","id":14,"pid":2,"tid":18217,"name":"dep"}
-,{"ts":1050032263097,"ph":"t","cat":"DataFlow","id":14,"pid":1,"tid":3,"name":"dep"}
-,{"ts":1050032263108,"ph":"s","cat":"DataFlow","id":15,"pid":2,"tid":18217,"name":"dep"}
-,{"ts":1050032263123,"ph":"t","cat":"DataFlow","id":15,"pid":1,"tid":4,"name":"dep"}
-,{"ts":1050032263221,"ph":"s","cat":"DataFlow","id":16,"pid":2,"tid":18217,"name":"dep"}
-,{"ts":1050053428581,"ph":"t","cat":"DataFlow","id":16,"pid":1,"tid":1,"name":"dep"}
-,{"ts":1050032263251,"ph":"s","cat":"DataFlow","id":17,"pid":2,"tid":18217,"name":"dep"}
-,{"ts":1050053436685,"ph":"t","cat":"DataFlow","id":17,"pid":1,"tid":2,"name":"dep"}
-,{"ts":1050032263279,"ph":"s","cat":"DataFlow","id":18,"pid":2,"tid":18217,"name":"dep"}
-,{"ts":1050053406458,"ph":"t","cat":"DataFlow","id":18,"pid":1,"tid":3,"name":"dep"}
-,{"ts":1050032263301,"ph":"s","cat":"DataFlow","id":19,"pid":2,"tid":18217,"name":"dep"}
-,{"ts":1050053347685,"ph":"t","cat":"DataFlow","id":19,"pid":1,"tid":4,"name":"dep"}
-,{"ts":1049968564426,"ph":"s","cat":"DataFlow","id":33,"pid":2,"tid":18217,"name":"dep"}
-,{"ts":1049968570407,"ph":"t","cat":"DataFlow","id":33,"pid":10,"tid":5,"name":"dep"}
-,{"ts":1049989785706,"ph":"s","cat":"DataFlow","id":34,"pid":2,"tid":18217,"name":"dep"}
-,{"ts":1049989787841,"ph":"t","cat":"DataFlow","id":34,"pid":10,"tid":1,"name":"dep"}
-,{"ts":1049989789265,"ph":"s","cat":"DataFlow","id":35,"pid":2,"tid":18217,"name":"dep"}
-,{"ts":1049989791376,"ph":"t","cat":"DataFlow","id":35,"pid":10,"tid":2,"name":"dep"}
-,{"ts":1049989793217,"ph":"s","cat":"DataFlow","id":36,"pid":2,"tid":18217,"name":"dep"}
-,{"ts":1049989795745,"ph":"t","cat":"DataFlow","id":36,"pid":10,"tid":3,"name":"dep"}
-,{"ts":1049989795417,"ph":"s","cat":"DataFlow","id":37,"pid":2,"tid":18217,"name":"dep"}
-,{"ts":1049989795607,"ph":"t","cat":"DataFlow","id":37,"pid":10,"tid":4,"name":"dep"}
-,{"ts":1049989795432,"ph":"s","cat":"DataFlow","id":38,"pid":2,"tid":18217,"name":"dep"}
-,{"ts":1049989795432,"ph":"t","cat":"DataFlow","id":38,"pid":10,"tid":0,"name":"dep"}
-,{"ts":1050011014823,"ph":"s","cat":"DataFlow","id":39,"pid":2,"tid":18217,"name":"dep"}
-,{"ts":1050011015576,"ph":"t","cat":"DataFlow","id":39,"pid":10,"tid":1,"name":"dep"}
-,{"ts":1050011027936,"ph":"s","cat":"DataFlow","id":40,"pid":2,"tid":18217,"name":"dep"}
-,{"ts":1050011028907,"ph":"t","cat":"DataFlow","id":40,"pid":10,"tid":2,"name":"dep"}
-,{"ts":1050011029074,"ph":"s","cat":"DataFlow","id":41,"pid":2,"tid":18217,"name":"dep"}
-,{"ts":1050011030043,"ph":"t","cat":"DataFlow","id":41,"pid":10,"tid":3,"name":"dep"}
-,{"ts":1050011030386,"ph":"s","cat":"DataFlow","id":42,"pid":2,"tid":18217,"name":"dep"}
-,{"ts":1050011031422,"ph":"t","cat":"DataFlow","id":42,"pid":10,"tid":4,"name":"dep"}
-,{"ts":1050032263144,"ph":"s","cat":"DataFlow","id":43,"pid":2,"tid":18217,"name":"dep"}
-,{"ts":1050032265749,"ph":"t","cat":"DataFlow","id":43,"pid":10,"tid":1,"name":"dep"}
-,{"ts":1050032263173,"ph":"s","cat":"DataFlow","id":44,"pid":2,"tid":18217,"name":"dep"}
-,{"ts":1050032265775,"ph":"t","cat":"DataFlow","id":44,"pid":10,"tid":2,"name":"dep"}
-,{"ts":1050032263184,"ph":"s","cat":"DataFlow","id":45,"pid":2,"tid":18217,"name":"dep"}
-,{"ts":1050032265548,"ph":"t","cat":"DataFlow","id":45,"pid":10,"tid":3,"name":"dep"}
-,{"ts":1050032263208,"ph":"s","cat":"DataFlow","id":46,"pid":2,"tid":18217,"name":"dep"}
-,{"ts":1050032264701,"ph":"t","cat":"DataFlow","id":46,"pid":10,"tid":4,"name":"dep"}
+,{"ph":"X","name":"kernel(float*, int, int)","pid":"10","tid":"1","ts":"1050401676191","dur":"91766",
+  "args":{
+    "BeginNs":"1050401676191797",
+    "EndNs":"1050401767958789",
+    "dev-id":"4",
+    "queue-id":"0",
+    "Name":"kernel(float*, int, int)",
+    "pid":"21040",
+    "tid":"21040",
+    "stream-id":"1",
+    "Data":"",
+    "DurationNs":"91766992"
+  }
+}
+,{"ph":"X","name":"kernel(float*, int, int)","pid":"10","tid":"2","ts":"1050401676215","dur":"91745",
+  "args":{
+    "BeginNs":"1050401676215798",
+    "EndNs":"1050401767961189",
+    "dev-id":"4",
+    "queue-id":"1",
+    "Name":"kernel(float*, int, int)",
+    "pid":"21040",
+    "tid":"21040",
+    "stream-id":"2",
+    "Data":"",
+    "DurationNs":"91745391"
+  }
+}
+,{"ph":"X","name":"kernel(float*, int, int)","pid":"10","tid":"3","ts":"1050401675977","dur":"91981",
+  "args":{
+    "BeginNs":"1050401675977395",
+    "EndNs":"1050401767959109",
+    "dev-id":"4",
+    "queue-id":"2",
+    "Name":"kernel(float*, int, int)",
+    "pid":"21040",
+    "tid":"21040",
+    "stream-id":"3",
+    "Data":"",
+    "DurationNs":"91981714"
+  }
+}
+,{"ph":"X","name":"kernel(float*, int, int)","pid":"10","tid":"4","ts":"1050401675128","dur":"92729",
+  "args":{
+    "BeginNs":"1050401675128743",
+    "EndNs":"1050401767858467",
+    "dev-id":"4",
+    "queue-id":"3",
+    "Name":"kernel(float*, int, int)",
+    "pid":"21040",
+    "tid":"21040",
+    "stream-id":"4",
+    "Data":"",
+    "DurationNs":"92729724"
+  }
+}
+,{"ts":1050401181967,"ph":"s","cat":"DataFlow","id":0,"pid":2,"tid":21040,"name":"dep"}
+,{"ts":1050401181967,"ph":"t","cat":"DataFlow","id":0,"pid":1,"tid":0,"name":"dep"}
+,{"ts":1050401241950,"ph":"s","cat":"DataFlow","id":1,"pid":2,"tid":21040,"name":"dep"}
+,{"ts":1050401281082,"ph":"t","cat":"DataFlow","id":1,"pid":1,"tid":0,"name":"dep"}
+,{"ts":1050401334762,"ph":"s","cat":"DataFlow","id":2,"pid":2,"tid":21040,"name":"dep"}
+,{"ts":1050401334762,"ph":"t","cat":"DataFlow","id":2,"pid":1,"tid":0,"name":"dep"}
+,{"ts":1050401407302,"ph":"s","cat":"DataFlow","id":3,"pid":2,"tid":21040,"name":"dep"}
+,{"ts":1050401448463,"ph":"t","cat":"DataFlow","id":3,"pid":1,"tid":0,"name":"dep"}
+,{"ts":1050401513849,"ph":"s","cat":"DataFlow","id":4,"pid":2,"tid":21040,"name":"dep"}
+,{"ts":1050401513857,"ph":"t","cat":"DataFlow","id":4,"pid":1,"tid":1,"name":"dep"}
+,{"ts":1050401513884,"ph":"s","cat":"DataFlow","id":5,"pid":2,"tid":21040,"name":"dep"}
+,{"ts":1050401608071,"ph":"t","cat":"DataFlow","id":5,"pid":1,"tid":1,"name":"dep"}
+,{"ts":1050401514365,"ph":"s","cat":"DataFlow","id":6,"pid":2,"tid":21040,"name":"dep"}
+,{"ts":1050401514792,"ph":"t","cat":"DataFlow","id":6,"pid":1,"tid":2,"name":"dep"}
+,{"ts":1050401515341,"ph":"s","cat":"DataFlow","id":7,"pid":2,"tid":21040,"name":"dep"}
+,{"ts":1050401608077,"ph":"t","cat":"DataFlow","id":7,"pid":1,"tid":2,"name":"dep"}
+,{"ts":1050401515918,"ph":"s","cat":"DataFlow","id":8,"pid":2,"tid":21040,"name":"dep"}
+,{"ts":1050401515934,"ph":"t","cat":"DataFlow","id":8,"pid":1,"tid":3,"name":"dep"}
+,{"ts":1050401515944,"ph":"s","cat":"DataFlow","id":9,"pid":2,"tid":21040,"name":"dep"}
+,{"ts":1050401608077,"ph":"t","cat":"DataFlow","id":9,"pid":1,"tid":3,"name":"dep"}
+,{"ts":1050401516622,"ph":"s","cat":"DataFlow","id":10,"pid":2,"tid":21040,"name":"dep"}
+,{"ts":1050401517275,"ph":"t","cat":"DataFlow","id":10,"pid":1,"tid":4,"name":"dep"}
+,{"ts":1050401517285,"ph":"s","cat":"DataFlow","id":11,"pid":2,"tid":21040,"name":"dep"}
+,{"ts":1050401608081,"ph":"t","cat":"DataFlow","id":11,"pid":1,"tid":4,"name":"dep"}
+,{"ts":1050401673467,"ph":"s","cat":"DataFlow","id":12,"pid":2,"tid":21040,"name":"dep"}
+,{"ts":1050401673475,"ph":"t","cat":"DataFlow","id":12,"pid":1,"tid":1,"name":"dep"}
+,{"ts":1050401673488,"ph":"s","cat":"DataFlow","id":13,"pid":2,"tid":21040,"name":"dep"}
+,{"ts":1050401673501,"ph":"t","cat":"DataFlow","id":13,"pid":1,"tid":2,"name":"dep"}
+,{"ts":1050401673514,"ph":"s","cat":"DataFlow","id":14,"pid":2,"tid":21040,"name":"dep"}
+,{"ts":1050401673525,"ph":"t","cat":"DataFlow","id":14,"pid":1,"tid":3,"name":"dep"}
+,{"ts":1050401673538,"ph":"s","cat":"DataFlow","id":15,"pid":2,"tid":21040,"name":"dep"}
+,{"ts":1050401673550,"ph":"t","cat":"DataFlow","id":15,"pid":1,"tid":4,"name":"dep"}
+,{"ts":1050401673614,"ph":"s","cat":"DataFlow","id":16,"pid":2,"tid":21040,"name":"dep"}
+,{"ts":1050401767991,"ph":"t","cat":"DataFlow","id":16,"pid":1,"tid":1,"name":"dep"}
+,{"ts":1050401673641,"ph":"s","cat":"DataFlow","id":17,"pid":2,"tid":21040,"name":"dep"}
+,{"ts":1050401768007,"ph":"t","cat":"DataFlow","id":17,"pid":1,"tid":2,"name":"dep"}
+,{"ts":1050401673669,"ph":"s","cat":"DataFlow","id":18,"pid":2,"tid":21040,"name":"dep"}
+,{"ts":1050401767991,"ph":"t","cat":"DataFlow","id":18,"pid":1,"tid":3,"name":"dep"}
+,{"ts":1050401673690,"ph":"s","cat":"DataFlow","id":19,"pid":2,"tid":21040,"name":"dep"}
+,{"ts":1050401767885,"ph":"t","cat":"DataFlow","id":19,"pid":1,"tid":4,"name":"dep"}
+,{"ts":1050401190176,"ph":"s","cat":"DataFlow","id":33,"pid":2,"tid":21040,"name":"dep"}
+,{"ts":1050401195969,"ph":"t","cat":"DataFlow","id":33,"pid":10,"tid":5,"name":"dep"}
+,{"ts":1050401353700,"ph":"s","cat":"DataFlow","id":34,"pid":2,"tid":21040,"name":"dep"}
+,{"ts":1050401355850,"ph":"t","cat":"DataFlow","id":34,"pid":10,"tid":1,"name":"dep"}
+,{"ts":1050401357268,"ph":"s","cat":"DataFlow","id":35,"pid":2,"tid":21040,"name":"dep"}
+,{"ts":1050401359392,"ph":"t","cat":"DataFlow","id":35,"pid":10,"tid":2,"name":"dep"}
+,{"ts":1050401361244,"ph":"s","cat":"DataFlow","id":36,"pid":2,"tid":21040,"name":"dep"}
+,{"ts":1050401363788,"ph":"t","cat":"DataFlow","id":36,"pid":10,"tid":3,"name":"dep"}
+,{"ts":1050401363460,"ph":"s","cat":"DataFlow","id":37,"pid":2,"tid":21040,"name":"dep"}
+,{"ts":1050401363648,"ph":"t","cat":"DataFlow","id":37,"pid":10,"tid":4,"name":"dep"}
+,{"ts":1050401363473,"ph":"s","cat":"DataFlow","id":38,"pid":2,"tid":21040,"name":"dep"}
+,{"ts":1050401363473,"ph":"t","cat":"DataFlow","id":38,"pid":10,"tid":0,"name":"dep"}
+,{"ts":1050401513864,"ph":"s","cat":"DataFlow","id":39,"pid":2,"tid":21040,"name":"dep"}
+,{"ts":1050401514629,"ph":"t","cat":"DataFlow","id":39,"pid":10,"tid":1,"name":"dep"}
+,{"ts":1050401514791,"ph":"s","cat":"DataFlow","id":40,"pid":2,"tid":21040,"name":"dep"}
+,{"ts":1050401515760,"ph":"t","cat":"DataFlow","id":40,"pid":10,"tid":2,"name":"dep"}
+,{"ts":1050401515933,"ph":"s","cat":"DataFlow","id":41,"pid":2,"tid":21040,"name":"dep"}
+,{"ts":1050401516901,"ph":"t","cat":"DataFlow","id":41,"pid":10,"tid":3,"name":"dep"}
+,{"ts":1050401517265,"ph":"s","cat":"DataFlow","id":42,"pid":2,"tid":21040,"name":"dep"}
+,{"ts":1050401518305,"ph":"t","cat":"DataFlow","id":42,"pid":10,"tid":4,"name":"dep"}
+,{"ts":1050401673556,"ph":"s","cat":"DataFlow","id":43,"pid":2,"tid":21040,"name":"dep"}
+,{"ts":1050401676191,"ph":"t","cat":"DataFlow","id":43,"pid":10,"tid":1,"name":"dep"}
+,{"ts":1050401673572,"ph":"s","cat":"DataFlow","id":44,"pid":2,"tid":21040,"name":"dep"}
+,{"ts":1050401676215,"ph":"t","cat":"DataFlow","id":44,"pid":10,"tid":2,"name":"dep"}
+,{"ts":1050401673581,"ph":"s","cat":"DataFlow","id":45,"pid":2,"tid":21040,"name":"dep"}
+,{"ts":1050401675977,"ph":"t","cat":"DataFlow","id":45,"pid":10,"tid":3,"name":"dep"}
+,{"ts":1050401673602,"ph":"s","cat":"DataFlow","id":46,"pid":2,"tid":21040,"name":"dep"}
+,{"ts":1050401675128,"ph":"t","cat":"DataFlow","id":46,"pid":10,"tid":4,"name":"dep"}
 ],
 "otherData": {
     "CMD": "rocminfo",
