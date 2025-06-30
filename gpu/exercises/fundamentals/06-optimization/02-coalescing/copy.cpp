@@ -15,9 +15,8 @@ __global__ void copy_kernel(float *in, float *out, size_t width, size_t height, 
   size_t y_index = blockIdx.y * tile_dim_y + threadIdx.y;
 
   size_t index = (y_index * width + stride*x_index) % (width*height);
-  size_t index_in = (y_index * width + stride*x_index) % (width*height);
 
-  out[index] = in[index_in];
+  out[index] = in[index];
 }
 
 int main() {
