@@ -55,7 +55,7 @@ int main() {
   memset(a, 0, N_bytes);
   // Host to device
   HIP_ERRCHK(hipMemcpyAsync(d_a, a, N_bytes, hipMemcpyHostToDevice, stream));
-  LAUNCH_KERNEL(kernel, gridsize, blocksize, 0, stream, d_a, N);
+  LAUNCH_KERNEL(kernel, gridsize, blocksize, 0, stream, d_a, static_cast<int>(N));
   HIP_ERRCHK(hipGetLastError());
   // Device to host
   HIP_ERRCHK(hipMemcpyAsync(a, d_a, N_bytes, hipMemcpyDeviceToHost, stream));
