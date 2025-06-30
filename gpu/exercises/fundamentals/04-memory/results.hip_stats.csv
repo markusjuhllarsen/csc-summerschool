@@ -1,0 +1,8 @@
+"Name","Calls","TotalDurationNs","AverageNs","Percentage"
+"hipLaunchKernel",1,640216341,640216341,99.91835152911871
+"hipStreamSynchronize",1,437498,437498,0.06828016743372438
+"hipFree",1,62551,62551,0.00976231377777017
+"hipMallocManaged",1,22484,22484,0.003509070406218677
+"__hipPushCallConfiguration",1,271,271,4.229487991839804e-05
+"__hipPopCallConfiguration",1,240,240,3.745672022293553e-05
+"hipGetLastError",1,110,110,1.7167663435512117e-05
