@@ -12,7 +12,7 @@ static inline void hip_errchk(hipError_t result, const char *file, int line) {
 }
 
 // DO 2^WORK loops of work in kernel
-#define WORK 0
+#define WORK 13
 
 // Switch between pinned and pageable host memory
 #define USE_PINNED_HOST_MEM 1
