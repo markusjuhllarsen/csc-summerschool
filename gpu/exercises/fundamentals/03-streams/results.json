@@ -1,0 +1,848 @@
+{ "traceEvents":[{}
+,{"args":{"name":"CPU HIP API"},"ph":"M","pid":2,"name":"process_name","sort_index":0}
+,{"args":{"name":"COPY"},"ph":"M","pid":1,"name":"process_name","sort_index":1}
+,{"args":{"name":"GPU0"},"ph":"M","pid":6,"name":"process_name","sort_index":2}
+,{"args":{"name":"GPU1"},"ph":"M","pid":7,"name":"process_name","sort_index":3}
+,{"args":{"name":"GPU2"},"ph":"M","pid":8,"name":"process_name","sort_index":4}
+,{"args":{"name":"GPU3"},"ph":"M","pid":9,"name":"process_name","sort_index":5}
+,{"args":{"name":"GPU4"},"ph":"M","pid":10,"name":"process_name","sort_index":6}
+,{"ph":"X","name":"CopyDeviceToHost","pid":"1","tid":"0","ts":"1034134686761","dur":"934",
+  "args":{
+    "BeginNs":"1034134686761306",
+    "EndNs":"1034134687695718",
+    "dev-id":"4",
+    "queue-id":"3",
+    "Name":"CopyDeviceToHost",
+    "pid":"64032",
+    "tid":"64032",
+    "stream-id":"0",
+    "Data":"",
+    "DurationNs":"934412"
+  }
+}
+,{"ph":"X","name":"CopyDeviceToHost","pid":"1","tid":"1","ts":"1034134786196","dur":"4",
+  "args":{
+    "BeginNs":"1034134786196105",
+    "EndNs":"1034134786200905",
+    "dev-id":"4",
+    "queue-id":"0",
+    "Name":"CopyDeviceToHost",
+    "pid":"64032",
+    "tid":"64032",
+    "stream-id":"1",
+    "Data":"",
+    "DurationNs":"4800"
+  }
+}
+,{"ph":"X","name":"CopyDeviceToHost","pid":"1","tid":"2","ts":"1034134786220","dur":"4",
+  "args":{
+    "BeginNs":"1034134786220585",
+    "EndNs":"1034134786225545",
+    "dev-id":"4",
+    "queue-id":"1",
+    "Name":"CopyDeviceToHost",
+    "pid":"64032",
+    "tid":"64032",
+    "stream-id":"2",
+    "Data":"",
+    "DurationNs":"4960"
+  }
+}
+,{"ph":"X","name":"CopyDeviceToHost","pid":"1","tid":"3","ts":"1034134786247","dur":"4",
+  "args":{
+    "BeginNs":"1034134786247945",
+    "EndNs":"1034134786252906",
+    "dev-id":"4",
+    "queue-id":"2",
+    "Name":"CopyDeviceToHost",
+    "pid":"64032",
+    "tid":"64032",
+    "stream-id":"3",
+    "Data":"",
+    "DurationNs":"4961"
+  }
+}
+,{"ph":"X","name":"hipStreamCreate","pid":"2","tid":"64032","ts":"1034134025101","dur":"612582",
+  "args":{
+    "BeginNs":"1034134025101863",
+    "EndNs":"1034134637684077",
+    "pid":"64032",
+    "tid":"64032",
+    "Name":"hipStreamCreate",
+    "args":"( stream(1))",
+    "Data":"",
+    "DurationNs":"612582214"
+  }
+}
+,{"ph":"X","name":"hipStreamCreate","pid":"2","tid":"64032","ts":"1034134637695","dur":"9075",
+  "args":{
+    "BeginNs":"1034134637695439",
+    "EndNs":"1034134646771356",
+    "pid":"64032",
+    "tid":"64032",
+    "Name":"hipStreamCreate",
+    "args":"( stream(2))",
+    "Data":"",
+    "DurationNs":"9075917"
+  }
+}
+,{"ph":"X","name":"hipStreamCreate","pid":"2","tid":"64032","ts":"1034134646773","dur":"9256",
+  "args":{
+    "BeginNs":"1034134646773069",
+    "EndNs":"1034134656029676",
+    "pid":"64032",
+    "tid":"64032",
+    "Name":"hipStreamCreate",
+    "args":"( stream(3))",
+    "Data":"",
+    "DurationNs":"9256607"
+  }
+}
+,{"ph":"X","name":"hipMallocAsync","pid":"2","tid":"64032","ts":"1034134656039","dur":"31",
+  "args":{
+    "BeginNs":"1034134656039585",
+    "EndNs":"1034134656071376",
+    "pid":"64032",
+    "tid":"64032",
+    "Name":"hipMallocAsync",
+    "args":"( dev_ptr(0x154a25200000) size(4096) stream(1))",
+    "Data":"",
+    "DurationNs":"31791"
+  }
+}
+,{"ph":"X","name":"hipMallocAsync","pid":"2","tid":"64032","ts":"1034134656072","dur":"4",
+  "args":{
+    "BeginNs":"1034134656072178",
+    "EndNs":"1034134656076296",
+    "pid":"64032",
+    "tid":"64032",
+    "Name":"hipMallocAsync",
+    "args":"( dev_ptr(0x154a25201000) size(4096) stream(2))",
+    "Data":"",
+    "DurationNs":"4118"
+  }
+}
+,{"ph":"X","name":"hipMallocAsync","pid":"2","tid":"64032","ts":"1034134656076","dur":"1",
+  "args":{
+    "BeginNs":"1034134656076516",
+    "EndNs":"1034134656078029",
+    "pid":"64032",
+    "tid":"64032",
+    "Name":"hipMallocAsync",
+    "args":"( dev_ptr(0x154a25202000) size(4096) stream(3))",
+    "Data":"",
+    "DurationNs":"1513"
+  }
+}
+,{"ph":"X","name":"__hipPushCallConfiguration","pid":"2","tid":"64032","ts":"1034134656082","dur":"1",
+  "args":{
+    "BeginNs":"1034134656082348",
+    "EndNs":"1034134656082769",
+    "pid":"64032",
+    "tid":"64032",
+    "Name":"__hipPushCallConfiguration",
+    "args":"( gridDim({z(1) y(1) x(4}) blockDim({z(1) y(1) x(256}) sharedMem(0) stream(4))",
+    "Data":"",
+    "DurationNs":"421"
+  }
+}
+,{"ph":"X","name":"__hipPopCallConfiguration","pid":"2","tid":"64032","ts":"1034134656083","dur":"1",
+  "args":{
+    "BeginNs":"1034134656083991",
+    "EndNs":"1034134656084151",
+    "pid":"64032",
+    "tid":"64032",
+    "Name":"__hipPopCallConfiguration",
+    "args":"( gridDim({z(1) y(1) x(4}) blockDim({z(1) y(1) x(256}) sharedMem(0) stream(4))",
+    "Data":"",
+    "DurationNs":"160"
+  }
+}
+,{"ph":"X","name":"hipLaunchKernel","pid":"2","tid":"64032","ts":"1034134656086","dur":"21651",
+  "args":{
+    "BeginNs":"1034134656086365",
+    "EndNs":"1034134677737625",
+    "pid":"64032",
+    "tid":"64032",
+    "Name":"hipLaunchKernel",
+    "args":"( kernel(kernel_c(float*, int)) function_address(0x200ca0) numBlocks({z(1) y(1) x(4}) dimBlocks({z(1) y(1) x(256}) args(0x7ffee1d65098) sharedMemBytes(0) stream(4))",
+    "Data":"",
+    "DurationNs":"21651260"
+  }
+}
+,{"ph":"X","name":"hipMemcpy","pid":"2","tid":"64032","ts":"1034134677763","dur":"9947",
+  "args":{
+    "BeginNs":"1034134677763165",
+    "EndNs":"1034134687711130",
+    "pid":"64032",
+    "tid":"64032",
+    "Name":"hipMemcpy",
+    "args":"( dst(0x1d4cdd8d0) src(0x154a25200000) sizeBytes(40) kind(4))",
+    "Data":"",
+    "DurationNs":"9947965"
+  }
+}
+,{"ph":"X","name":"hipDeviceSynchronize","pid":"2","tid":"64032","ts":"1034134687714","dur":"1",
+  "args":{
+    "BeginNs":"1034134687714577",
+    "EndNs":"1034134687715970",
+    "pid":"64032",
+    "tid":"64032",
+    "Name":"hipDeviceSynchronize",
+    "args":"( ))",
+    "Data":"",
+    "DurationNs":"1393"
+  }
+}
+,{"ph":"X","name":"__hipPushCallConfiguration","pid":"2","tid":"64032","ts":"1034134687720","dur":"1",
+  "args":{
+    "BeginNs":"1034134687720358",
+    "EndNs":"1034134687720509",
+    "pid":"64032",
+    "tid":"64032",
+    "Name":"__hipPushCallConfiguration",
+    "args":"( gridDim({z(1) y(1) x(4}) blockDim({z(1) y(1) x(256}) sharedMem(0) stream(1))",
+    "Data":"",
+    "DurationNs":"151"
+  }
+}
+,{"ph":"X","name":"__hipPopCallConfiguration","pid":"2","tid":"64032","ts":"1034134687720","dur":"1",
+  "args":{
+    "BeginNs":"1034134687720989",
+    "EndNs":"1034134687721160",
+    "pid":"64032",
+    "tid":"64032",
+    "Name":"__hipPopCallConfiguration",
+    "args":"( gridDim({z(1) y(1) x(4}) blockDim({z(1) y(1) x(256}) sharedMem(0) stream(1))",
+    "Data":"",
+    "DurationNs":"171"
+  }
+}
+,{"ph":"X","name":"hipLaunchKernel","pid":"2","tid":"64032","ts":"1034134687721","dur":"3451",
+  "args":{
+    "BeginNs":"1034134687721571",
+    "EndNs":"1034134691173495",
+    "pid":"64032",
+    "tid":"64032",
+    "Name":"hipLaunchKernel",
+    "args":"( kernel(kernel_a(float*, int)) function_address(0x200c90) numBlocks({z(1) y(1) x(4}) dimBlocks({z(1) y(1) x(256}) args(0x7ffee1d65098) sharedMemBytes(0) stream(1))",
+    "Data":"",
+    "DurationNs":"3451924"
+  }
+}
+,{"ph":"X","name":"hipGetLastError","pid":"2","tid":"64032","ts":"1034134691179","dur":"1",
+  "args":{
+    "BeginNs":"1034134691179517",
+    "EndNs":"1034134691179607",
+    "pid":"64032",
+    "tid":"64032",
+    "Name":"hipGetLastError",
+    "args":"( ))",
+    "Data":"",
+    "DurationNs":"90"
+  }
+}
+,{"ph":"X","name":"__hipPushCallConfiguration","pid":"2","tid":"64032","ts":"1034134691180","dur":"1",
+  "args":{
+    "BeginNs":"1034134691180128",
+    "EndNs":"1034134691180268",
+    "pid":"64032",
+    "tid":"64032",
+    "Name":"__hipPushCallConfiguration",
+    "args":"( gridDim({z(1) y(1) x(4}) blockDim({z(1) y(1) x(256}) sharedMem(0) stream(2))",
+    "Data":"",
+    "DurationNs":"140"
+  }
+}
+,{"ph":"X","name":"__hipPopCallConfiguration","pid":"2","tid":"64032","ts":"1034134691182","dur":"1",
+  "args":{
+    "BeginNs":"1034134691182433",
+    "EndNs":"1034134691182553",
+    "pid":"64032",
+    "tid":"64032",
+    "Name":"__hipPopCallConfiguration",
+    "args":"( gridDim({z(1) y(1) x(4}) blockDim({z(1) y(1) x(256}) sharedMem(0) stream(2))",
+    "Data":"",
+    "DurationNs":"120"
+  }
+}
+,{"ph":"X","name":"hipLaunchKernel","pid":"2","tid":"64032","ts":"1034134691182","dur":"16822",
+  "args":{
+    "BeginNs":"1034134691182813",
+    "EndNs":"1034134708005673",
+    "pid":"64032",
+    "tid":"64032",
+    "Name":"hipLaunchKernel",
+    "args":"( kernel(kernel_b(float*, int)) function_address(0x200c98) numBlocks({z(1) y(1) x(4}) dimBlocks({z(1) y(1) x(256}) args(0x7ffee1d65098) sharedMemBytes(0) stream(2))",
+    "Data":"",
+    "DurationNs":"16822860"
+  }
+}
+,{"ph":"X","name":"hipGetLastError","pid":"2","tid":"64032","ts":"1034134708007","dur":"1",
+  "args":{
+    "BeginNs":"1034134708007035",
+    "EndNs":"1034134708007125",
+    "pid":"64032",
+    "tid":"64032",
+    "Name":"hipGetLastError",
+    "args":"( ))",
+    "Data":"",
+    "DurationNs":"90"
+  }
+}
+,{"ph":"X","name":"__hipPushCallConfiguration","pid":"2","tid":"64032","ts":"1034134708010","dur":"1",
+  "args":{
+    "BeginNs":"1034134708010622",
+    "EndNs":"1034134708010772",
+    "pid":"64032",
+    "tid":"64032",
+    "Name":"__hipPushCallConfiguration",
+    "args":"( gridDim({z(1) y(1) x(4}) blockDim({z(1) y(1) x(256}) sharedMem(0) stream(3))",
+    "Data":"",
+    "DurationNs":"150"
+  }
+}
+,{"ph":"X","name":"__hipPopCallConfiguration","pid":"2","tid":"64032","ts":"1034134708011","dur":"1",
+  "args":{
+    "BeginNs":"1034134708011033",
+    "EndNs":"1034134708011163",
+    "pid":"64032",
+    "tid":"64032",
+    "Name":"__hipPopCallConfiguration",
+    "args":"( gridDim({z(1) y(1) x(4}) blockDim({z(1) y(1) x(256}) sharedMem(0) stream(3))",
+    "Data":"",
+    "DurationNs":"130"
+  }
+}
+,{"ph":"X","name":"hipLaunchKernel","pid":"2","tid":"64032","ts":"1034134708013","dur":"3453",
+  "args":{
+    "BeginNs":"1034134708013197",
+    "EndNs":"1034134711466555",
+    "pid":"64032",
+    "tid":"64032",
+    "Name":"hipLaunchKernel",
+    "args":"( kernel(kernel_c(float*, int)) function_address(0x200ca0) numBlocks({z(1) y(1) x(4}) dimBlocks({z(1) y(1) x(256}) args(0x7ffee1d65098) sharedMemBytes(0) stream(3))",
+    "Data":"",
+    "DurationNs":"3453358"
+  }
+}
+,{"ph":"X","name":"hipGetLastError","pid":"2","tid":"64032","ts":"1034134711467","dur":"1",
+  "args":{
+    "BeginNs":"1034134711467898",
+    "EndNs":"1034134711468028",
+    "pid":"64032",
+    "tid":"64032",
+    "Name":"hipGetLastError",
+    "args":"( ))",
+    "Data":"",
+    "DurationNs":"130"
+  }
+}
+,{"ph":"X","name":"hipStreamSynchronize","pid":"2","tid":"64032","ts":"1034134711469","dur":"74708",
+  "args":{
+    "BeginNs":"1034134711469862",
+    "EndNs":"1034134786178042",
+    "pid":"64032",
+    "tid":"64032",
+    "Name":"hipStreamSynchronize",
+    "args":"( stream(1))",
+    "Data":"",
+    "DurationNs":"74708180"
+  }
+}
+,{"ph":"X","name":"hipMemcpyAsync","pid":"2","tid":"64032","ts":"1034134786184","dur":"20",
+  "args":{
+    "BeginNs":"1034134786184705",
+    "EndNs":"1034134786205035",
+    "pid":"64032",
+    "tid":"64032",
+    "Name":"hipMemcpyAsync",
+    "args":"( dst(0x1d4cdd8d0) src(0x154a25200000) sizeBytes(4096) kind(4) stream(1))",
+    "Data":"",
+    "DurationNs":"20330"
+  }
+}
+,{"ph":"X","name":"hipStreamSynchronize","pid":"2","tid":"64032","ts":"1034134786205","dur":"8",
+  "args":{
+    "BeginNs":"1034134786205696",
+    "EndNs":"1034134786213912",
+    "pid":"64032",
+    "tid":"64032",
+    "Name":"hipStreamSynchronize",
+    "args":"( stream(2))",
+    "Data":"",
+    "DurationNs":"8216"
+  }
+}
+,{"ph":"X","name":"hipMemcpyAsync","pid":"2","tid":"64032","ts":"1034134786214","dur":"13",
+  "args":{
+    "BeginNs":"1034134786214272",
+    "EndNs":"1034134786227759",
+    "pid":"64032",
+    "tid":"64032",
+    "Name":"hipMemcpyAsync",
+    "args":"( dst(0x1d4cde8e0) src(0x154a25201000) sizeBytes(4096) kind(4) stream(2))",
+    "Data":"",
+    "DurationNs":"13487"
+  }
+}
+,{"ph":"X","name":"hipStreamSynchronize","pid":"2","tid":"64032","ts":"1034134786230","dur":"10",
+  "args":{
+    "BeginNs":"1034134786230704",
+    "EndNs":"1034134786240924",
+    "pid":"64032",
+    "tid":"64032",
+    "Name":"hipStreamSynchronize",
+    "args":"( stream(3))",
+    "Data":"",
+    "DurationNs":"10220"
+  }
+}
+,{"ph":"X","name":"hipMemcpyAsync","pid":"2","tid":"64032","ts":"1034134786241","dur":"13",
+  "args":{
+    "BeginNs":"1034134786241245",
+    "EndNs":"1034134786254921",
+    "pid":"64032",
+    "tid":"64032",
+    "Name":"hipMemcpyAsync",
+    "args":"( dst(0x1d4cdf8f0) src(0x154a25202000) sizeBytes(4096) kind(4) stream(3))",
+    "Data":"",
+    "DurationNs":"13676"
+  }
+}
+,{"ph":"X","name":"hipFree","pid":"2","tid":"64032","ts":"1034134786302","dur":"3",
+  "args":{
+    "BeginNs":"1034134786302233",
+    "EndNs":"1034134786306140",
+    "pid":"64032",
+    "tid":"64032",
+    "Name":"hipFree",
+    "args":"( ptr(0x154a25200000))",
+    "Data":"",
+    "DurationNs":"3907"
+  }
+}
+,{"ph":"X","name":"hipFree","pid":"2","tid":"64032","ts":"1034134786306","dur":"1",
+  "args":{
+    "BeginNs":"1034134786306701",
+    "EndNs":"1034134786307824",
+    "pid":"64032",
+    "tid":"64032",
+    "Name":"hipFree",
+    "args":"( ptr(0x154a25201000))",
+    "Data":"",
+    "DurationNs":"1123"
+  }
+}
+,{"ph":"X","name":"hipFree","pid":"2","tid":"64032","ts":"1034134786308","dur":"1",
+  "args":{
+    "BeginNs":"1034134786308104",
+    "EndNs":"1034134786309106",
+    "pid":"64032",
+    "tid":"64032",
+    "Name":"hipFree",
+    "args":"( ptr(0x154a25202000))",
+    "Data":"",
+    "DurationNs":"1002"
+  }
+}
+,{"ph":"X","name":"hipStreamDestroy","pid":"2","tid":"64032","ts":"1034134786314","dur":"14045",
+  "args":{
+    "BeginNs":"1034134786314306",
+    "EndNs":"1034134800359587",
+    "pid":"64032",
+    "tid":"64032",
+    "Name":"hipStreamDestroy",
+    "args":"( stream(1))",
+    "Data":"",
+    "DurationNs":"14045281"
+  }
+}
+,{"ph":"X","name":"hipStreamDestroy","pid":"2","tid":"64032","ts":"1034134800360","dur":"376",
+  "args":{
+    "BeginNs":"1034134800360569",
+    "EndNs":"1034134800736917",
+    "pid":"64032",
+    "tid":"64032",
+    "Name":"hipStreamDestroy",
+    "args":"( stream(2))",
+    "Data":"",
+    "DurationNs":"376348"
+  }
+}
+,{"ph":"X","name":"hipStreamDestroy","pid":"2","tid":"64032","ts":"1034134800741","dur":"369",
+  "args":{
+    "BeginNs":"1034134800741847",
+    "EndNs":"1034134801111192",
+    "pid":"64032",
+    "tid":"64032",
+    "Name":"hipStreamDestroy",
+    "args":"( stream(3))",
+    "Data":"",
+    "DurationNs":"369345"
+  }
+}
+,{"ph":"X","name":"kernel_c(float*, int)","pid":"10","tid":"4","ts":"1034134677740","dur":"8965",
+  "args":{
+    "BeginNs":"1034134677740870",
+    "EndNs":"1034134686706586",
+    "dev-id":"4",
+    "queue-id":"3",
+    "Name":"kernel_c(float*, int)",
+    "pid":"64032",
+    "tid":"64032",
+    "stream-id":"4",
+    "Data":"",
+    "DurationNs":"8965716"
+  }
+}
+,{"ph":"X","name":"kernel_a(float*, int)","pid":"10","tid":"1","ts":"1034134691502","dur":"94597",
+  "args":{
+    "BeginNs":"1034134691502386",
+    "EndNs":"1034134786099625",
+    "dev-id":"4",
+    "queue-id":"0",
+    "Name":"kernel_a(float*, int)",
+    "pid":"64032",
+    "tid":"64032",
+    "stream-id":"1",
+    "Data":"",
+    "DurationNs":"94597239"
+  }
+}
+,{"ph":"X","name":"kernel_b(float*, int)","pid":"10","tid":"2","ts":"1034134711562","dur":"63859",
+  "args":{
+    "BeginNs":"1034134711562489",
+    "EndNs":"1034134775421885",
+    "dev-id":"4",
+    "queue-id":"1",
+    "Name":"kernel_b(float*, int)",
+    "pid":"64032",
+    "tid":"64032",
+    "stream-id":"2",
+    "Data":"",
+    "DurationNs":"63859396"
+  }
+}
+,{"ph":"X","name":"kernel_c(float*, int)","pid":"10","tid":"3","ts":"1034134711794","dur":"8718",
+  "args":{
+    "BeginNs":"1034134711794012",
+    "EndNs":"1034134720512846",
+    "dev-id":"4",
+    "queue-id":"2",
+    "Name":"kernel_c(float*, int)",
+    "pid":"64032",
+    "tid":"64032",
+    "stream-id":"3",
+    "Data":"",
+    "DurationNs":"8718834"
+  }
+}
+,{"ts":1034134711469,"ph":"s","cat":"DataFlow","id":0,"pid":6,"tid":64032,"name":"dep"}
+,{"ts":1034134711469,"ph":"t","cat":"DataFlow","id":0,"pid":2,"tid":1,"name":"dep"}
+,{"ts":1034134775421,"ph":"s","cat":"DataFlow","id":1,"pid":6,"tid":64032,"name":"dep"}
+,{"ts":1034134786205,"ph":"t","cat":"DataFlow","id":1,"pid":2,"tid":2,"name":"dep"}
+,{"ts":1034134720512,"ph":"s","cat":"DataFlow","id":2,"pid":6,"tid":64032,"name":"dep"}
+,{"ts":1034134786230,"ph":"t","cat":"DataFlow","id":2,"pid":2,"tid":3,"name":"dep"}
+,{"ts":1034134666911,"ph":"s","cat":"DataFlow","id":3,"pid":2,"tid":64032,"name":"dep"}
+,{"ts":1034134677740,"ph":"t","cat":"DataFlow","id":3,"pid":10,"tid":4,"name":"dep"}
+,{"ts":1034134689446,"ph":"s","cat":"DataFlow","id":4,"pid":2,"tid":64032,"name":"dep"}
+,{"ts":1034134691502,"ph":"t","cat":"DataFlow","id":4,"pid":10,"tid":1,"name":"dep"}
+,{"ts":1034134699593,"ph":"s","cat":"DataFlow","id":5,"pid":2,"tid":64032,"name":"dep"}
+,{"ts":1034134711562,"ph":"t","cat":"DataFlow","id":5,"pid":10,"tid":2,"name":"dep"}
+,{"ts":1034134709739,"ph":"s","cat":"DataFlow","id":6,"pid":2,"tid":64032,"name":"dep"}
+,{"ts":1034134711794,"ph":"t","cat":"DataFlow","id":6,"pid":10,"tid":3,"name":"dep"}
+,{"ts":1034134682736,"ph":"s","cat":"DataFlow","id":15,"pid":2,"tid":64032,"name":"dep"}
+,{"ts":1034134686761,"ph":"t","cat":"DataFlow","id":15,"pid":1,"tid":0,"name":"dep"}
+,{"ts":1034134786194,"ph":"s","cat":"DataFlow","id":16,"pid":2,"tid":64032,"name":"dep"}
+,{"ts":1034134786196,"ph":"t","cat":"DataFlow","id":16,"pid":1,"tid":1,"name":"dep"}
+,{"ts":1034134786220,"ph":"s","cat":"DataFlow","id":17,"pid":2,"tid":64032,"name":"dep"}
+,{"ts":1034134786220,"ph":"t","cat":"DataFlow","id":17,"pid":1,"tid":2,"name":"dep"}
+,{"ts":1034134786247,"ph":"s","cat":"DataFlow","id":18,"pid":2,"tid":64032,"name":"dep"}
+,{"ts":1034134786247,"ph":"t","cat":"DataFlow","id":18,"pid":1,"tid":3,"name":"dep"}
+],
+"otherData": {
+    "CMD": "rocminfo",
+    "HSASystemAttributes.RuntimeVersion": "1.1",
+    "HSASystemAttributes.SystemTimestampFreq.": "1000.000000MHz",
+    "HSASystemAttributes.Sig.MaxWaitDuration": "18446744073709551615(0xFFFFFFFFFFFFFFFF)(timestampcount)",
+    "HSASystemAttributes.MachineModel": "LARGE",
+    "HSASystemAttributes.SystemEndianness": "LITTLE",
+    "HSASystemAttributes.Mwaitx": "DISABLED",
+    "HSASystemAttributes.DMAbufSupport": "YES",
+    "Agent1.Name": "AMDEPYC7A5364-CoreProcessor",
+    "Agent1.Uuid": "CPU-XX",
+    "Agent1.MarketingName": "AMDEPYC7A5364-CoreProcessor",
+    "Agent1.VendorName": "CPU",
+    "Agent1.Feature": "Nonespecified",
+    "Agent1.Profile": "FULL_PROFILE",
+    "Agent1.FloatRoundMode": "NEAR",
+    "Agent1.MaxQueueNumber": "0(0x0)",
+    "Agent1.QueueMinSize": "0(0x0)",
+    "Agent1.QueueMaxSize": "0(0x0)",
+    "Agent1.QueueType": "MULTI",
+    "Agent1.Node": "0",
+    "Agent1.DeviceType": "CPU",
+    "Agent1.CacheInfo.L1": "32768(0x8000)KB",
+    "Agent1.ChipID": "0(0x0)",
+    "Agent1.ASICRevision": "0(0x0)",
+    "Agent1.CachelineSize": "64(0x40)",
+    "Agent1.MaxClockFreq.(MHz)": "2000",
+    "Agent1.BDFID": "0",
+    "Agent1.InternalNodeID": "0",
+    "Agent1.ComputeUnit": "32",
+    "Agent1.SIMDsperCU": "0",
+    "Agent1.ShaderEngines": "0",
+    "Agent1.ShaderArrs.perEng.": "0",
+    "Agent1.WatchPtsonAddr.Ranges": "1",
+    "Agent1.Features": "None",
+    "Agent1.PoolInfo.Pool1.Segment": "GLOBAL",
+    "Agent1.PoolInfo.Pool1.FLAGS": "FINEGRAINED",
+    "Agent1.PoolInfo.Pool1.Size": "131295136(0x7d367a0)KB",
+    "Agent1.PoolInfo.Pool1.Allocatable": "TRUE",
+    "Agent1.PoolInfo.Pool1.AllocGranule": "4KB",
+    "Agent1.PoolInfo.Pool1.AllocAlignment": "4KB",
+    "Agent1.PoolInfo.Pool1.Accessiblebyall": "TRUE",
+    "Agent1.PoolInfo.Pool2.Segment": "GLOBAL",
+    "Agent1.PoolInfo.Pool2.FLAGS": "KERNARG,FINEGRAINED",
+    "Agent1.PoolInfo.Pool2.Size": "131295136(0x7d367a0)KB",
+    "Agent1.PoolInfo.Pool2.Allocatable": "TRUE",
+    "Agent1.PoolInfo.Pool2.AllocGranule": "4KB",
+    "Agent1.PoolInfo.Pool2.AllocAlignment": "4KB",
+    "Agent1.PoolInfo.Pool2.Accessiblebyall": "TRUE",
+    "Agent1.PoolInfo.Pool3.Segment": "GLOBAL",
+    "Agent1.PoolInfo.Pool3.FLAGS": "COARSEGRAINED",
+    "Agent1.PoolInfo.Pool3.Size": "131295136(0x7d367a0)KB",
+    "Agent1.PoolInfo.Pool3.Allocatable": "TRUE",
+    "Agent1.PoolInfo.Pool3.AllocGranule": "4KB",
+    "Agent1.PoolInfo.Pool3.AllocAlignment": "4KB",
+    "Agent1.PoolInfo.Pool3.Accessiblebyall": "TRUE",
+    "Agent2.Name": "AMDEPYC7A5364-CoreProcessor",
+    "Agent2.Uuid": "CPU-XX",
+    "Agent2.MarketingName": "AMDEPYC7A5364-CoreProcessor",
+    "Agent2.VendorName": "CPU",
+    "Agent2.Feature": "Nonespecified",
+    "Agent2.Profile": "FULL_PROFILE",
+    "Agent2.FloatRoundMode": "NEAR",
+    "Agent2.MaxQueueNumber": "0(0x0)",
+    "Agent2.QueueMinSize": "0(0x0)",
+    "Agent2.QueueMaxSize": "0(0x0)",
+    "Agent2.QueueType": "MULTI",
+    "Agent2.Node": "1",
+    "Agent2.DeviceType": "CPU",
+    "Agent2.CacheInfo.L1": "32768(0x8000)KB",
+    "Agent2.ChipID": "0(0x0)",
+    "Agent2.ASICRevision": "0(0x0)",
+    "Agent2.CachelineSize": "64(0x40)",
+    "Agent2.MaxClockFreq.(MHz)": "2000",
+    "Agent2.BDFID": "0",
+    "Agent2.InternalNodeID": "1",
+    "Agent2.ComputeUnit": "32",
+    "Agent2.SIMDsperCU": "0",
+    "Agent2.ShaderEngines": "0",
+    "Agent2.ShaderArrs.perEng.": "0",
+    "Agent2.WatchPtsonAddr.Ranges": "1",
+    "Agent2.Features": "None",
+    "Agent2.PoolInfo.Pool1.Segment": "GLOBAL",
+    "Agent2.PoolInfo.Pool1.FLAGS": "FINEGRAINED",
+    "Agent2.PoolInfo.Pool1.Size": "132111288(0x7dfdbb8)KB",
+    "Agent2.PoolInfo.Pool1.Allocatable": "TRUE",
+    "Agent2.PoolInfo.Pool1.AllocGranule": "4KB",
+    "Agent2.PoolInfo.Pool1.AllocAlignment": "4KB",
+    "Agent2.PoolInfo.Pool1.Accessiblebyall": "TRUE",
+    "Agent2.PoolInfo.Pool2.Segment": "GLOBAL",
+    "Agent2.PoolInfo.Pool2.FLAGS": "KERNARG,FINEGRAINED",
+    "Agent2.PoolInfo.Pool2.Size": "132111288(0x7dfdbb8)KB",
+    "Agent2.PoolInfo.Pool2.Allocatable": "TRUE",
+    "Agent2.PoolInfo.Pool2.AllocGranule": "4KB",
+    "Agent2.PoolInfo.Pool2.AllocAlignment": "4KB",
+    "Agent2.PoolInfo.Pool2.Accessiblebyall": "TRUE",
+    "Agent2.PoolInfo.Pool3.Segment": "GLOBAL",
+    "Agent2.PoolInfo.Pool3.FLAGS": "COARSEGRAINED",
+    "Agent2.PoolInfo.Pool3.Size": "132111288(0x7dfdbb8)KB",
+    "Agent2.PoolInfo.Pool3.Allocatable": "TRUE",
+    "Agent2.PoolInfo.Pool3.AllocGranule": "4KB",
+    "Agent2.PoolInfo.Pool3.AllocAlignment": "4KB",
+    "Agent2.PoolInfo.Pool3.Accessiblebyall": "TRUE",
+    "Agent3.Name": "AMDEPYC7A5364-CoreProcessor",
+    "Agent3.Uuid": "CPU-XX",
+    "Agent3.MarketingName": "AMDEPYC7A5364-CoreProcessor",
+    "Agent3.VendorName": "CPU",
+    "Agent3.Feature": "Nonespecified",
+    "Agent3.Profile": "FULL_PROFILE",
+    "Agent3.FloatRoundMode": "NEAR",
+    "Agent3.MaxQueueNumber": "0(0x0)",
+    "Agent3.QueueMinSize": "0(0x0)",
+    "Agent3.QueueMaxSize": "0(0x0)",
+    "Agent3.QueueType": "MULTI",
+    "Agent3.Node": "2",
+    "Agent3.DeviceType": "CPU",
+    "Agent3.CacheInfo.L1": "32768(0x8000)KB",
+    "Agent3.ChipID": "0(0x0)",
+    "Agent3.ASICRevision": "0(0x0)",
+    "Agent3.CachelineSize": "64(0x40)",
+    "Agent3.MaxClockFreq.(MHz)": "2000",
+    "Agent3.BDFID": "0",
+    "Agent3.InternalNodeID": "2",
+    "Agent3.ComputeUnit": "32",
+    "Agent3.SIMDsperCU": "0",
+    "Agent3.ShaderEngines": "0",
+    "Agent3.ShaderArrs.perEng.": "0",
+    "Agent3.WatchPtsonAddr.Ranges": "1",
+    "Agent3.Features": "None",
+    "Agent3.PoolInfo.Pool1.Segment": "GLOBAL",
+    "Agent3.PoolInfo.Pool1.FLAGS": "FINEGRAINED",
+    "Agent3.PoolInfo.Pool1.Size": "132111292(0x7dfdbbc)KB",
+    "Agent3.PoolInfo.Pool1.Allocatable": "TRUE",
+    "Agent3.PoolInfo.Pool1.AllocGranule": "4KB",
+    "Agent3.PoolInfo.Pool1.AllocAlignment": "4KB",
+    "Agent3.PoolInfo.Pool1.Accessiblebyall": "TRUE",
+    "Agent3.PoolInfo.Pool2.Segment": "GLOBAL",
+    "Agent3.PoolInfo.Pool2.FLAGS": "KERNARG,FINEGRAINED",
+    "Agent3.PoolInfo.Pool2.Size": "132111292(0x7dfdbbc)KB",
+    "Agent3.PoolInfo.Pool2.Allocatable": "TRUE",
+    "Agent3.PoolInfo.Pool2.AllocGranule": "4KB",
+    "Agent3.PoolInfo.Pool2.AllocAlignment": "4KB",
+    "Agent3.PoolInfo.Pool2.Accessiblebyall": "TRUE",
+    "Agent3.PoolInfo.Pool3.Segment": "GLOBAL",
+    "Agent3.PoolInfo.Pool3.FLAGS": "COARSEGRAINED",
+    "Agent3.PoolInfo.Pool3.Size": "132111292(0x7dfdbbc)KB",
+    "Agent3.PoolInfo.Pool3.Allocatable": "TRUE",
+    "Agent3.PoolInfo.Pool3.AllocGranule": "4KB",
+    "Agent3.PoolInfo.Pool3.AllocAlignment": "4KB",
+    "Agent3.PoolInfo.Pool3.Accessiblebyall": "TRUE",
+    "Agent4.Name": "AMDEPYC7A5364-CoreProcessor",
+    "Agent4.Uuid": "CPU-XX",
+    "Agent4.MarketingName": "AMDEPYC7A5364-CoreProcessor",
+    "Agent4.VendorName": "CPU",
+    "Agent4.Feature": "Nonespecified",
+    "Agent4.Profile": "FULL_PROFILE",
+    "Agent4.FloatRoundMode": "NEAR",
+    "Agent4.MaxQueueNumber": "0(0x0)",
+    "Agent4.QueueMinSize": "0(0x0)",
+    "Agent4.QueueMaxSize": "0(0x0)",
+    "Agent4.QueueType": "MULTI",
+    "Agent4.Node": "3",
+    "Agent4.DeviceType": "CPU",
+    "Agent4.CacheInfo.L1": "32768(0x8000)KB",
+    "Agent4.ChipID": "0(0x0)",
+    "Agent4.ASICRevision": "0(0x0)",
+    "Agent4.CachelineSize": "64(0x40)",
+    "Agent4.MaxClockFreq.(MHz)": "2000",
+    "Agent4.BDFID": "0",
+    "Agent4.InternalNodeID": "3",
+    "Agent4.ComputeUnit": "32",
+    "Agent4.SIMDsperCU": "0",
+    "Agent4.ShaderEngines": "0",
+    "Agent4.ShaderArrs.perEng.": "0",
+    "Agent4.WatchPtsonAddr.Ranges": "1",
+    "Agent4.Features": "None",
+    "Agent4.PoolInfo.Pool1.Segment": "GLOBAL",
+    "Agent4.PoolInfo.Pool1.FLAGS": "FINEGRAINED",
+    "Agent4.PoolInfo.Pool1.Size": "132056268(0x7df04cc)KB",
+    "Agent4.PoolInfo.Pool1.Allocatable": "TRUE",
+    "Agent4.PoolInfo.Pool1.AllocGranule": "4KB",
+    "Agent4.PoolInfo.Pool1.AllocAlignment": "4KB",
+    "Agent4.PoolInfo.Pool1.Accessiblebyall": "TRUE",
+    "Agent4.PoolInfo.Pool2.Segment": "GLOBAL",
+    "Agent4.PoolInfo.Pool2.FLAGS": "KERNARG,FINEGRAINED",
+    "Agent4.PoolInfo.Pool2.Size": "132056268(0x7df04cc)KB",
+    "Agent4.PoolInfo.Pool2.Allocatable": "TRUE",
+    "Agent4.PoolInfo.Pool2.AllocGranule": "4KB",
+    "Agent4.PoolInfo.Pool2.AllocAlignment": "4KB",
+    "Agent4.PoolInfo.Pool2.Accessiblebyall": "TRUE",
+    "Agent4.PoolInfo.Pool3.Segment": "GLOBAL",
+    "Agent4.PoolInfo.Pool3.FLAGS": "COARSEGRAINED",
+    "Agent4.PoolInfo.Pool3.Size": "132056268(0x7df04cc)KB",
+    "Agent4.PoolInfo.Pool3.Allocatable": "TRUE",
+    "Agent4.PoolInfo.Pool3.AllocGranule": "4KB",
+    "Agent4.PoolInfo.Pool3.AllocAlignment": "4KB",
+    "Agent4.PoolInfo.Pool3.Accessiblebyall": "TRUE",
+    "Agent5.Name": "gfx90a",
+    "Agent5.Uuid": "GPU-28fcd3609ffec4db",
+    "Agent5.MarketingName": "AMDInstinctMI250X",
+    "Agent5.VendorName": "AMD",
+    "Agent5.Feature": "KERNEL_DISPATCH",
+    "Agent5.Profile": "BASE_PROFILE",
+    "Agent5.FloatRoundMode": "NEAR",
+    "Agent5.MaxQueueNumber": "128(0x80)",
+    "Agent5.QueueMinSize": "64(0x40)",
+    "Agent5.QueueMaxSize": "131072(0x20000)",
+    "Agent5.QueueType": "MULTI",
+    "Agent5.Node": "4",
+    "Agent5.DeviceType": "GPU",
+    "Agent5.CacheInfo.L1": "16(0x10)KB",
+    "Agent5.CacheInfo.L2": "8192(0x2000)KB",
+    "Agent5.ChipID": "29704(0x7408)",
+    "Agent5.ASICRevision": "1(0x1)",
+    "Agent5.CachelineSize": "64(0x40)",
+    "Agent5.MaxClockFreq.(MHz)": "1700",
+    "Agent5.BDFID": "53504",
+    "Agent5.InternalNodeID": "4",
+    "Agent5.ComputeUnit": "110",
+    "Agent5.SIMDsperCU": "4",
+    "Agent5.ShaderEngines": "8",
+    "Agent5.ShaderArrs.perEng.": "1",
+    "Agent5.WatchPtsonAddr.Ranges": "4",
+    "Agent5.CoherentHostAccess": "TRUE",
+    "Agent5.Features": "KERNEL_DISPATCH",
+    "Agent5.FastF16Operation": "TRUE",
+    "Agent5.WavefrontSize": "64(0x40)",
+    "Agent5.WorkgroupMaxSize": "1024(0x400)",
+    "Agent5.WorkgroupMaxSizeperDimension.x": "1024(0x400)",
+    "Agent5.WorkgroupMaxSizeperDimension.y": "1024(0x400)",
+    "Agent5.WorkgroupMaxSizeperDimension.z": "1024(0x400)",
+    "Agent5.MaxWavesPerCU": "32(0x20)",
+    "Agent5.MaxWork-itemPerCU": "2048(0x800)",
+    "Agent5.GridMaxSize": "4294967295(0xffffffff)",
+    "Agent5.GridMaxSizeperDimension.x": "4294967295(0xffffffff)",
+    "Agent5.GridMaxSizeperDimension.y": "4294967295(0xffffffff)",
+    "Agent5.GridMaxSizeperDimension.z": "4294967295(0xffffffff)",
+    "Agent5.Maxfbarriers/Workgrp": "32",
+    "Agent5.PacketProcessoruCode:": "78",
+    "Agent5.SDMAengineuCode:": "8",
+    "Agent5.IOMMUSupport:": "None",
+    "Agent5.PoolInfo.Pool1.Segment": "GLOBAL",
+    "Agent5.PoolInfo.Pool1.FLAGS": "COARSEGRAINED",
+    "Agent5.PoolInfo.Pool1.Size": "67092480(0x3ffc000)KB",
+    "Agent5.PoolInfo.Pool1.Allocatable": "TRUE",
+    "Agent5.PoolInfo.Pool1.AllocGranule": "4KB",
+    "Agent5.PoolInfo.Pool1.AllocAlignment": "4KB",
+    "Agent5.PoolInfo.Pool1.Accessiblebyall": "FALSE",
+    "Agent5.PoolInfo.Pool2.Segment": "GLOBAL",
+    "Agent5.PoolInfo.Pool2.FLAGS": "EXTENDEDFINEGRAINED",
+    "Agent5.PoolInfo.Pool2.Size": "67092480(0x3ffc000)KB",
+    "Agent5.PoolInfo.Pool2.Allocatable": "TRUE",
+    "Agent5.PoolInfo.Pool2.AllocGranule": "4KB",
+    "Agent5.PoolInfo.Pool2.AllocAlignment": "4KB",
+    "Agent5.PoolInfo.Pool2.Accessiblebyall": "FALSE",
+    "Agent5.PoolInfo.Pool3.Segment": "GLOBAL",
+    "Agent5.PoolInfo.Pool3.FLAGS": "FINEGRAINED",
+    "Agent5.PoolInfo.Pool3.Size": "67092480(0x3ffc000)KB",
+    "Agent5.PoolInfo.Pool3.Allocatable": "TRUE",
+    "Agent5.PoolInfo.Pool3.AllocGranule": "4KB",
+    "Agent5.PoolInfo.Pool3.AllocAlignment": "4KB",
+    "Agent5.PoolInfo.Pool3.Accessiblebyall": "FALSE",
+    "Agent5.PoolInfo.Pool4.Segment": "GROUP",
+    "Agent5.PoolInfo.Pool4.Size": "64(0x40)KB",
+    "Agent5.PoolInfo.Pool4.Allocatable": "FALSE",
+    "Agent5.PoolInfo.Pool4.AllocGranule": "0KB",
+    "Agent5.PoolInfo.Pool4.AllocAlignment": "0KB",
+    "Agent5.PoolInfo.Pool4.Accessiblebyall": "FALSE",
+    "Agent5.ISAInfo.ISA1.Name:amdgcn-amd-amdhsa--gfx90a:sramecc+": "xnack-",
+    "Agent5.ISAInfo.ISA1.MachineModels": "HSA_MACHINE_MODEL_LARGE",
+    "Agent5.ISAInfo.ISA1.Profiles": "HSA_PROFILE_BASE",
+    "Agent5.ISAInfo.ISA1.DefaultRoundingMode": "NEAR",
+    "Agent5.ISAInfo.ISA1.DefaultRoundingMode": "NEAR",
+    "Agent5.ISAInfo.ISA1.Fastf16": "TRUE",
+    "Agent5.ISAInfo.ISA1.WorkgroupMaxSize": "1024(0x400)",
+    "Agent5.ISAInfo.ISA1.WorkgroupMaxSizeperDimension.x": "1024(0x400)",
+    "Agent5.ISAInfo.ISA1.WorkgroupMaxSizeperDimension.y": "1024(0x400)",
+    "Agent5.ISAInfo.ISA1.WorkgroupMaxSizeperDimension.z": "1024(0x400)",
+    "Agent5.ISAInfo.ISA1.GridMaxSize": "4294967295(0xffffffff)",
+    "Agent5.ISAInfo.ISA1.GridMaxSizeperDimension.x": "4294967295(0xffffffff)",
+    "Agent5.ISAInfo.ISA1.GridMaxSizeperDimension.y": "4294967295(0xffffffff)",
+    "Agent5.ISAInfo.ISA1.GridMaxSizeperDimension.z": "4294967295(0xffffffff)",
+    "Agent5.ISAInfo.ISA1.FBarrierMaxSize": "32"
+  }
+}

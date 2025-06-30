@@ -6,7 +6,7 @@
 
 
 // How many integers to write, total from all MPI processes
-static constexpr size_t numElements = 10000;
+static constexpr size_t numElements = 104857600;
 
 /* Enables or disables debug printing of file contents. Printing is not practical for large files,
 so we enable/disable this based on 'numElements'. */
