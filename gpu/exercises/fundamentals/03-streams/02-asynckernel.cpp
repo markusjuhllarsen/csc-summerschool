@@ -35,9 +35,9 @@ int main() {
   c = (float*) malloc(N_bytes);
 
   // Device allocations
-  HIP_ERRCHK(hipMallocAsync((void**)&d_a, N_bytes, stream[0]));
-  HIP_ERRCHK(hipMallocAsync((void**)&d_b, N_bytes, stream[1]));
-  HIP_ERRCHK(hipMallocAsync((void**)&d_c, N_bytes, stream[2]));
+  HIP_ERRCHK(hipMalloc((void**)&d_a, N_bytes));
+  HIP_ERRCHK(hipMalloc((void**)&d_b, N_bytes));
+  HIP_ERRCHK(hipMalloc((void**)&d_c, N_bytes));
 
   // warmup
   kernel_c<<<gridsize, blocksize>>>(d_a, N);
@@ -55,12 +55,12 @@ int main() {
   HIP_ERRCHK(hipGetLastError());
 
   // Copy results back
-  HIP_ERRCHK(hipStreamSynchronize(stream[0]));
-  HIP_ERRCHK(hipMemcpyAsync(a, d_a, N_bytes, hipMemcpyDefault, stream[0]));
-  HIP_ERRCHK(hipStreamSynchronize(stream[1]));
-  HIP_ERRCHK(hipMemcpyAsync(b, d_b, N_bytes, hipMemcpyDefault, stream[1]));
-  HIP_ERRCHK(hipStreamSynchronize(stream[2]));
-  HIP_ERRCHK(hipMemcpyAsync(c, d_c, N_bytes, hipMemcpyDefault, stream[2]));
+  // There is implicit synchronization
+  // between streams when copying data back to host
+  HIP_ERRCHK(hipStreamSynchronize(stream[0])); // Synchronize stream[0] to be sure
+  HIP_ERRCHK(hipMemcpy(a, d_a, N_bytes, hipMemcpyDefault));
+  HIP_ERRCHK(hipMemcpy(b, d_b, N_bytes, hipMemcpyDefault));
+  HIP_ERRCHK(hipMemcpy(c, d_c, N_bytes, hipMemcpyDefault));
 
   for (int i = 0; i < 20; ++i) printf("%f ", a[i]);
   printf("\n");
