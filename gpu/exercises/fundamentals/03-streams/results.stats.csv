@@ -1,4 +1,4 @@
 "Name","Calls","TotalDurationNs","AverageNs","Percentage"
-"kernel_a(float*, int)",1,94597239,94597239,53.70534948995603
-"kernel_b(float*, int)",1,63859396,63859396,36.254664688442965
-"kernel_c(float*, int)",2,17684550,8842275,10.039985821601007
+"kernel_a(float*, int)",1,85583692,85583692,50.6850507474763
+"kernel_b(float*, int)",1,65435746,65435746,38.752874866732434
+"kernel_c(float*, int)",2,17834476,8917238,10.56207438579126
