@@ -46,18 +46,26 @@ int main() {
   float *a;
   float *d_a;
 
+  hipStream_t stream;
+  HIP_ERRCHK(hipStreamCreate(&stream));
+
   a = (float*) malloc(N_bytes);
-  HIP_ERRCHK(hipMalloc((void**)&d_a, N_bytes));
+  HIP_ERRCHK(hipMallocAsync((void**)&d_a, N_bytes, stream));
 
   memset(a, 0, N_bytes);
-
-  HIP_ERRCHK(hipMemcpy(d_a, a, N_bytes, hipMemcpyHostToDevice));
-  kernel<<<gridsize, blocksize,0,0>>>(d_a, N);
+  // Host to device
+  HIP_ERRCHK(hipMemcpyAsync(d_a, a, N_bytes, hipMemcpyHostToDevice, stream));
+  kernel<<<gridsize, blocksize,0,stream>>>(d_a, N);
   HIP_ERRCHK(hipGetLastError());
-  HIP_ERRCHK(hipMemcpy(a, d_a, N_bytes, hipMemcpyDeviceToHost));
-
+  // Device to host
+  HIP_ERRCHK(hipMemcpyAsync(a, d_a, N_bytes, hipMemcpyDeviceToHost, stream));
+  // Synchronize the stream to ensure all operations are complete
+  // before checking the results and freeing the device memory
+  HIP_ERRCHK(hipStreamSynchronize(stream));
   printf("error: %f", max_error(a, N));
-  HIP_ERRCHK(hipFree(d_a));
+  HIP_ERRCHK(hipFree(d_a));  
+  
   free(a);
+  HIP_ERRCHK(hipStreamDestroy(stream));
 
 }
