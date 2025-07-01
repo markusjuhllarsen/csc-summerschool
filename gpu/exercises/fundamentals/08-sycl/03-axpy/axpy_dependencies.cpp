@@ -10,9 +10,7 @@ int main() {
   constexpr size_t N = 25600;
   std::vector<int> x(N),y(N);
   int a=4;
-  std::fill(x.begin(), x.end(), 1);
-  std::fill(y.begin(), y.end(), 2);
-  
+
   {
     // Create buffers for the host data
     buffer<int> x_buf(x.data(), range<1>(N));
@@ -24,7 +22,7 @@ int main() {
 
     // Initialize x
     q.submit([&](handler& h) {
-      accessor x_acc(x_buf, h, read_only, no_init);     
+      accessor x_acc(x_buf, h, write_only, no_init);     
       h.parallel_for(
         nd_range<1>(range<1>(global_size), range<1>(local_size)),
         [=](nd_item<1> item) {
