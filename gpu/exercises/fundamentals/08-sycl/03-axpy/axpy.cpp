@@ -33,7 +33,7 @@ int main() {
 
       //Checking the result inside the scope of the buffers using host_accessors
       {
-          host_accessor h_accY(buf_y, access_mode::read_only); // Read back data after kernel execution
+          host_accessor h_accY(buf_y, access_mode::read); // Read back data after kernel execution
           std::cout << "First few elements of Y after operation:" << std::endl;
           for (size_t i = 0; i < 10; ++i) {
             std::cout << "Y[" << i << "] = " << h_accY[i] << std::endl;
