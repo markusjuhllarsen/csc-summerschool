@@ -26,8 +26,8 @@ int main() {
     // Submit the kernel to the queue
     q.submit([&](handler& h) {
       // Create accessors if necessary
-      accessor x_acc(buf_x, h, read_only);
-      accessor y_acc(buf_y, h, read_write);
+      //accessor x_acc(buf_x, h, read_only);
+      //accessor y_acc(buf_y, h, read_write);
 
       //h.parallel_for(range<1>(N), [=](id<1> idx) {
       //  // The kernel code
