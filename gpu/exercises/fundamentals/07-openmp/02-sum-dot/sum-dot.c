@@ -24,11 +24,11 @@ int main(void)
         for (int i = 0; i < NX; i++) {
             vecC[i] = vecA[i] + vecB[i];
         }
-    // Dot product
-    #pragma omp target teams distribute parallel for reduction(+:res)  
-    for (int i = 0; i < NX; i++) {
-        res += vecC[i] * vecB[i];
-    }
+        // Dot product
+        #pragma omp target teams distribute parallel for reduction(+:res)  
+        for (int i = 0; i < NX; i++) {
+            res += vecC[i] * vecB[i];
+        }
     }
 
     double sum = 0.0;
