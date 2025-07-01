@@ -71,6 +71,7 @@ void GPUtoGPUviaHost(int rank, double *hA, double *dA, int N, double &timer)
     //       sending them back to rank 0.
     if (rank == 0) {
         // TODO: Copy vector to host and send it to rank 1
+        hipMemcpy(hA, dA, sizeof(double) * N, hipMemcpyDeviceToHost);
         MPI_Send(hA, N, MPI_DOUBLE, 1, 11, MPI_COMM_WORLD);
         // TODO: Receive vector from rank 1 and copy it to the device
         MPI_Recv(hA, N, MPI_DOUBLE, 1, 12, MPI_COMM_WORLD, MPI_STATUS_IGNORE);
