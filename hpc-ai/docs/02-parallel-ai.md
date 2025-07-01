@@ -68,10 +68,19 @@ train_loader = torch.utils.data.DataLoader(data, ..., num_workers=N)
 # Data Parallelism
 
 :::::: {.columns}
-::: {.column width="20%"}
-![](img/data_parallelism.png){.center width=60%}
+::: {.column width="40%"}
+![](img/data_parallelism.png){.center width=70%}
 :::
-::: {.column width="80%"}
+::: {.column width="30%"}
+<small>
+- How it works:
+  - Copy model to each GPU.
+  - Split inputs across GPUs.
+  - Compute forward/backward.
+  - Aggregate gradients.
+</small>
+:::
+::: {.column width="40%"}
 <small>
 **Overheads**
 
@@ -80,12 +89,6 @@ train_loader = torch.utils.data.DataLoader(data, ..., num_workers=N)
 | Communication Overhead    | High          |
 | Partial distribution      | Possible      |
 | Underutilization          | Possible      |
-
-- How it works:
-- Copy model to each GPU.
-- Split inputs across GPUs.
-- Compute forward/backward.
-- Aggregate gradients.
 </small>
 :::
 ::::::
@@ -112,14 +115,27 @@ train_loader = torch.utils.data.DataLoader(data, ..., num_workers=N)
 # MP: Pipeline Parallelism
 
 :::::: {.columns}
-::: {.column width="50%"}
-![](img/pipeline_parallelism.png){.center width=60%}
+::: {.column width="40%"}
+![](img/pipeline_parallelism.png){.center width=70%}
+:::
+::: {.column width="30%"}
+<small>
+- Idea: Split model layer-wise across GPUs.
+  - Each GPU processes part of the model sequentially.
+  - Underutilization is an issue.
+  - Maximizes compute by overlapping stages (with microbatching).
+</small>
 :::
 ::: {.column width="40%"}
-- <small>Idea: Split model layer-wise across GPUs.</small>  
-- <small>Each GPU processes part of the model sequentially.</small>  
-- <small>Underutilization is an issue.</small>  
-- <small>Maximizes compute by overlapping stages (with microbatching).</small>
+<small>
+**Overheads**
+
+| Type                      | Description   |
+|---------------------------|---------------|
+| Communication Overhead    | Low           |
+| Partial distribution      | No            |
+| Underutilization          | High          |
+</small>
 :::
 ::::::
 
@@ -135,14 +151,28 @@ train_loader = torch.utils.data.DataLoader(data, ..., num_workers=N)
 # MP: Tensor Parallelism
 
 :::::: {.columns}
-::: {.column width="58%"}
-![](img/tensor_parallelism.png){.center width=60%}
+::: {.column width="60%"}
+![](img/tensor_parallelism.png){.center width=70%}
+:::
+::: {.column width="30%"}
+<small>
+-Horizontal Parallelism:
+  - Divide tensors horizontally.
+  - Store part of the layers or blocks on different GPUs.
+  - Concat outputs between GPUs manually.
+</small>
 :::
 ::: {.column width="40%"}
-- <small>Horizontal Parallelism:</small>  
-- <small>Divide tensors horizontally.</small>  
-- <small>Store part of the layers or blocks on different GPUs.</small>  
-- <small>Concat outputs between GPUs manually.</small>
+<small>
+**Overheads**
+
+| Type                      | Description   |
+|---------------------------|---------------|
+| Communication Overhead    | Low           |
+| Partial distribution      | No            |
+| Underutilization          | No            |
+| Model Modification        | High            |
+</small>
 :::
 ::::::
 
