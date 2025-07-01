@@ -22,8 +22,8 @@ int main() {
     // Submit the kernel to the queue
     q.submit([&](handler& h) {
       // Create accessors if necessary
-      accessor x_acc{buf_x, h, read};
-      accessor y_acc{buf_y, h, read_write};
+      auto x_acc = sycl::accessor{buf_x, h, sycl::read};
+      auto y_acc = sycl::accessor{buf_y, h, sycl::read_write};
 
       h.parallel_for(range<1>(N), [=](id<1> idx) {
         // The kernel code
