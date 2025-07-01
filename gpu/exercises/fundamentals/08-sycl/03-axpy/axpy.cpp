@@ -22,8 +22,8 @@ int main() {
     // Submit the kernel to the queue
     q.submit([&](handler& h) {
       // Create accessors if necessary
-      accessor x_acc(buf_x, h, read);
-      accessor y_acc(buf_y, h, read_write);
+      accessor x_acc(buf_x, h, access_mode::read);
+      accessor y_acc(buf_y, h, access_mode::read_write);
 
       h.parallel_for(range<1>(N), [=](id<1> idx) {
         // The kernel code
@@ -33,7 +33,7 @@ int main() {
 
       //Checking the result inside the scope of the buffers using host_accessors
       {
-          host_accessor h_accY(buf_y, read_only); // Read back data after kernel execution
+          host_accessor h_accY(buf_y, access_mode::read_only); // Read back data after kernel execution
           std::cout << "First few elements of Y after operation:" << std::endl;
           for (size_t i = 0; i < 10; ++i) {
             std::cout << "Y[" << i << "] = " << h_accY[i] << std::endl;
