@@ -13,7 +13,6 @@ int main() {
   std::fill(x.begin(), x.end(), 1);
   std::fill(y.begin(), y.end(), 2);
 
-  {
    // Create buffers for the host data or allocate memory using USM
    // If USM + malloc_device() is used add the copy operations
     int *d_x = malloc_device<int>(N, q);
@@ -55,7 +54,7 @@ int main() {
             std::cout << "Y[" << i << "] = " << y[i] << std::endl;
           }
       }
-  }
+      
   // If USM + malloc_device() is used add the copy operations 
   // TODO
   // Check that all outputs match expected value
