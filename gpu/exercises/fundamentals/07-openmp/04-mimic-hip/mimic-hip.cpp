@@ -29,7 +29,7 @@ int main() {
       c[k] = a[k] +  b[k];
 }
 */
-#pragma omp target teams distribute parallel
+#pragma omp target teams parallel
 {
   const int tid = omp_get_thread_num() + omp_get_team_num() * omp_get_num_threads();
   const int stride = omp_get_num_threads() * omp_get_num_teams();
