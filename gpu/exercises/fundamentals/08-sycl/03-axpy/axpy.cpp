@@ -25,9 +25,18 @@ int main() {
       accessor x_acc(buf_x, h, read_only);
       accessor y_acc(buf_y, h, read_write);
 
-      h.parallel_for(range<1>(N), [=](id<1> idx) {
-        // The kernel code
-        y_acc[idx] = a * x_acc[idx] + y_acc[idx];
+      //h.parallel_for(range<1>(N), [=](id<1> idx) {
+      //  // The kernel code
+      //  y_acc[idx] = a * x_acc[idx] + y_acc[idx];
+      //});
+      int local_size = 256; // Define local work-group size
+      int global_size = ((N + local_size - 1) / local_size) * local_size; // Calculate global size
+
+      h.parallel_for(nd_range<1>(range<1>(global_size), range<1>(local_size)), [=](nd_item<1> item) {
+        auto idx=item.get_global_id(0);
+        if(idx<N){ //to avoid out of bounds access
+          y_acc[idx] = a*x_acc[idx] + y_acc[idx];
+        }
       });
     });
 
