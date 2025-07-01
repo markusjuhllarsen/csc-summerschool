@@ -71,11 +71,19 @@ void GPUtoGPUviaHost(int rank, double *hA, double *dA, int N, double &timer)
     //       sending them back to rank 0.
     if (rank == 0) {
         // TODO: Copy vector to host and send it to rank 1
+        MPI_Send(hA, N, MPI_DOUBLE, 1, 11, MPI_COMM_WORLD);
         // TODO: Receive vector from rank 1 and copy it to the device
+        MPI_Recv(hA, N, MPI_DOUBLE, 1, 12, MPI_COMM_WORLD, MPI_STATUS_IGNORE);
+        hipMemcpy(dA, hA, sizeof(double) * N, hipMemcpyHostToDevice);
     } else if (rank == 1) {
         // TODO: Receive vector from rank 0 and copy it to the device
         // TODO: Launch kernel to increment values on the GPU
         // TODO: Copy vector to host and send it to rank 0
+        MPI_Recv(hA, N, MPI_DOUBLE, 0, 11, MPI_COMM_WORLD, MPI_STATUS_IGNORE);
+        hipMemcpy(dA, hA, sizeof(double) * N, hipMemcpyHostToDevice);
+        add_kernel<<<numBlocks, blockSize>>>(dA, N);
+        hipMemcpy(hA, dA, sizeof(double) * N, hipMemcpyDeviceToHost);
+        MPI_Send(hA, N, MPI_DOUBLE, 0, 12, MPI_COMM_WORLD);   
     }
 
     stop = MPI_Wtime();
