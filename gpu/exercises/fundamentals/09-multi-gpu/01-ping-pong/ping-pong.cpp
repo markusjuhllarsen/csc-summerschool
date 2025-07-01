@@ -81,7 +81,9 @@ void GPUtoGPUviaHost(int rank, double *hA, double *dA, int N, double &timer)
         // TODO: Copy vector to host and send it to rank 0
         MPI_Recv(hA, N, MPI_DOUBLE, 0, 11, MPI_COMM_WORLD, MPI_STATUS_IGNORE);
         hipMemcpy(dA, hA, sizeof(double) * N, hipMemcpyHostToDevice);
-        add_kernel<<<numBlocks, blockSize>>>(dA, N);
+        int blocksize = 128;
+        int gridsize = (N + blocksize - 1) / blocksize;
+        add_kernel<<<gridsize, blocksize>>>(dA, N);
         hipMemcpy(hA, dA, sizeof(double) * N, hipMemcpyDeviceToHost);
         MPI_Send(hA, N, MPI_DOUBLE, 0, 12, MPI_COMM_WORLD);   
     }
