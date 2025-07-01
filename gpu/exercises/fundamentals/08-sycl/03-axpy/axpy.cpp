@@ -10,10 +10,10 @@ int main() {
   constexpr size_t N = 25600;
   //std::vector<int> x(N),y(N);
   int a=4;
-  int *d_x = malloc_shared<int>(N, q);
-  int *d_y = malloc_shared<int>(N, q);
-  std::fill(x.begin(), x.end(), 1);
-  std::fill(y.begin(), y.end(), 2);
+  int *x = malloc_shared<int>(N, q);
+  int *y = malloc_shared<int>(N, q);
+  std::fill(x, x + N, 1);
+  std::fill(y, y + N, 2);
 
    // Create buffers for the host data or allocate memory using USM
    // If USM + malloc_device() is used add the copy operations
@@ -42,7 +42,7 @@ int main() {
         auto idx=item.get_global_id(0);
         if(idx<N){ //to avoid out of bounds access
           //y_acc[idx] = a*x_acc[idx] + y_acc[idx];
-          d_y[idx] = a * d_x[idx] + d_y[idx]; // Using USM pointers
+          y[idx] = a * x[idx] + y[idx]; // Using USM pointers
         }
       });
     });
@@ -62,10 +62,10 @@ int main() {
   // Check that all outputs match expected value
 
   // If USM is used free the device memory
-  free(d_x, q);
-  free(d_y, q);
+  free(x, q);
+  free(y, q);
   // Check that all outputs match expected value
-  bool passed = std::all_of(y.begin(), y.end(),
+  bool passed = std::all_of(y, y + N,
                             [a](int val) { return val == a * 1 + 2; });
   std::cout << ((passed) ? "SUCCESS" : "FAILURE")
             << std::endl;
