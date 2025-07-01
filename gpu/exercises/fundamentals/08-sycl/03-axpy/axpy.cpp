@@ -27,7 +27,7 @@ int main() {
 
       h.parallel_for(range<1>(N), [=](id<1> idx) {
         // The kernel code
-        y_acc[idx] = a * x_acc[idx];
+        y_acc[idx] = a * x_acc[idx] + y_acc[idx];
       });
     });
 
