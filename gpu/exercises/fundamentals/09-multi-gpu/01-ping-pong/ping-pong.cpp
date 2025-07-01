@@ -104,11 +104,19 @@ void GPUtoGPUdirect(int rank, double *dA, int N, double &timer)
     //       from GPU memory using HIP-aware MPI.
     if (rank == 0) {
         // TODO: Send vector to rank 1
+        MPI_Send(dA, N, MPI_DOUBLE, 1, 11, MPI_COMM_WORLD);
         // TODO: Receive vector from rank 1
+        MPI_Recv(dA, N, MPI_DOUBLE, 1, 12, MPI_COMM_WORLD, MPI_STATUS_IGNORE);
     } else if (rank == 1) {
         // TODO: Receive vector from rank 0
+        MPI_Recv(dA, N, MPI_DOUBLE, 0, 11, MPI_COMM_WORLD, MPI_STATUS_IGNORE);
         // TODO: Launch kernel to increment values on the GPU
+        int blocksize = 128;
+        int gridsize = (N + blocksize - 1) / blocksize;
+        add_kernel<<<gridsize, blocksize>>>(dA, N);
+        hipStreamSynchronize(0); // Ensure kernel execution is complete
         // TODO: Send vector to rank 0
+        MPI_Send(dA, N, MPI_DOUBLE, 0, 12, MPI_COMM_WORLD);
     }
 
     stop = MPI_Wtime();
