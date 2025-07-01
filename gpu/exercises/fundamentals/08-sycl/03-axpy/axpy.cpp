@@ -16,8 +16,13 @@ int main() {
   {
    // Create buffers for the host data or allocate memory using USM
    // If USM + malloc_device() is used add the copy operations
-    buffer<int, 1> buf_x(x.data(), range<1>(N));
-    buffer<int, 1> buf_y(y.data(), range<1>(N));
+    int *d_x = malloc_device<int>(N, q);
+    int *d_y = malloc_device<int>(N, q);
+    //buffer<int, 1> buf_x(x.data(), range<1>(N));
+    //buffer<int, 1> buf_y(y.data(), range<1>(N));
+
+    q.memcpy(d_x, x.data(), N * sizeof(int)).wait();
+    q.memcpy(d_y, y.data(), N * sizeof(int)).wait();
 
     // Submit the kernel to the queue
     q.submit([&](handler& h) {
@@ -35,17 +40,19 @@ int main() {
       h.parallel_for(nd_range<1>(range<1>(global_size), range<1>(local_size)), [=](nd_item<1> item) {
         auto idx=item.get_global_id(0);
         if(idx<N){ //to avoid out of bounds access
-          y_acc[idx] = a*x_acc[idx] + y_acc[idx];
+          //y_acc[idx] = a*x_acc[idx] + y_acc[idx];
+          d_y[idx] = a * d_x[idx] + d_y[idx]; // Using USM pointers
         }
       });
     });
 
       //Checking the result inside the scope of the buffers using host_accessors
       {
-          host_accessor h_accY(buf_y, read_only); // Read back data after kernel execution
+          //host_accessor h_accY(buf_y, read_only); // Read back data after kernel execution
+          q.memcpy(y.data(), d_y, sizeof(int) * N).wait();
           std::cout << "First few elements of Y after operation:" << std::endl;
           for (size_t i = 0; i < 10; ++i) {
-            std::cout << "Y[" << i << "] = " << h_accY[i] << std::endl;
+            std::cout << "Y[" << i << "] = " << y[i] << std::endl;
           }
       }
   }
@@ -54,7 +61,8 @@ int main() {
   // Check that all outputs match expected value
 
   // If USM is used free the device memory
-  // TODO
+  free(d_x, q);
+  free(d_y, q);
   // Check that all outputs match expected value
   bool passed = std::all_of(y.begin(), y.end(),
                             [a](int val) { return val == a * 1 + 2; });
