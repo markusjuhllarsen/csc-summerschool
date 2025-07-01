@@ -62,12 +62,14 @@ int main() {
   // Check that all outputs match expected value
 
   // If USM is used free the device memory
-  free(x, q);
-  free(y, q);
+  
   // Check that all outputs match expected value
   bool passed = std::all_of(y, y + N,
                             [a](int val) { return val == a * 1 + 2; });
   std::cout << ((passed) ? "SUCCESS" : "FAILURE")
             << std::endl;
   return (passed) ? 0 : 1;
+
+  free(x, q);
+  free(y, q);
 }
