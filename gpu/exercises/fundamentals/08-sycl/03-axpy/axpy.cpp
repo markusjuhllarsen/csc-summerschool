@@ -8,20 +8,22 @@ int main() {
   
   // Initialize input and output memory on the host
   constexpr size_t N = 25600;
-  std::vector<int> x(N),y(N);
+  //std::vector<int> x(N),y(N);
   int a=4;
+  int *d_x = malloc_shared<int>(N, q);
+  int *d_y = malloc_shared<int>(N, q);
   std::fill(x.begin(), x.end(), 1);
   std::fill(y.begin(), y.end(), 2);
 
    // Create buffers for the host data or allocate memory using USM
    // If USM + malloc_device() is used add the copy operations
-    int *d_x = malloc_device<int>(N, q);
-    int *d_y = malloc_device<int>(N, q);
+    //int *d_x = malloc_device<int>(N, q);
+    //int *d_y = malloc_device<int>(N, q);
     //buffer<int, 1> buf_x(x.data(), range<1>(N));
     //buffer<int, 1> buf_y(y.data(), range<1>(N));
 
-    q.memcpy(d_x, x.data(), N * sizeof(int)).wait();
-    q.memcpy(d_y, y.data(), N * sizeof(int)).wait();
+    //q.memcpy(d_x, x.data(), N * sizeof(int)).wait();
+    //q.memcpy(d_y, y.data(), N * sizeof(int)).wait();
 
     // Submit the kernel to the queue
     q.submit([&](handler& h) {
@@ -48,7 +50,7 @@ int main() {
       //Checking the result inside the scope of the buffers using host_accessors
       {
           //host_accessor h_accY(buf_y, read_only); // Read back data after kernel execution
-          q.memcpy(y.data(), d_y, sizeof(int) * N).wait();
+          //q.memcpy(y.data(), d_y, sizeof(int) * N).wait();
           std::cout << "First few elements of Y after operation:" << std::endl;
           for (size_t i = 0; i < 10; ++i) {
             std::cout << "Y[" << i << "] = " << y[i] << std::endl;
