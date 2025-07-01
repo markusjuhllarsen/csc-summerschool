@@ -35,7 +35,12 @@ int main() {
     }
 
     // TODO: Allocate + copy initial values to GPU
+    double *d_x;
+    double *d_y;
 
+    HIP_ERRCHK(hipMalloc((void**)&d_x, num_bytes));
+    HIP_ERRCHK(hipMalloc((void**)&d_y, num_bytes));
+    HIP_ERRCHK(hipMemcpy(d_x, x.data(), num_bytes, hipMemcpyHostToDevice));
     // TODO: Define grid dimensions
     // Use dim3 structure for threads and blocks
     dim3 threads;

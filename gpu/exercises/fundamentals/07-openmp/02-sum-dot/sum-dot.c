@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include <omp.h>
 
 #define NX 102400
 
@@ -12,20 +13,23 @@ int main(void)
         vecB[i] = vecA[i] * vecA[i];
     }
 
-    // TODO start: create a data region and offload the two computations
-    // so that data is kept in the device between the computations
-
-    for (int i = 0; i < NX; i++) {
-        vecC[i] = vecA[i] + vecB[i];
-    }
-
     double res = 0.0;
 
+    // TODO start: create a data region and offload the two computations
+    // so that data is kept in the device between the computations
+    #pragma omp target data map(to: vecA[0:NX], vecB[0:NX]) map(from: vecC[0:NX])
+    {
+        // Vector addition
+        #pragma omp target teams distribute parallel for
+        for (int i = 0; i < NX; i++) {
+            vecC[i] = vecA[i] + vecB[i];
+        }
+    // Dot product
+    #pragma omp target teams distribute parallel for reduction(+:res)  
     for (int i = 0; i < NX; i++) {
         res += vecC[i] * vecB[i];
     }
-
-    // TODO end
+    }
 
     double sum = 0.0;
     /* Compute the check value */
