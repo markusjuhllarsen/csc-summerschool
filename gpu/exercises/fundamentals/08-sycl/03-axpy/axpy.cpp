@@ -4,7 +4,7 @@ using namespace sycl;
 
 int main() {
   // Set up queue on any available device
-  //TODO 
+  queue q;
   
   // Initialize input and output memory on the host
   constexpr size_t N = 25600;
@@ -14,23 +14,31 @@ int main() {
   std::fill(y.begin(), y.end(), 2);
 
   {
-   // Create buffers for the host data or allocate memory usinggUSM
+   // Create buffers for the host data or allocate memory using USM
    // If USM + malloc_device() is used add the copy operations
-   // TODO
+    buffer<int, 1> buf_x(x.data(), range<1>(N));
+    buffer<int, 1> buf_y(y.data(), range<1>(N));
 
     // Submit the kernel to the queue
     q.submit([&](handler& h) {
       // Create accessors if necessary
-      //TODO
+      accessor x_acc{buf_x, h, read};
+      accessor y_acc{buf_y, h, read_write};
 
-      h.parallel_for(
-        //The kernel as a lambda
-        //TODO
-      );
+      h.parallel_for(range<1>(N), [=](id<1> idx) {
+        // The kernel code
+        y_acc[idx] = a * x_acc[idx];
+      });
     });
 
-      //TODO after the submission works
       //Checking the result inside the scope of the buffers using host_accessors
+      {
+          host_accessor h_accY(buf_y, read_only); // Read back data after kernel execution
+          std::cout << "First few elements of Y after operation:" << std::endl;
+          for (size_t i = 0; i < 10; ++i) {
+            std::cout << "Y[" << i << "] = " << h_accY[i] << std::endl;
+          }
+      }
   }
   // If USM + malloc_device() is used add the copy operations 
   // TODO
