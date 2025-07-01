@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include <omp.h>
 
 #define NX 102400
 
@@ -15,6 +16,7 @@ int main(void)
     // TODO start: offload and parallelize the computation
 
     double res = 0.0;
+    #pragma omp target teams distribute parallel for reduction(+:res)
     for (int i = 0; i < NX; i++) {
         res += vecA[i] * vecB[i];
     }
