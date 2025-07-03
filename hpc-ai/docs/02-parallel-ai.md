@@ -1,6 +1,7 @@
 ---
 title:  "Scaling PyTorch Models: Single vs Multi-GPU Training and Techniques"
 event:  CSC Summer School in High-Performance Computing 2025
+author: Hossein Firooz (FCAI / Aalto University)
 lang:   en
 ---
 
@@ -56,12 +57,12 @@ train_loader = torch.utils.data.DataLoader(data, ..., num_workers=N)
 
 :::::: {.columns}
 ::: {.column width="50%"}
-**Model Parallelism**  
-![](img/data_parallelism_general.png){.center width=45%}
+**Model Parallelism**
+![](img/model_parallelism_general.png){.center width=45%}
 :::
 ::: {.column width="50%"}
-**Data Parallelism (MP)**  
-![](img/model_parallelism_general.png){.center width=70%}
+**Data Parallelism**
+![](img/data_parallelism_general.png){.center width=70%}
 :::
 ::::::
 
@@ -94,11 +95,11 @@ train_loader = torch.utils.data.DataLoader(data, ..., num_workers=N)
 ::::::
  
 
-# Naive Pytroch Data Parallelism (DP)
+# Naive PyTorch Data Parallelism (DP)
   ![](img/pytorch_dp_details.png){width=75%}
 
 
-# Pytroch Distributed Data Parallelism (DDP)
+# PyTorch Distributed Data Parallelism (DDP)
   ![](img/pytorch_ddp_details.png){width=75%}
 
 
@@ -119,7 +120,7 @@ With overlap:
 - DDP is generally the recommended approach
 
 
-# MP: Pipeline Parallelism
+# MP: Pipeline Parallelism (PP)
 
 :::::: {.columns}
 ::: {.column width="40%"}
@@ -149,9 +150,9 @@ With overlap:
 # Bubble issue and GPipe
 <div class="column"  style="width:80%; text-align: center;">
   ![](img/mp_vs_gpipe.png){width=80%}
-  - <small>Picture from [GPipe Paper, arXiv:1811.06965](https://arxiv.org/abs/1811.06965)</small>
+  <br><small>Picture from [GPipe Paper, arXiv:1811.06965](https://arxiv.org/abs/1811.06965)</small>
 </div>
-- GPipe divided the data to micro-batch to reduce the bubble issue.
+- GPipe divides the data to micro-batch to reduce the bubble issue.
 
 
 # MP: Tensor Parallelism
@@ -187,13 +188,13 @@ With overlap:
 ![](img/tp_example.png){width=60%}
 
 # Mix and Match: DP + PP!
-  ![](img/dp_pp.png){.center width=70%}
-- This is from [Deepspeed](https://www.microsoft.com/en-us/research/blog/zero-deepspeed-new-system-optimizations-enable-training-models-with-over-100-billion-parameters/)
+<center>
+![](img/dp_pp.png){.center width=70%}
+This is from [DeepSpeed](https://www.microsoft.com/en-us/research/blog/zero-deepspeed-new-system-optimizations-enable-training-models-with-over-100-billion-parameters/)
+</center>
 
 - It reduces the bubble issue
-
 - For DP, there are two GPUs: GPU0 and GPU1
-
 - Inside each DP rank, there is a PP.
 
 # Reality: 3D Parallelism
@@ -209,7 +210,7 @@ With overlap:
 ::::::
 
 
-# ZeRO: Advance Data Parallelism
+# ZeRO: Advanced Data Parallelism
 - Issue with DP: Full optimizer states and gradients duplicated on every GPU.
   - Not efficient with VRAM
 - ZeRO Idea: Partition optimizer states, gradients, and parameters across GPUs.
@@ -225,7 +226,7 @@ With overlap:
 
 # ZeRO Stages
 - For 7B model with 64 GPUs:
-- Zero-1O: ptimizer State Partitioning
+- Zero-1: Optimizer State Partitioning
   - 4x memory reduction, same communication volume as DP
 - Zero-2: Optimizer + Gradient Partitioning
   - 8x memory reduction, same communication volume as DP
@@ -236,11 +237,11 @@ With overlap:
 
   
 # Summary
-- Model fits onto a single GPU -> DDP or ZeRO
+- Model fits onto a single GPU &rarr; DDP or ZeRO
 - Model doesn’t fit onto a single GPU
-  - Fast intra-node/GPU connection -> PP, ZeRO, TP
-  - Without intra-node/GPU connection -> PP
-- Largest Layer not fitting into a single GPU -> TP
+  - Fast intra-node/GPU connection &rarr; PP, ZeRO, TP
+  - Without intra-node/GPU connection &rarr; PP
+- Largest Layer not fitting into a single GPU &rarr; TP
 - Multi-Node / Multi-GPU:
   - ZeRO - as it requires close to no modifications to the model
   - PP+TP+DDP: less communications, but requires massive changes to the model

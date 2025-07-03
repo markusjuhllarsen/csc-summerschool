@@ -1,6 +1,7 @@
 ---
 title:  Understanding GPU Computational Capabilities
 event:  CSC Summer School in High-Performance Computing 2025
+author: Hossein Firooz (FCAI / Aalto University)
 lang:   en
 ---
 
@@ -15,7 +16,7 @@ lang:   en
 ::: {.column width="40%"}
 ![](img/amd-mi250.avif){.center width=60%}
 
-<small>Single AMD MI250 GPU</small>
+<small>Single AMD MI250X GPU</small>
 :::
 ::::::
 
@@ -25,7 +26,7 @@ lang:   en
 - Commonly used to estimate compute cost of training/inference.
 - Training ML Models =  Forward pass + Backward pass.
 
-# AMD MI250 GPU Characteristics
+# AMD MI250X GPU Characteristics
 - Compute Power [(Link)](https://www.amd.com/en/products/accelerators/instinct/mi200/mi250x.html)
     - Peak FP64 Performance: 47.9 TFLOPs
     - Peak FP32 Performance: 47.9 TFLOPs
@@ -40,12 +41,12 @@ lang:   en
 # Peak vs Max-Achievable FLOPs
 
 :::::: {.columns}
-::: {.column width="60%"}
+::: {.column width="50%"}
 ![](img/maf-flops.png){.center width=80%}
 
 <small>Picture from [AMD](https://rocm.blogs.amd.com/software-tools-optimization/Understanding_Peak_and_Max-Achievable_FLOPS/README.html)</small>
 :::
-::: {.column width="40%"}
+::: {.column width="50%"}
 - <small>Peak performance is calculated based on the hardware characteristics</small>  
 - <small>$FLOPs/s = Cores \times Ops/Cycle \times Clock$</small>  
 - <small>Memory Bandwidth Limits, Underutilization, Load Imbalance, etc.</small>  
